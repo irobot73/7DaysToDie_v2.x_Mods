@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<quests>
+
+    <!--  Remove biome filter from the Goto objective  -->
+    <setattribute xpath="//quest[@id='quest_whiteRiverCitizen1']/objective[@type='Goto' and @id='trader']/property[@name='biome_filter_type']" name="value">AnyBiome</setattribute>
+    <remove xpath="//quest[@id='quest_whiteRiverCitizen1']/objective[@type='Goto' and @id='trader']/property[@name='biome_filter']"/> 
+
+</quests>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<gameevents>
+
+    <!--  Remove all the rewards when completing the BASICS challenges -->
+    <remove xpath="/gameevents/action_sequence[@name='challenge_group_reward_basics']/action" />
+
+    <!--  Add the 'challenge_group_reward_basics' rewards to the 'game_first_spawn' event -->
+    <append xpath="/gameevents/action_sequence[@name='game_first_spawn']">
+
+        <!--  +2000 EXP from early basic challenges  -->
+        <!--  +5000 EXP from homesteading challenges  -->
+        <!--  +3000 more experience as a crude estimate of what a player might recieve in the process.
+        <action class="AddXP">
+            <property name="xp_amount" value="10000"/>
+        </action> -->
+
+        <!--  Skill points granted for completing basic challenges. -->
+        <action class="AddSkillPoints">
+            <property name="skill_points" value="4"/>
+        </action>
+
+        <action class="Delay">
+            <property name="time" value="2"/>
+        </action>
+
+        <!--  Automatically attain the quest to find the nearest trader. -->
+        <action class="AddQuest">
+            <property name="phase" value="1"/>
+            <property name="quest" value="quest_whiteRiverCitizen1"/>
+        </action>
+
+    </append>
+
+    <!--  Remove challenge rewards that are no longer relevant.
+    <remove xpath="//action_sequence[@name='challenge_group_reward_basics']"/>
+    <remove xpath="//action_sequence[@name='challenge_group_reward_homesteading']"/>
+    <remove xpath="//action_sequence[@name='challenge_group_reward_advanced_survival']"/> -->
+
+</gameevents>

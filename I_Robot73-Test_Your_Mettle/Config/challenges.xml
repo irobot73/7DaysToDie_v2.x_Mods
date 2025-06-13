@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<challenges>
+
+    <!-- Remove Gather Resources Stone Axe Objectives -->
+    <remove xpath="/challenges/challenge[@name='gatherResourcesStoneAxe']/objective[@item='resourceWood']"/>
+    <remove xpath="/challenges/challenge[@name='gatherResourcesStoneAxe']/objective[@item='resourceRockSmall']"/>
+
+    <!-- Set Objective COMPLETE -->
+    <append xpath="/challenges/challenge[@name='gatherResourcesStoneAxe']">
+        <objective type="ChallengeComplete" challenge="redeemChallenge" count="1" is_redeemed="true"/>
+    </append>
+
+    <!--  Unhide challenge groups hidden by the "Basics" challenge group (IE:  Don't make 'BASICS' mandatory). -->
+    <removeattribute xpath="//challenge_group[@hidden_by='Basics']/@hidden_by"/>
+
+    <!--  Remove all challenges belonging to these challenge groups:
+    <remove xpath="//challenge[@group='Basics']"/>
+    <remove xpath="//challenge[@group='Homesteading']"/>
+    <remove xpath="//challenge[@group='AdvancedSurvival']"/> -->
+
+    <!--  Remove the challenge groups themselves now that they are empty.
+    <remove xpath="//challenge_group[@name='Basics']"/>
+    <remove xpath="//challenge_group[@name='Homesteading']"/>
+    <remove xpath="//challenge_group[@name='AdvancedSurvival']"/> -->
+
+</challenges>

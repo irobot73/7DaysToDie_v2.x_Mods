@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<entityclasses>
+
+    <!-- Or set a whole new list -->
+    <set xpath="/entity_classes/entity_class[@name='playerMale']/property[starts-with(@name,'ItemsOnEnterGame.GameModeSurvival')]/@value">RobotsStarterItems</set>
+
+    <!-- You can simply append anything to the existing list.  Just watch those commas
+    <append xpath="/entity_classes/entity_class[@name='playerMale']/property[@name='ItemsOnEnterGame.GameModeSurvival']/@value"></append>
+    <append xpath="/entity_classes/entity_class[@name='playerMale']/property[@name='ItemsOnEnterGame.GameModeSurvivalSP']/@value"></append>
+    <append xpath="/entity_classes/entity_class[@name='playerMale']/property[@name='ItemsOnEnterGame.GameModeSurvivalMP']/@value"></append> -->    
+
+</entityclasses>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<items>
+
+    <append xpath="/items">
+
+        <item name="MysteriousDrifterNote">
+	        <property name="Extends" value="blankNoteMaster"/>
+	        <property name="CreativeMode" value="None"/>
+	        <property name="DescriptionKey" value="MysteriousDrifterNoteDesc"/>
+	        <property name="CustomIcon" value="challengeQuestMaster"/>
+        </item>
+
+        <!-- Starter Items -->
+        <item name="RobotsStarterItems">
+            <property name="CreativeMode" value="Player"/>
+            <property name="CustomIcon" value="cntWoodenChestOpen"/>
+            <property name="Weight" value="0"/>
+            <property name="EconomicValue" value="0"/>
+            <property name="ItemTypeIcon" value="bundle"/>
+            <property name="HoldType" value="45"/>
+            <property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+            <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+            <property name="Material" value="Mmetal"/>
+            <property name="DescriptionKey" value="RobotsStarterItemsDesc"/>
+	        <property name="SellableToTrader" value="false"/>
+	        <property name="Group" value="Special Items"/>
+	        <property name="Stacknumber" value="1"/>
+            <property class="Action0">
+                <property name="Class" value="OpenBundle"/>
+                <property name="Delay" value="0"/>
+                <!-- Enough to complete all the BASIC challenges w/ 25 fiber, wood, stone & arrows -->
+                <property name="Create_item" value="bedrollBlockVariantHelper,drinkJarBoiledWater,foodCanChili,medicalFirstAidBandage,meleeToolTorch,resourceYuccaFibers,resourceWood,resourceRockSmall,resourceFeather"/>
+                <property name="Create_item_count" value="1,1,1,1,1,35,70,52,25"/>
+            </property>
+        </item>
+
+    </append>
+
+</items>
+

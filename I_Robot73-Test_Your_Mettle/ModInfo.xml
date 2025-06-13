@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+	<Name value="I_Robot_Test_Your_Mettle" />
+	<DisplayName value="Test Your Mettle (Robot Edition)" />
+	<Description value="Skips the 'Basic Survival' challanges, if you want." />
+	<Author value="I_Robot73, StormyG7"/>
+	<Version value="2.0.0-BETA"/>
+	<Website value="https://discord.gg/DEU5wmMvSn/"/>
+	<SkipWithAntiCheat value="false"/>
+</xml>
+
+<!-- https://github.com/irobot73/7DaysToDie_v2.x_Mods -->
+
+<!-- https://7daystodie.fandom.com/wiki/XPath_Explained -->

@@ -1,0 +1,9 @@
+Key,File,Type,UsedInMainMenu,NoTranslate,english
+
+RobotsStarterItems,items,item,,,"Mysterious Drifter's Items"
+RobotsStarterItemsDesc,items,item,,,"Items left for you by a helpful stranger."
+MysteriousDrifterNote,items,item,,,"Mysterious Drifter's Note"
+MysteriousDrifterNoteDesc,items,item,,,"Stranger,\n\nI've left you with the few supplies I could spare, should you wake up.\n\nFare thee well and God speed\n- The Mysterious Drifter"
+
+quest_WhiteRiverCitizen1_description_title,Quest,Quest Info,,,"A hastily scrawled note"
+quest_WhiteRiverCitizen1_description,Quest,Quest Info,,,"Stranger,\n\nI've left you with the few supplies I could spare and noted on your map the nearest trader I could find.\n\nFare thee well and God speed\n- The Mysterious Drifter"
