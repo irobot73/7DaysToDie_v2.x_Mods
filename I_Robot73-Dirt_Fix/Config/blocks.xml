@@ -1,0 +1,10 @@
+<blocks>
+
+    <!-- Make harvesting/destruction a BIT less 'profitable'
+            'terrTopsoil' extends from 'terrDirt' -->
+    <!-- <set xpath="//block[@name='terrDirt']/drop[@event='Harvest' and @name='resourceClayLump']/@count">14</set> -->
+
+    <!-- Or, uncomment the following instead & make harvesting/destruction from ALL terrain blocks a BIT less 'profitable' -->
+    <!-- <set xpath="//block[@name='terrDirt' or @name='terrForestGround' or @name='terrBurntForestGround' or @name='farmPlotBlock']/drop[@event='Harvest' and @name='resourceClayLump']/@count">14</set> -->
+
+</blocks>

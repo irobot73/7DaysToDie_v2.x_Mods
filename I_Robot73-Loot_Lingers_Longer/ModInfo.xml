@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+	<Name value="I_Robot_Loot_Lingers_Longer" />
+	<DisplayName value="Loot Lingers Longer (Robot Edition)" />
+	<Description value="Make loot bags stay around a bit longer." />
+	<Author value="I_Robot73"/>
+	<Version value="2.0.0"/>
+	<Website value="https://discord.gg/DEU5wmMvSn/"/>
+</xml>
+
+<!-- https://github.com/irobot73/7DaysToDie_v2.x_Mods -->
+
+<!-- https://7daystodie.fandom.com/wiki/XPath_Explained -->

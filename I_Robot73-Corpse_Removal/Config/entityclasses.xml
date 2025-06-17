@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<entityclasses>
+
+    <!-- Reduce number of seconds before any corpse will despawn -->
+    <set xpath="/entity_classes/entity_class[@name='zombieTemplateMale']/property[@name='TimeStayAfterDeath']/@value">10</set>  
+
+</entityclasses>

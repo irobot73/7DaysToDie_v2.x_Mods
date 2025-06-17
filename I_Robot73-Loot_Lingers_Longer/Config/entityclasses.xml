@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<entityclasses>
+
+    <!-- Time, in seconds, before loot bags will despawn ('2700' == 45-min [1/2 of a 90-min/day]')-->
+    <set xpath="/entity_classes/entity_class[starts-with(@name,'EntityLootContainer')]/property[@name='TimeStayAfterDeath']/@value">2700</set>   
+
+</entityclasses>

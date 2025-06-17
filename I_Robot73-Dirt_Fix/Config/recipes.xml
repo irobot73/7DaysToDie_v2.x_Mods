@@ -1,0 +1,7 @@
+<recipes>
+
+    <!-- Make terrain block creation 'costs' a BIT higher'
+            Set to '22' to match the HARVEST count of the vanilla game (1:1) -->
+    <set xpath="//recipe[@name='terrDirt' or @name='terrTopSoil']/ingredient[@name='resourceClayLump']/@count">24</set>
+
+</recipes>
