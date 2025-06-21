@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<blockplaceholders>
+
+<include filename="./blockplaceholders_environment.xml" />
+<include filename="./blockplaceholders_flora.xml" />
+<include filename="./blockplaceholders_vehicles.xml" />
+
+</blockplaceholders>

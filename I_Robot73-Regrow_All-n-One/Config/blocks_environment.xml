@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<blocks>
+
+<include filename="./blocks_environment_custom.xml" />
+<include filename="./blocks_environment_helpers.xml" />
+<include filename="./blocks_environment_respawners.xml" />
+
+<!-- ************************
+
+     Here's where we 'hijack' the existing blocks to do our bidding.
+     Remove/comment out below to remove what's not wanted
+
+ ************************ -->
+
+<!-- Tweak the boulders as we'd like
+        - Insert the DowngradeBlock
+ -->
+    <append xpath="//block[@name='resourceRock01']">
+        <property name="DowngradeBlock" value="rbtAllBoulderRandomRespawner"/>
+        <property name="PassThroughDamage" value="false"/>
+    </append>
+
+<!-- Tweak the bird nests as we'd like
+        - Insert the DowngradeBlock
+ -->
+    <append xpath="//block[@name='cntBirdnest']">
+        <property name="DowngradeBlock" value="rbtBirdNestRespawner"/>
+        <property name="PassThroughDamage" value="false"/>
+    </append>
+
+<!-- Tweak the Post Mailbox as we'd like
+        - Insert the DowngradeBlock
+ -->
+    <append xpath="//block[@name='cntPostMailbox']">
+        <property name="DowngradeBlock" value="rbtPostMailboxRandomRespawner"/>
+        <property name="PassThroughDamage" value="false"/>
+    </append>
+
+<!-- Tweak the News Dispensers as we'd like
+        - Override the DowngradeBlock
+ -->
+    <setattribute xpath="//block[starts-with(@name, 'cntNewsDispenseFree') or starts-with(@name, 'cntNewspaperDispenserStand')]/property[@name='Extends']" name="param1">DowngradeBlock</setattribute>
+    <append xpath="//block[starts-with(@name, 'cntNewsDispenseFree') or starts-with(@name, 'cntNewspaperDispenserStand')]">
+        <property name="DowngradeBlock" value="rbtNewsDispenserRandomRespawner"/>
+        <property name="PassThroughDamage" value="false"/>
+    </append>
+
+<!-- Tweak the ATMs as we'd like
+        - Insert the DowngradeBlock
+ -->
+    <append xpath="//block[@name='cntATMInsecure']">
+        <property name="DowngradeBlock" value="rbtATMRandomRespawner"/>
+        <property name="PassThroughDamage" value="false"/>
+    </append>
+
+<!-- Tweak the vending machines as we'd like
+        - Insert the DowngradeBlock
+ -->
+    <append xpath="//block[@name='cntVendingMachine2Broken']">
+        <property name="DowngradeBlock" value="rbtAllDrinksVendingMachineRandomRespawner"/>
+        <property name="PassThroughDamage" value="false"/>
+    </append>
+
+    <append xpath="//block[starts-with(@name, 'cntVendingMachineSnacks')]">
+        <property name="DowngradeBlock" value="rbtAllSnacksVendingMachineRandomRespawner"/>
+        <property name="PassThroughDamage" value="false"/>
+    </append>
+
+<!-- Tweak the street lights as we'd like
+        - Insert the DowngradeBlock
+ -->
+    <append xpath="//block[@name='streetLight01']">
+        <property name="DowngradeBlock" value="rbtAllStreeLightRandomRespawner"/>
+        <property name="PassThroughDamage" value="false"/>
+    </append>
+
+<!-- Tweak the transformers as we'd like
+        - Insert the DowngradeBlock
+ -->
+    <append xpath="//block[@name='utilityTransformer']">
+        <property name="DowngradeBlock" value="rbtUtilityTransformerRespawner"/>
+        <property name="PassThroughDamage" value="false"/>
+    </append>
+ -->
+    <append xpath="//block[@name='utilityTransformerHanging']">
+        <property name="DowngradeBlock" value="rbtUtilityTransformerHangingRespawner"/>
+        <property name="PassThroughDamage" value="false"/>
+    </append>
+
+</blocks>
+
+<!--'spawnVehicleBlock' -> spawner of your choice (placed on TOP side of block) -> 'grows' to an asphault block (grow time should be high '0.0001')
+
+    <append xpath="/blocks">
+
+	    <block name="spawnVehicleBlock">
+		    <property name="CreativeMode" value="Dev"/>
+		    <property name="Extends" value="air"/>
+		    <property name="Class" value="PlantGrowing"/>
+		    <property name="PlantGrowing.Next" value="spawnVehicleNext"/>
+		    <property name="PlantGrowing.GrowOnTop" value="{YOUR SPAWNER HERE}"/>
+		    <property name="PlantGrowing.GrowthRate" value="0.25"/>
+		    <property name="PlantGrowing.FertileLevel" value="0"/>
+		    <property name="PlantGrowing.IsRandom" value="false"/>
+		    <property name="PlantGrowing.LightLevelGrow" value="0"/>
+		    <property name="PlantGrowing.LightLevelStay" value="0"/>
+		    <property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+		    <drop event="Destroy" count="0"/>
+	    </block>
+	    <block name="spawnVehicleNext">
+		    <property name="CreativeMode" value="None"/>
+		    <property name="Extends" value="spawnVehicleBlock"/>
+		    <property name="PlantGrowing.Next" value="spawnVehicleEnd"/>
+		    <property name="PlantGrowing.IsGrowOnTopEnabled" value="false"/>
+		    <property name="PlantGrowing.IsRandom" value="false"/>
+		    <property name="PlantGrowing.GrowthRate" value="0.25"/>
+	    </block>
+	    <block name="spawnVehicleEnd">
+		    <property name="CreativeMode" value="None"/>
+		    <property name="Extends" value="spawnVehicleBlock"/>
+		    <property name="MultiBlockDim" value="1,3,1"/>
+		    <property name="PlantGrowing.Next" value="terrAsphalt"/>
+		    <property name="PlantGrowing.GrowthRate" value="0.0001"/>
+		    <property name="PlantGrowing.IsRandom" value="false"/>
+		    <property name="PlantGrowing.IsGrowOnTopEnabled" value="false"/>
+	    </block>
+
+    </append>
+
+-->

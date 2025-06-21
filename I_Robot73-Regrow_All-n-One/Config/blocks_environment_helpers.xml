@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<blocks>
+
+    <!-- Post Mailbox Helper -->
+    <insertAfter xpath="/blocks/block[@name='rbtEmptyPostMailbox']">
+
+        <!-- Helper that will pick a random post mailbox for a respawn [REF:  'BLOCKPLACEHOLDERS.XML'] -->
+        <block name="rbtAllPostMailboxesRandomHelper">
+            <property name="Extends" value="cntPostMailbox"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="CustomIcon" value="cntPostMailbox"/>
+            <property name="CustomIconTint" value="9caf88"/>
+            <property name="ItemTypeIcon" value="other"/>
+            <property name="DescriptionKey" value="rbtAllPostMailboxesRandomHelperDesc"/>
+            <property name="SortOrder1" value="R215"/>
+        </block>
+
+    </insertAfter>
+
+    <!-- Newspaper Dispenser Helper -->
+    <insertAfter xpath="/blocks/block[@name='cntNewspaperDispenserStandYellow']">
+
+        <!-- Helper that will pick a random news dispenser for a respawn [REF:  'BLOCKPLACEHOLDERS.XML'] -->
+        <block name="rbtAllNewsDispensersRandomHelper">
+            <property name="Extends" value="cntNewsDispenseFreeGreen"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="CustomIcon" value="cntNewsDispenseFreeGreen"/>
+            <property name="CustomIconTint" value="9caf88"/>
+            <property name="ItemTypeIcon" value="other"/>
+            <property name="DescriptionKey" value="rbtAllNewsDispensersRandomHelperDesc"/>
+            <property name="SortOrder1" value="R220"/>
+        </block>
+
+    </insertAfter>
+
+    <!-- ATM Helper -->
+    <insertAfter xpath="/blocks/block[@name='cntATMInsecure']">
+
+        <!-- Helper that will pick a random ATM for a respawn [REF:  'BLOCKPLACEHOLDERS.XML'] -->
+        <block name="rbtAllATMsRandomHelper">
+            <property name="Extends" value="cntATMInsecure"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="CustomIcon" value="cntATMSecure"/>
+            <property name="CustomIconTint" value="9caf88"/>
+            <property name="ItemTypeIcon" value="other"/>
+            <property name="DescriptionKey" value="rbtAllATMsRandomHelperDesc"/>
+            <property name="SortOrder1" value="R205"/>
+        </block>
+
+    </insertAfter>
+
+    <!-- Stree Light Helper -->
+    <insertAfter xpath="/blocks/block[@name='streetLightClassic']">
+
+        <!-- Helper that will pick a random street light for a respawn [REF:  'BLOCKPLACEHOLDERS.XML'] -->
+        <block name="rbtAllStreeLightsRandomHelper">
+            <property name="Extends" value="streetLight01"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="CustomIcon" value="streetLight02"/>
+            <property name="CustomIconTint" value="9caf88"/>
+            <property name="ItemTypeIcon" value="other"/>
+            <property name="DescriptionKey" value="rbtAllStreeLightsRandomHelperDesc"/>
+            <property name="SortOrder1" value="R207"/>
+        </block>
+
+    </insertAfter>
+
+    <!-- Boulder Helper -->
+    <insertAfter xpath="/blocks/block[@name='oreShaleBoulder']">
+
+        <!-- Helper that will pick a random boulder for a respawn [REF:  'BLOCKPLACEHOLDERS.XML'] -->
+        <block name="rbtAllBouldersRandomHelper">
+            <property name="Extends" value="rock01"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="CustomIcon" value="rock04"/>
+            <property name="CustomIconTint" value="9caf88"/>
+            <property name="ItemTypeIcon" value="other"/>
+            <property name="DescriptionKey" value="rbtAllBouldersRandomHelperDesc"/>
+            <property name="SortOrder1" value="R202"/>
+        </block>
+
+    </insertAfter>
+
+</blocks>

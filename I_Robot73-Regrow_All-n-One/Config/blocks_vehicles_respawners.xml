@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<blocks>
+
+    <!-- ALL Vehicles Respawner -->
+    <insertAfter xpath="/blocks/block[@name='semiFlatbedFrontTraderOnly']">
+
+        <block name="rbtAllCarRandomRespawner">
+            <property name="Extends" value="rbtVehicleRespawnMaster"/>
+            <property name="CustomIcon" value="decoCarWheelFlat"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="DescriptionKey" value="rbtAllCarRandomRespawnerDesc"/>
+            <property name="PlantGrowing.Next" value="rbtAllVehiclesRandomHelper"/>
+            <property name="SortOrder1" value="R551"/>
+            <property name="SortOrder2" value="9551"/>
+        </block>
+
+        <!-- *** OLD_SEDAN_DAMAGE_00_COLORS -->
+	    <!-- *** OLD_SEDAN_DAMAGE_01_COLORS -->
+	    <!-- *** OLD_SEDAN_DAMAGE_02_COLORS -->
+        <!-- ROBOT_DEFAULT -->
+        <block name="rbtVehicleRandomRespawner">
+            <property name="Extends" value="rbtVehicleRespawnMaster"/>
+            <property name="CustomIcon" value="decoCarWheelFlat"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="DescriptionKey" value="rbtVehicleRandomRespawnerDesc"/>
+            <property name="PlantGrowing.Next" value="carsRandomHelper"/>
+            <property name="SortOrder1" value="R560"/>
+            <property name="SortOrder2" value="9560"/>
+        </block>
+
+	    <!-- *** 3M_WIDE_OLD_SEDANS (uses existing HELPER -->
+	    <!-- *** SEDANS (uses existing HELPER -->
+	    <!-- *** BURNT_SEDAN (uses existing HELPER -->
+        <block name="rbtCar3WideRandomRespawner">
+            <property name="Extends" value="rbtVehicleRespawnMaster"/>
+            <property name="CustomIcon" value="decoCarWheelFlat"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="DescriptionKey" value="rbtCar3WideRandomRespawnerDesc"/>
+            <property name="PlantGrowing.Next" value="cars3WideRandomHelper"/>
+            <property name="SortOrder1" value="R565"/>
+            <property name="SortOrder2" value="9565"/>
+        </block>
+
+	    <!-- *** ABANDONED_SUV_DOORS (uses existing HELPER -->
+	    <!-- *** 3M_WIDE_SEDANS (uses existing HELPER -->
+	    <!-- *** 3M_WIDE_BURNT_SEDAN (uses existing HELPER -->
+	    <!-- *** FRONT_CRUMPLED_SEDAN (uses existing HELPER -->
+        <!-- *** ALL_SEDANS -->
+		<block name="rbtAllSedanRandomSpawner">
+            <property name="Extends" value="rbtVehicleRespawnMaster"/>
+            <property name="CustomIcon" value="decoCarWheelFlat"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="DescriptionKey" value="rbtAllSedanRandomSpawnerDesc"/>
+            <property name="PlantGrowing.Next" value="rbtAllSedansRandomHelper"/>
+            <property name="SortOrder1" value="R570"/>
+            <property name="SortOrder2" value="9570"/>
+        </block>
+
+	    <!-- *** MINIVANS -->
+        <block name="rbtMinivanRandomRespawner">
+            <property name="Extends" value="rbtVehicleRespawnMaster"/>
+            <property name="CustomIcon" value="decoCarWheelFlat"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="DescriptionKey" value="rbtMinivanRandomRespawnerDesc"/>
+            <property name="PlantGrowing.Next" value="cntMinivan01RandomHelper"/>
+            <property name="SortOrder1" value="R571"/>
+            <property name="SortOrder2" value="9571"/>
+        </block>
+
+	    <!-- *** 3_WIDE_MINIVANS -->
+        <block name="rbtMinivan3WideRandomRespawner">
+            <property name="Extends" value="rbtVehicleRespawnMaster"/>
+            <property name="CustomIcon" value="decoCarWheelFlat"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="DescriptionKey" value="rbtMinivan3WideRandomRespawnerDesc"/>
+            <property name="PlantGrowing.Next" value="cntMinivan3Wide01RandomHelper"/>
+            <property name="SortOrder1" value="R572"/>
+            <property name="SortOrder2" value="9572"/>
+        </block>
+
+	    <!-- *** ALL_MINIVANS -->
+        <block name="rbtAllMinivanRandomRespawner">
+            <property name="Extends" value="rbtVehicleRespawnMaster"/>
+            <property name="CustomIcon" value="decoCarWheelFlat"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="DescriptionKey" value="rbtAllMinivanRandomRespawnerDesc"/>
+            <property name="PlantGrowing.Next" value="rbtAllMinivansRandomHelper"/>
+            <property name="SortOrder1" value="R573"/>
+            <property name="SortOrder2" value="9573"/>
+        </block>
+
+	    <!-- *** SUVs (uses existing HELPER -->
+        <!-- *** ABANDONED_SUV -->
+	    <!-- *** ABANDONED_SUV_DOORS (uses existing HELPER -->
+	    <!-- *** 3_WIDE_SUVS -->
+        <!-- *** ABANDONED_3M_WIDE_SUV -->
+	    <!-- *** ABANDONED_SUV_3M_WIDE_DOORS -->
+        <!-- ALL_SUVS -->
+        <block name="rbtAllSUVRandomRespawner">
+            <property name="Extends" value="rbtVehicleRespawnMaster"/>
+            <property name="CustomIcon" value="decoCarWheelFlat"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="DescriptionKey" value="rbtAllSUVRandomRespawnerDesc"/>
+            <property name="PlantGrowing.Next" value="rbtAllSUVsRandomHelper"/>
+            <property name="SortOrder1" value="R580"/>
+            <property name="SortOrder2" value="9580"/>
+        </block>
+
+	    <!-- *** PICKUPTRUCKS (uses existing HELPER) -->
+	    <!-- *** ABANDONED_PICKUP_TRUCK (uses existing HELPER) -->
+	    <!-- *** ABANDONED_PICKUP_TRUCK_DOOR (uses existing HELPER) -->
+	    <!-- *** 3_WIDE_PICKUPTRUCKS (uses existing HELPER) -->
+	    <!-- *** ABANDONED_PICKUP_TRUCK_3M_WIDE (uses existing HELPER) -->
+	    <!-- *** ABANDONED_PICKUP_TRUCK_3M_WIDE_DOOR (uses existing HELPER) -->
+	    <!-- *** ALL_PICKUPTRUCKS -->
+        <block name="rbtAllPickupTruckRandomRespawner">
+            <property name="Extends" value="rbtVehicleRespawnMaster"/>
+            <property name="CustomIcon" value="decoCarWheelFlat"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="DescriptionKey" value="rbtAllPickupTruckRandomRespawnerDesc"/>
+            <property name="PlantGrowing.Next" value="rbtAllPickupTrucksRandomHelper"/>
+            <property name="SortOrder1" value="R590"/>
+            <property name="SortOrder2" value="9590"/>
+        </block>
+
+	    <!-- *** SEMI_TRUCK -->
+        <block name="rbtSemiTruckRandomRespawner">
+            <property name="Extends" value="rbtVehicleRespawnMaster"/>
+            <property name="CustomIcon" value="decoCarWheelFlat"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="DescriptionKey" value="rbtSemiTruckRandomRespawnerDesc"/>
+            <property name="PlantGrowing.Next" value="cntSemiTruck01RandomHelper"/>
+            <property name="SortOrder1" value="R591"/>
+            <property name="SortOrder2" value="9591"/>
+        </block>
+
+	    <!-- *** SEMI_TRUCK_MODULAR -->
+        <block name="rbtSemiTruckModularFrontRandomRespawner">
+            <property name="Extends" value="rbtVehicleRespawnMaster"/>
+            <property name="CustomIcon" value="decoCarWheelFlat"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="DescriptionKey" value="rbtSemiTruckModularFrontRandomRespawnerDesc"/>
+            <property name="PlantGrowing.Next" value="cntSemiTruck01ModularFrontRandomHelper"/>
+            <property name="SortOrder1" value="R592"/>
+            <property name="SortOrder2" value="9592"/>
+        </block>
+
+	    <!-- *** POLICE_CAR -->
+        <block name="rbtPoliceCarRandomRespawner">
+            <property name="Extends" value="rbtVehicleRespawnMaster"/>
+            <property name="CustomIcon" value="decoCarWheelFlat"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="DescriptionKey" value="rbtPoliceCarRandomRespawnerDesc"/>
+            <property name="PlantGrowing.Next" value="rbtAllPoliceCarRandomHelper"/>
+            <property name="SortOrder1" value="R593"/>
+            <property name="SortOrder2" value="9593"/>
+        </block>
+
+        <!-- FIRE_TRUCK (uses existing HELPER) -->
+        <block name="rbtFireTruckRandomRespawner">
+            <property name="Extends" value="rbtVehicleRespawnMaster"/>
+            <property name="CustomIcon" value="decoCarWheelFlat"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="DescriptionKey" value="rbtFireTruckRandomRespawnerDesc"/>
+            <property name="PlantGrowing.Next" value="cntFireTruck01RandomHelper"/>
+            <property name="SortOrder1" value="R594"/>
+            <property name="SortOrder2" value="9594"/>
+        </block>
+
+	    <!-- *** CRUSHED_CARS_01 (uses existing HELPER) -->
+        <block name="rbtCrushedCar01RandomRespawner">
+            <property name="Extends" value="rbtVehicleRespawnMaster"/>
+            <property name="CustomIcon" value="decoCarWheelFlat"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="DescriptionKey" value="rbtCrushedCar01RandomRespawnerDesc"/>
+            <property name="PlantGrowing.Next" value="crushedCars01RandomHelper"/>
+            <property name="SortOrder1" value="R597"/>
+            <property name="SortOrder2" value="9597"/>
+        </block>
+
+	    <!-- *** CRUSHED_CARS_02 (uses existing HELPER) -->
+        <block name="rbtCrushedCar02RandomRespawner">
+            <property name="Extends" value="rbtVehicleRespawnMaster"/>
+            <property name="CustomIcon" value="decoCarWheelFlat"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="DescriptionKey" value="rbtCrushedCar02RandomRespawnerDesc"/>
+            <property name="PlantGrowing.Next" value="crushedCars02RandomHelper"/>
+            <property name="SortOrder1" value="R597"/>
+            <property name="SortOrder2" value="9597"/>
+        </block>
+
+	    <!-- *** ALL_CRUSHED_CARS -->
+        <block name="rbtAllCrushedCarRandomRespawner">
+            <property name="Extends" value="rbtVehicleRespawnMaster"/>
+            <property name="CustomIcon" value="decoCarWheelFlat"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="DescriptionKey" value="rbtAllCrushedCarRandomRespawnerDesc"/>
+            <property name="PlantGrowing.Next" value="rbtAllCrushedCarsRandomHelper"/>
+            <property name="SortOrder1" value="R597"/>
+            <property name="SortOrder2" value="9597"/>
+        </block>
+
+	    <!-- *** BUSES -->
+        <block name="rbtBusRandomRespawner">
+            <property name="Extends" value="rbtVehicleRespawnMaster"/>
+            <property name="CustomIcon" value="decoCarWheelFlat"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="DescriptionKey" value="rbtBusRandomRespawnerDesc"/>
+            <property name="PlantGrowing.Next" value="cntAllBusesRandomHelper"/>
+            <property name="SortOrder1" value="R598"/>
+            <property name="SortOrder2" value="9598"/>
+        </block>
+
+	    <!-- *** SERVICE_VEHICLES
+            - cntServiceTruckMoPower: (SEE:  'GENERIC_SERVICE_TRUCK')
+            - cntServiceTruckWorkingStiffTools: (SEE:  'GENERIC_SERVICE_TRUCK')
+
+            - AMBULANCE (can only spawn itself)
+        -->
+        <block name="rbtAmbulanceRespawner">
+            <property name="Extends" value="rbtVehicleRespawnMaster"/>
+            <property name="CustomIcon" value="decoCarWheelFlat"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="DescriptionKey" value="rbtAmbulanceRespawnerDesc"/>
+            <property name="PlantGrowing.Next" value="cntAmbulanceTruck01"/>
+            <property name="SortOrder1" value="R605"/>
+            <property name="SortOrder2" value="9605"/>
+        </block>
+
+	    <!-- *** GENERIC_SERVICE_TRUCK -->
+        <block name="rbtGenericSvcTruckRandomRespawner">
+            <property name="Extends" value="rbtVehicleRespawnMaster"/>
+            <property name="CustomIcon" value="decoCarWheelFlat"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="DescriptionKey" value="rbtGenericSvcTruckRandomRespawnerDesc"/>
+            <property name="PlantGrowing.Next" value="rbtAllServiceTrucksRandomHelper"/>
+            <property name="SortOrder1" value="R606"/>
+            <property name="SortOrder2" value="9606"/>
+        </block>
+
+	    <!-- *** BOX_TRUCK -->
+        <block name="rbtBoxTruckRandomRespawner">
+            <property name="Extends" value="rbtVehicleRespawnMaster"/>
+            <property name="CustomIcon" value="decoCarWheelFlat"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="DescriptionKey" value="rbtBoxTruckRandomRespawnerDesc"/>
+            <property name="PlantGrowing.Next" value="cntBoxTruckRandomLootHelper"/>
+            <property name="SortOrder1" value="R607"/>
+            <property name="SortOrder2" value="9607"/>
+        </block>
+
+	    <!-- *** ARMY_TRUCKS -->
+        <block name="rbtArmyTruckRandomRespawner">
+            <property name="Extends" value="rbtVehicleRespawnMaster"/>
+            <property name="CustomIcon" value="decoCarWheelFlat"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="DescriptionKey" value="rbtArmyTruckRandomRespawnerDesc"/>
+            <property name="PlantGrowing.Next" value="cntArmyTruckRandomLootHelper"/>
+            <property name="SortOrder1" value="R608"/>
+            <property name="SortOrder2" value="9608"/>
+        </block>
+
+        <!-- *** FARM_TRUCKS -->
+        <block name="rbtFarmTruckRandomRespawner">
+            <property name="Extends" value="rbtVehicleRespawnMaster"/>
+            <property name="CustomIcon" value="decoCarWheelFlat"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="DescriptionKey" value="rbtFarmTruckRandomRespawnerDesc"/>
+            <property name="PlantGrowing.Next" value="cntFarmTruckRandomLootHelper"/>
+            <property name="SortOrder1" value="R609"/>
+            <property name="SortOrder2" value="9609"/>
+        </block>
+
+	    <!-- *** TRACTORS -->
+        <block name="rbtTractorRandomRespawner">
+            <property name="Extends" value="rbtVehicleRespawnMaster"/>
+            <property name="CustomIcon" value="decoCarWheelFlat"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="DescriptionKey" value="rbtTractorRandomRespawnerDesc"/>
+            <property name="PlantGrowing.Next" value="rbtAllTractorsRandomHelper"/>
+            <property name="SortOrder1" value="R610"/>
+            <property name="SortOrder2" value="9610"/>
+        </block>
+
+	    <!-- *** EXCAVATORS -->
+        <block name="rbtExcavatorRandomRespawner">
+            <property name="Extends" value="rbtVehicleRespawnMaster"/>
+            <property name="CustomIcon" value="decoCarWheelFlat"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="DescriptionKey" value="rbtExcavatorRandomRespawnerDesc"/>
+            <property name="PlantGrowing.Next" value="rbtAllExcavatorsRandomHelper"/>
+            <property name="SortOrder1" value="R611"/>
+            <property name="SortOrder2" value="9611"/>
+        </block>
+
+	    <!-- *** BACKHOES -->
+        <block name="rbtBackhoeRandomRespawner">
+            <property name="Extends" value="rbtVehicleRespawnMaster"/>
+            <property name="CustomIcon" value="decoCarWheelFlat"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="DescriptionKey" value="rbtBackhoeRandomRespawnerDesc"/>
+            <property name="PlantGrowing.Next" value="rbtAllBackhoesRandomHelper"/>
+            <property name="SortOrder1" value="R612"/>
+            <property name="SortOrder2" value="9612"/>
+        </block>
+
+	    <!-- *** FORKLIFTS -->
+        <block name="rbtForkliftRandomRespawner">
+            <property name="Extends" value="rbtVehicleRespawnMaster"/>
+            <property name="CustomIcon" value="decoCarWheelFlat"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="DescriptionKey" value="rbtForkliftRandomRespawnerDesc"/>
+            <property name="PlantGrowing.Next" value="rbtAllForkLiftsRandomHelper"/>
+            <property name="SortOrder1" value="R613"/>
+            <property name="SortOrder2" value="9613"/>
+        </block>
+
+    </insertAfter>
+
+</blocks>

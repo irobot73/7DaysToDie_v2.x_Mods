@@ -1,0 +1,617 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<blocks>
+
+<include filename="./blocks_vehicles_custom.xml" />
+<include filename="./blocks_vehicles_helpers.xml" />
+<include filename="./blocks_vehicles_respawners.xml" />
+
+<!-- ************************
+
+     Here's where we 'hijack' the existing blocks to do our bidding.
+     Remove/comment out below to remove what's not wanted
+
+ ************************ -->
+
+<!-- Tweak the Vehicles as we'd like
+        - Insert the DowngradeBlock
+ -->
+
+	<!-- *** OLD_SEDAN_DAMAGE_00_COLORS -->
+	<!-- *** OLD_SEDAN_DAMAGE_01_COLORS -->
+	<!-- *** OLD_SEDAN_DAMAGE_02_COLORS -->
+    <append xpath="//block[@name='cntCar03SedanDamage2Master']">
+        <property name="DowngradeBlock" value="rbtVehicleRandomRespawner"/>
+        <property name="PassThroughDamage" value="false"/>
+    </append>
+
+    <!-- *** 3M_WIDE_OLD_SEDANS (uses existing HELPER -->
+    <!-- *** SEDANS (uses existing HELPER -->
+    <!-- *** BURNT_SEDAN (uses existing HELPER -->
+    <append xpath="//block[@name='cntSedan01White']">
+        <property name="DowngradeBlock" value="rbtVehicleRandomRespawner"/>
+    </append>
+    <set xpath="//block[@name='cntSedan01White']/property[@name='PassThroughDamage']/@value">false</set>
+
+	<!-- *** BURNT_SEDAN -->
+    <append xpath="//block[@name='burntSedan01']">
+        <property name="DowngradeBlock" value="rbtVehicleRandomRespawner"/>
+    </append>
+    <set xpath="//block[@name='burntSedan01']/property[@name='PassThroughDamage']/@value">false</set>
+
+	<!-- *** ALL_SEDAN -->
+    <append xpath="//block[(@name='cntSedan3Wide01White') or (@name='burntSedan3Wide01') or (@name='cntFrontCrumpledSedan01White')]">
+        <property name="DowngradeBlock" value="rbtAllSedanRandomSpawner"/>
+    </append>
+    <set xpath="//block[(@name='cntSedan3Wide01White') or (@name='burntSedan3Wide01') or (@name='cntFrontCrumpledSedan01White')]/property[@name='PassThroughDamage']/@value">false</set>
+
+    <!-- *** ALL_MINIVANS
+            - Didn't see much need to split it out, so made a combo-HELPER.  I kept the individual blocks if someone wants to use 'em.
+     -->
+	    <!-- *** MINIVANS
+        <append xpath="//block[@name='cntMinivan01White']">
+            <property name="DowngradeBlock" value="rbtMinivanRandomRespawner"/>
+        </append>
+        <set xpath="//block[@name='cntMinivan01White']/property[@name='PassThroughDamage']/@value">false</set>
+        -->
+	    <!-- *** 3_WIDE_MINIVANS
+        <append xpath="//block[@name='cntMinivan3Wide01White']">
+            <property name="DowngradeBlock" value="rbtMinivan3WideRandomRespawner"/>
+        </append>
+        <set xpath="//block[@name='cntMinivan3Wide01White']/property[@name='PassThroughDamage']/@value">false</set>
+        -->
+	<!-- *** ALL_MINIVANS -->
+    <append xpath="//block[(@name='cntMinivan01White') or (@name='cntMinivan3Wide01White')]">
+        <property name="DowngradeBlock" value="rbtAllMinivanRandomRespawner"/>
+    </append>
+    <set xpath="//block[(@name='cntMinivan01White') or (@name='cntMinivan3Wide01White')]/property[@name='PassThroughDamage']/@value">false</set>
+
+	<!-- *** SUVs (uses existing HELPER -->
+    <!-- *** ABANDONED_SUV -->
+	<!-- *** ABANDONED_SUV_DOORS (uses existing HELPER -->
+	<!-- *** 3_WIDE_SUVS -->
+    <!-- *** ABANDONED_3M_WIDE_SUV -->
+	<!-- *** ABANDONED_SUV_3M_WIDE_DOORS -->
+    <!-- ALL_SUVS -->
+    <append xpath="//block[(@name='cntSUV01White') or (@name='abandonedSUV01White') or (@name='abandonedSUV01DoorsWhite') or (@name='cntSUV3Wide01White') or (@name='abandonedSUV3Wide01White')or (@name='abandonedSUV3Wide01DoorsWhite')]">
+        <property name="DowngradeBlock" value="rbtAllSUVRandomRespawner"/>
+    </append>
+    <set xpath="//block[(@name='cntSUV01White') or (@name='abandonedSUV01White') or (@name='abandonedSUV01DoorsWhite') or (@name='cntSUV3Wide01White') or (@name='abandonedSUV3Wide01White')or (@name='abandonedSUV3Wide01DoorsWhite')]/property[@name='PassThroughDamage']/@value">false</set>
+
+	<!-- *** PICKUPTRUCKS -->
+	<!-- *** ABANDONED_PICKUP_TRUCK -->
+	<!-- *** ABANDONED_PICKUP_TRUCK_DOOR -->
+	<!-- *** 3_WIDE_PICKUPTRUCKS -->
+	<!-- *** ABANDONED_PICKUP_TRUCK_3M_WIDE -->
+	<!-- *** ABANDONED_PICKUP_TRUCK_3M_WIDE_DOOR -->
+	<!-- *** ALL_PICKUPTRUCKS -->
+    <append xpath="//block[(@name='cntPickupTruck01White') or (@name='abandonedPickupTruck01White') or (@name='abandonedPickupTruck01DoorWhite')]">
+        <property name="DowngradeBlock" value="rbtAllPickupTruckRandomRespawner"/>
+        <property name="PassThroughDamage" value="false"/>
+    </append>
+    <!-- *** -->
+    <append xpath="//block[(@name='abandonedPickupTruck3Wide01White') or (@name='abandonedPickupTruck3Wide01DoorWhite')]">
+        <property name="DowngradeBlock" value="rbtAllPickupTruckRandomRespawner"/>
+        <property name="PassThroughDamage" value="false"/>
+    </append>
+    <append xpath="//block[(@name='cntPickupTruck3Wide01White')]">
+        <property name="DowngradeBlock" value="rbtAllPickupTruckRandomRespawner"/>
+    </append>
+    <set xpath="//block[(@name='cntPickupTruck3Wide01White')]/property[@name='PassThroughDamage']/@value">false</set>
+
+	<!-- *** SEMI_TRUCK -->
+    <append xpath="//block[(@name='cntSemiTruck01White')]">
+        <property name="DowngradeBlock" value="rbtSemiTruckRandomRespawner"/>
+    </append>
+    <set xpath="//block[(@name='cntSemiTruck01White')]/property[@name='PassThroughDamage']/@value">false</set>
+
+	<!-- *** SEMI_TRUCK_MODULAR -->
+    <append xpath="//block[(@name='cntSemiTruck01ModularFrontWhite')]">
+        <property name="DowngradeBlock" value="rbtSemiTruckModularFrontRandomRespawner"/>
+    </append>
+
+	<!-- *** POLICE_CAR -->
+    <append xpath="//block[(@name='cntPoliceCar01AlarmUnlocked') or (@name='cntPoliceCar01PickedLockBonus')]">
+        <property name="DowngradeBlock" value="rbtPoliceCarRandomRespawner"/>
+    </append>
+    <set xpath="//block[(@name='cntPoliceCar01AlarmUnlocked') or (@name='cntPoliceCar01PickedLockBonus')]/property[@name='PassThroughDamage']/@value">false</set>
+
+    <!-- *** FIRE_TRUCK -->
+    <append xpath="//block[@name='cntFireTruck01White']">
+        <property name="DowngradeBlock" value="rbtFireTruckRandomRespawner"/>
+        <property name="PassThroughDamage" value="false"/>
+    </append>
+
+	<!-- *** CRUSHED_CARS_01 -->
+    <append xpath="//block[(@name='crushedCars01White')]">
+        <property name="DowngradeBlock" value="rbtCrushedCar01RandomRespawner"/>
+        <property name="PassThroughDamage" value="false"/>
+    </append>
+
+	<!-- *** CRUSHED_CARS_02 -->
+    <append xpath="//block[(@name='crushedCars02White')]">
+        <property name="DowngradeBlock" value="rbtCrushedCar02RandomRespawner"/>
+        <property name="PassThroughDamage" value="false"/>
+    </append>
+
+	<!-- *** BUSES -->
+    <append xpath="//block[(@name='cntBusSchool')]">
+        <property name="DowngradeBlock" value="rbtBusRandomRespawner"/>
+        <property name="PassThroughDamage" value="false"/>
+    </append>
+
+	<!-- *** SERVICE_VEHICLES
+            - cntServiceTruckMoPower: (SEE:  'GENERIC_SERVICE_TRUCK')
+            - cntServiceTruckWorkingStiffTools: (SEE:  'GENERIC_SERVICE_TRUCK')
+        -->
+    <append xpath="//block[@name='cntAmbulanceTruck01']">
+        <property name="DowngradeBlock" value="rbtAmbulanceRespawner"/>
+        <property name="PassThroughDamage" value="false"/>
+    </append>
+
+	<!-- *** GENERIC_SERVICE_TRUCK -->
+    <append xpath="//block[(@name='cntServiceTruckWhite') or (@name='cntServiceTruckMoPower') or (@name='cntServiceTruckWorkingStiffTools')]">
+        <property name="DowngradeBlock" value="rbtGenericSvcTruckRandomRespawner"/>
+        <property name="PassThroughDamage" value="false"/>
+    </append>
+
+	<!-- *** BOX_TRUCK -->
+    <append xpath="//block[@name='cntBoxTruckWhite']">
+        <property name="DowngradeBlock" value="rbtBoxTruckRandomRespawner"/>
+        <property name="PassThroughDamage" value="false"/>
+    </append>
+
+	<!-- *** ARMY_TRUCKS -->
+    <append xpath="//block[(@name='cntArmyTruckOpen') or (@name='cntArmyTruckClosed')]">
+        <property name="DowngradeBlock" value="rbtArmyTruckRandomRespawner"/>
+        <property name="PassThroughDamage" value="false"/>
+    </append>
+
+	<!-- *** FARM_TRUCKS -->
+    <append xpath="//block[(@name='cntFarmTruckOpen') or (@name='cntFarmTruckClosed')]">
+        <property name="DowngradeBlock" value="rbtFarmTruckRandomRespawner"/>
+        <property name="PassThroughDamage" value="false"/>
+    </append>
+
+	<!-- *** TRACTORS -->
+    <append xpath="//block[(@name='tractorWhite') or (@name='tractorRed') or (@name='tractorGreen') or (@name='tractorBlue')]">
+        <property name="DowngradeBlock" value="rbtTractorRandomRespawner"/>
+        <property name="PassThroughDamage" value="false"/>
+    </append>
+
+	<!-- *** EXCAVATORS -->
+    <append xpath="//block[(@name='excavatorWhite') or (@name='excavatorClawWhite')]">
+        <property name="DowngradeBlock" value="rbtExcavatorRandomRespawner"/>
+        <property name="PassThroughDamage" value="false"/>
+    </append>
+
+	<!-- *** BACKHOES -->
+    <append xpath="//block[@name='backhoeWhite']">
+        <property name="DowngradeBlock" value="rbtBackhoeRandomRespawner"/>
+        <property name="PassThroughDamage" value="false"/>
+    </append>
+
+	<!-- *** FORKLIFTS -->
+    <append xpath="//block[(@name='forkliftWhite') or (@name='forklift2White')]">
+        <property name="DowngradeBlock" value="rbtForkliftRandomRespawner"/>
+    </append>
+    <set xpath="//block[(@name='forkliftWhite') or (@name='forklift2White')]/property[@name='PassThroughDamage']/@value">false</set>
+
+</blocks>
+
+<!-- *** BASE GAME:
+
+*** VEHICLES vs. BASE ENTITY ***
+
+     *** OLD_SEDAN_DAMAGE_00_COLORS         <block name="carsRandomHelper">
+                                            <block name="carWrecksRandomHelper">
+    cntCar03SedanDamage0v01                 cntCar03SedanDamage0Master
+    cntCar03SedanDamage0v02
+    cntCar03SedanDamage0v03
+    cntCar03SedanDamage0v04
+    cntCar03SedanDamage0v05
+    cntCar03SedanDamage0v06
+    cntCar03SedanDamage0v07
+    cntCar03SedanDamage0v08
+    *** OLD_SEDAN_DAMAGE_01_COLORS
+    cntCar03SedanDamage1v01                 cntCar03SedanDamage1Master
+    cntCar03SedanDamage1v02
+    cntCar03SedanDamage1v03
+    cntCar03SedanDamage1v04
+    cntCar03SedanDamage1v05
+    cntCar03SedanDamage1v06
+    cntCar03SedanDamage1v07
+    cntCar03SedanDamage1v08
+    *** OLD_SEDAN_DAMAGE_02_COLORS
+    cntCar03SedanDamage2v01                 cntCar03SedanDamage2Master
+    cntCar03SedanDamage2v02
+    cntCar03SedanDamage2v03 
+    cntCar03SedanDamage2v04
+    cntCar03SedanDamage2v05
+    cntCar03SedanDamage2v06
+    cntCar03SedanDamage2v07
+    cntCar03SedanDamage2v08
+    *** 3M_WIDE_OLD_SEDANS                  <block name="cars3WideRandomHelper">
+    cntCar03Sedan3WideDamage0v01            cntCar03SedanDamage0Master
+    cntCar03Sedan3WideDamage0v01
+    cntCar03Sedan3WideDamage0v03
+    cntCar03Sedan3WideDamage0v04
+    cntCar03Sedan3WideDamage0v05
+    cntCar03Sedan3WideDamage0v06
+    cntCar03Sedan3WideDamage1v01            cntCar03SedanDamage1Master
+    cntCar03Sedan3WideDamage1v02
+    cntCar03Sedan3WideDamage1v03
+    cntCar03Sedan3WideDamage1v04
+    cntCar03Sedan3WideDamage1v05
+    cntCar03Sedan3WideDamage1v06
+    cntCar03Sedan3WideDamage1v01            cntCar03SedanDamage2Master
+    cntCar03Sedan3WideDamage1v02
+    cntCar03Sedan3WideDamage1v03
+    cntCar03Sedan3WideDamage1v04
+    cntCar03Sedan3WideDamage1v05
+    cntCar03Sedan3WideDamage1v06
+    *** SEDANS                              <block name="cntSedan01RandomHelper">
+    cntSedan01White                         cntSedan01White
+    cntSedan01Brown
+    cntSedan01Red
+    cntSedan01Orange
+    cntSedan01Yellow
+    cntSedan01Green
+    cntSedan01Blue
+    cntSedan01Purple
+    cntSedan01Grey
+    cntSedan01Black
+    cntSedan01Pink
+    *** BURNT_SEDAN
+    burntSedan01                            burntSedan01
+                                            <block name="abandonedSUV01RandomHelper">
+    abandonedSUV01White                     burntSedan01
+    abandonedSUV01Brown                     abandonedSUV01White
+    abandonedSUV01Red
+    abandonedSUV01Orange
+    abandonedSUV01Yellow
+    abandonedSUV01Green
+    abandonedSUV01Blue
+    abandonedSUV01Purple
+    abandonedSUV01Grey
+    abandonedSUV01Pink
+    *** ABANDONED_SUV_DOORS                 <block name="abandonedSUV01DoorsRandomHelper">
+    abandonedSUV01DoorsWhite                abandonedSUV01DoorsWhite
+    abandonedSUV01DoorsBrown
+    abandonedSUV01DoorsRed
+    abandonedSUV01DoorsOrange
+    abandonedSUV01DoorsYellow
+    abandonedSUV01DoorsGreen
+    abandonedSUV01DoorsBlue
+    abandonedSUV01DoorsPurple
+    abandonedSUV01DoorsGrey
+    abandonedSUV01DoorsPink
+    *** ABANDONED_PICKUP_TRUCK              <block name="abandonedPickupTruck01RandomHelper">
+    abandonedPickupTruck01White             abandonedPickupTruck01White
+    abandonedPickupTruck01Brown
+    abandonedPickupTruck01Red
+    abandonedPickupTruck01Orange
+    abandonedPickupTruck01Yellow
+    abandonedPickupTruck01Green
+    abandonedPickupTruck01Blue
+    abandonedPickupTruck01Purple
+    abandonedPickupTruck01Grey
+    abandonedPickupTruck01Pink
+    *** ABANDONED_PICKUP_TRUCK_DOOR         <block name="abandonedPickupTruck01DoorRandomHelper">
+    abandonedPickupTruck01DoorWhite         burntSedan01
+    abandonedPickupTruck01DoorBrown
+    abandonedPickupTruck01DoorRed
+    abandonedPickupTruck01DoorOrange
+    abandonedPickupTruck01DoorYellow
+    abandonedPickupTruck01DoorGreen
+    abandonedPickupTruck01DoorBlue
+    abandonedPickupTruck01DoorPurple
+    abandonedPickupTruck01DoorGrey
+    abandonedPickupTruck01DoorPink
+    *** 3M_WIDE_SEDANS                      <block name="cntSedan3Wide01RandomHelper">
+    cntSedan3Wide01White                    cntSedan3Wide01White
+    cntSedan3Wide01Brown
+    cntSedan3Wide01Red
+    cntSedan3Wide01Orange
+    cntSedan3Wide01Yellow
+    cntSedan3Wide01Green
+    cntSedan3Wide01Blue
+    cntSedan3Wide01Purple
+    cntSedan3Wide01Grey
+    cntSedan3Wide01Black
+    cntSedan3Wide01Pink
+    *** 3M_WIDE_BURNT_SEDAN
+    burntSedan3Wide01                       burntSedan3Wide01
+                                            <block name="abandonedSUV3Wide01RandomHelper">
+    abandonedSUV3Wide01White                burntSedan3Wide01
+    abandonedSUV3Wide01Brown                abandonedSUV3Wide01White
+    abandonedSUV3Wide01Red
+    abandonedSUV3Wide01Orange
+    abandonedSUV3Wide01Yellow
+    abandonedSUV3Wide01Green
+    abandonedSUV3Wide01Blue
+    abandonedSUV3Wide01Purple
+    abandonedSUV3Wide01Grey
+    abandonedSUV3Wide01Pink
+    *** ABANDONED_SUV_3M_WIDE_DOORS         <block name="abandonedSUV3Wide01DoorsRandomHelper">
+    abandonedSUV3Wide01DoorsWhite           abandonedSUV3Wide01DoorsWhite
+    abandonedSUV3Wide01DoorsBrown
+    abandonedSUV3Wide01DoorsRed
+    abandonedSUV3Wide01DoorsOrange
+    abandonedSUV3Wide01DoorsYellow
+    abandonedSUV3Wide01DoorsGreen
+    abandonedSUV3Wide01DoorsBlue
+    abandonedSUV3Wide01DoorsPurple
+    abandonedSUV3Wide01DoorsGrey
+    abandonedSUV3Wide01DoorsPink
+    *** ABANDONED_PICKUP_TRUCK_3M_WIDE      <block name="abandonedPickupTruck3Wide01RandomHelper">
+    abandonedPickupTruck3Wide01White        abandonedPickupTruck3Wide01White
+    abandonedPickupTruck3Wide01Brown
+    abandonedPickupTruck3Wide01Red
+    abandonedPickupTruck3Wide01Orange
+    abandonedPickupTruck3Wide01Yellow
+    abandonedPickupTruck3Wide01Green
+    abandonedPickupTruck3Wide01Blue
+    abandonedPickupTruck3Wide01Purple
+    abandonedPickupTruck3Wide01Grey
+    abandonedPickupTruck3Wide01Pink
+    *** ABANDONED_PICKUP_TRUCK_3M_WIDE_DOOR <block name="abandonedPickupTruck3Wide01DoorRandomHelper">
+    abandonedPickupTruck3Wide01DoorWhite    abandonedPickupTruck3Wide01DoorWhite
+    abandonedPickupTruck3Wide01DoorBrown
+    abandonedPickupTruck3Wide01DoorRed
+    abandonedPickupTruck3Wide01DoorOrange
+    abandonedPickupTruck3Wide01DoorYellow
+    abandonedPickupTruck3Wide01DoorGreen
+    abandonedPickupTruck3Wide01DoorBlue
+    abandonedPickupTruck3Wide01DoorPurple
+    abandonedPickupTruck3Wide01DoorGrey
+    abandonedPickupTruck3Wide01DoorPink
+    *** FRONT_CRUMPLED_SEDAN                <block name="cntFrontCrumpledSedan01RandomHelper">
+    cntFrontCrumpledSedan01White            cntFrontCrumpledSedan01White
+    cntFrontCrumpledSedan01Brown
+    cntFrontCrumpledSedan01Red
+    cntFrontCrumpledSedan01Orange
+    cntFrontCrumpledSedan01Yellow
+    cntFrontCrumpledSedan01Green
+    cntFrontCrumpledSedan01Blue
+    cntFrontCrumpledSedan01Purple
+    cntFrontCrumpledSedan01Grey
+    cntFrontCrumpledSedan01Black
+    cntFrontCrumpledSedan01Pink
+    *** MINIVANS                            <block name="cntMinivan01RandomHelper">
+    cntMinivan01White                       cntMinivan01White
+    cntMinivan01Brown
+    cntMinivan01Red
+    cntMinivan01Orange
+    cntMinivan01Yellow
+    cntMinivan01Green
+    cntMinivan01Blue
+    cntMinivan01Purple
+    cntMinivan01Grey
+    cntMinivan01Black
+    cntMinivan01Pink
+    *** 3_WIDE_MINIVANS                 <block name="cntMinivan3Wide01RandomHelper">
+    cntMinivan3Wide01White              cntMinivan3Wide01White
+    cntMinivan3Wide01Brown
+    cntMinivan3Wide01Red
+    cntMinivan3Wide01Orange
+    cntMinivan3Wide01Yellow
+    cntMinivan3Wide01Green
+    cntMinivan3Wide01Blue
+    cntMinivan3Wide01Purple
+    cntMinivan3Wide01Grey
+    cntMinivan3Wide01Black
+    cntMinivan3Wide01Pink
+    *** SUVs                            <block name="cntSUV01RandomHelper">
+    cntSUV01White                       cntSUV01White
+    cntSUV01Brown
+    cntSUV01Red
+    cntSUV01Orange
+    cntSUV01Yellow
+    cntSUV01Green
+    cntSUV01Blue
+    cntSUV01Purple
+    cntSUV01Grey
+    cntSUV01Pink
+    *** 3_WIDE_SUVS                     <block name="cntSUV3Wide01RandomHelper">
+    cntSUV3Wide01White                  cntSUV3Wide01White
+    cntSUV3Wide01Brown
+    cntSUV3Wide01Red
+    cntSUV3Wide01Orange
+    cntSUV3Wide01Yellow
+    cntSUV3Wide01Green
+    cntSUV3Wide01Blue
+    cntSUV3Wide01Purple
+    cntSUV3Wide01Grey
+    cntSUV3Wide01Pink
+    *** PICKUPTRUCKS                    <block name="cntPickupTruck01RandomHelper">
+    cntPickupTruck01White               cntPickupTruck01White
+    cntPickupTruck01Brown
+    cntPickupTruck01Red
+    cntPickupTruck01Orange
+    cntPickupTruck01Yellow
+    cntPickupTruck01Green
+    cntPickupTruck01Blue
+    cntPickupTruck01Purple
+    cntPickupTruck01Grey
+    cntPickupTruck01Pink
+    *** 3_WIDE_PICKUPTRUCKS            <block name="cntPickupTruck3Wide01RandomHelper">
+    cntPickupTruck3Wide01White          cntPickupTruck3Wide01White
+    cntPickupTruck3Wide01Brown
+    cntPickupTruck3Wide01Red
+    cntPickupTruck3Wide01Orange
+    cntPickupTruck3Wide01Yellow
+    cntPickupTruck3Wide01Green
+    cntPickupTruck3Wide01Blue
+    cntPickupTruck3Wide01Purple
+    cntPickupTruck3Wide01Grey
+    cntPickupTruck3Wide01Pink
+    *** SEMI_TRUCK                      <block name="cntSemiTruck01RandomHelper">
+    cntSemiTruck01White                 cntSemiTruck01White
+    cntSemiTruck01Brown
+    cntSemiTruck01Red
+    cntSemiTruck01Orange
+    cntSemiTruck01Yellow
+    cntSemiTruck01Green
+    cntSemiTruck01Blue
+    cntSemiTruck01Purple
+    cntSemiTruck01Pink
+    *** SEMI_TRUCK_MODULAR              <block name="cntSemiTruck01ModularFrontRandomHelper">
+    cntSemiTruck01ModularFrontWhite     cntSemiTruck01ModularFrontWhite
+    cntSemiTruck01ModularFrontBrown"
+    cntSemiTruck01ModularFrontRed
+    cntSemiTruck01ModularFrontOrange
+    cntSemiTruck01ModularFrontYellow
+    cntSemiTruck01ModularFrontGreen
+    cntSemiTruck01ModularFrontBlue
+    cntSemiTruck01ModularFrontPurple
+    cntSemiTruck01ModularFrontPink
+    cntSemiTruck01ModularRearEndOnly    cntSemiTruck01White
+    cntSemiTruck01ModularRearEndFlatbedStraight     cntSemiTruck01ModularRearEndOnly
+    *** POLICE_CAR                      
+    cntPoliceCar01                      cntPoliceCar01
+    cntPoliceCar01PickedLockBonus       cntPoliceCar01PickedLockBonus   (SUCCESSFULLY_LOCK_PICKED_POLICE_CAR)
+    cntPoliceCar01AlarmLocked           cntPoliceCar01AlarmLocked       (SMASHED_POLICE_CAR_WITH_ALARM_THAT_SPAWNS_ZOMBIES)
+    cntPoliceCar01AlarmUnlocked         cntPoliceCar01AlarmUnlocked     (SMASHED_POLICE_CAR_DOWNGRADED_TO_UNLOCKED)
+    *** FIRE_TRUCK                      <block name="cntFireTruck01RandomHelper">
+    cntFireTruck01Red                   cntFireTruck01White
+    cntFireTruck01Orange
+    cntFireTruck01Yellow
+    *** CRUSHED_CARS_01                 
+    crushedCars01White                  crushedCars01White
+                                        <block name="crushedCars01RandomHelper">
+    crushedCars01Brown
+    crushedCars01Red
+    crushedCars01Orange
+    crushedCars01Yellow
+    crushedCars01Green
+    crushedCars01Blue
+    crushedCars01Purple
+    crushedCars01Grey
+    crushedCars01Black
+    crushedCars01Pink
+    *** CRUSHED_CARS_02                 
+    crushedCars02White                  crushedCars01White
+                                        <block name="crushedCars02RandomHelper">
+    crushedCars02Brown                  crushedCars02White
+    crushedCars02Red
+    crushedCars02Orange
+    crushedCars02Yellow
+    crushedCars02Green
+    crushedCars02Blue
+    crushedCars02Purple
+    crushedCars02Grey
+    crushedCars02Black
+    crushedCars02Pink
+    *** BUSES                           
+    cntBusSchool                        cntBusSchool
+    cntBusSchoolShort                   cntBusSchool
+    cntBusShuttle                       cntBusSchool
+    cntBusCity                          cntBusSchool
+    *** SERVICE_VEHICLES                
+    cntAmbulanceTruck01                 cntBusSchool
+    cntServiceTruckMoPower              cntBusSchool
+    cntServiceTruckWorkingStiffTools    cntBusSchool
+    *** GENERIC_SERVICE_TRUCK
+    cntServiceTruckWhite                cntBusSchool
+                                        <block name="cntServiceTruckRandomLootHelper">
+    cntServiceTruckBrown                cntServiceTruckWhite
+    cntServiceTruckRed
+    cntServiceTruckOrange
+    cntServiceTruckYellow
+    cntServiceTruckGreen
+    cntServiceTruckBlue
+    cntServiceTruckPurple
+    cntServiceTruckGrey
+    cntServiceTruckBlack
+    cntServiceTruckPink
+    *** BOX_TRUCK                       
+    cntBoxTruckWhite                    cntBoxTruckWhite
+                                        <block name="cntBoxTruckRandomLootHelper">
+    cntBoxTruckBrown
+    cntBoxTruckRed
+    cntBoxTruckOrange
+    cntBoxTruckYellow
+    cntBoxTruckGreen
+    cntBoxTruckBlue
+    cntBoxTruckPurple
+    cntBoxTruckGrey
+    cntBoxTruckBlack
+    cntBoxTruckPink
+    *** ARMY_TRUCKS
+    cntArmyTruckOpen                    cntArmyTruckOpen
+                                        <block name="cntArmyTruckRandomLootHelper">
+                                        <block name="cntFarmTruckRandomLootHelper">
+    cntArmyTruckClosed                  cntBusSchool
+    cntFarmTruckOpen                    cntArmyTruckOpen
+    cntFarmTruckClosed                  cntArmyTruckClosed
+    *** TRACTORS                        
+    tractorWhite                        cntBusSchool
+    tractorRed                          cntBusSchool
+    tractorGreen                        cntBusSchool
+    tractorBlue                         cntBusSchool
+    *** EXCAVATORS
+    excavatorWhite                      cntBusSchool
+    excavatorRed                        excavatorWhite
+    excavatorOrange
+    excavatorYellow
+    excavatorGreen
+    excavatorBlue
+    excavatorGrey
+    excavatorClawWhite                  cntBusSchool
+    excavatorClawRed                    excavatorClawWhite
+    excavatorClawOrange
+    excavatorClawYellow
+    excavatorClawGreen
+    excavatorClawBlue
+    excavatorClawGrey
+    *** BACKHOES
+    backhoeWhite                        cntBusSchool
+    backhoeRed                          backhoeWhite
+    backhoeOrange
+    backhoeYellow
+    backhoeGreen
+    backhoeBlue
+    backhoeGrey
+    *** FORKLIFTS
+    forkliftWhite                       forkliftWhite
+    forkliftRed         
+    forkliftOrange
+    forkliftYellow
+    forkliftGreen
+    forkliftBlue
+    *** FORKLIFT_WITH_FORKS_UP
+    forklift2White                      forklift2White
+    forklift2Red
+    forklift2Orange
+    forklift2Yellow
+    forklift2Green
+    forklift2Blue
+    *** VEHICLE_VS_AIR_HELPERS          <block name="cntCar03SedanDamage0RandomHelper">
+                                        <block name="cntCar03SedanDamage1RandomHelper">
+                                        <block name="cntCar03SedanDamage2RandomHelper">
+    *** FRONT_CRUMPLED_SEDAN            <block name="cntFrontCrumpledSedan01AirRandomHelper">
+                                        <block name="cntSedan01AirRandomHelper">
+                                        <block name="cntMinivan01AirRandomHelper">
+                                        <block name="cntSUV01AirRandomHelper">
+                                        <block name="cntPickupTruck01AirRandomHelper">
+                                        <block name="cntSemiTruck01AirRandomHelper">
+                                        <block name="cntPoliceCar01AirRandomHelper">
+                                        <block name="cntFireTruck01AirRandomHelper">
+                                        <block name="cntBusSchoolShortRandomHelper">
+                                        <block name="cntBusSchoolRandomHelper">
+                                        <block name="cntBusCityRandomHelper">
+                                        <block name="cntAmbulanceTruck01RandomLootHelper">
+                                        <block name="cntServiceTruckMoPowerRandomLootHelper">
+                                        <block name="cntServiceTruckWorkingStiffToolsRandomLootHelper">
+    *** FLATBED_TRAILER
+    semiFlatbedBack                     semiFlatbedBack
+    semiFlatbedBackTraderOnly
+    semiFlatbedMiddleWheels             semiFlatbedMiddleWheels
+    semiFlatbedMiddleWheelsTraderOnly
+    semiFlatbedMiddle                   semiFlatbedMiddle
+    semiFlatbedMiddle45                 semiFlatbedMiddle45
+    semiFlatbedMiddleTraderOnly         semiFlatbedMiddleWheels
+    semiFlatbedFront                    semiFlatbedFront
+    semiFlatbedFrontTraderOnly
+-->

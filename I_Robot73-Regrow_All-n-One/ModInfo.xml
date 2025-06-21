@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+	<Name value="I_Robot73_Regrow_All-n-One"/>
+	<DisplayName value="Regrow EVERYTHING (Robot Edition)" />
+	<Description value="Regrows (spawns) trees, cacti, nests, trees (and more?), after they are harvested."/>
+	<Author value="I_Robot73"/>
+	<Version value="1.0.7"/>
+	<Website value="https://discord.gg/DEU5wmMvSn/"/>
+</xml>
+
+<!-- https://github.com/irobot73/7DaysToDie_v1.x_Mods -->
+
+<!-- https://7daystodie.fandom.com/wiki/XPath_Explained -->

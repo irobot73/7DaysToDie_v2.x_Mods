@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<blocks>
+
+    <!-- Trees  -->
+    <insertAfter xpath="/blocks/block[@name='treeTraderRandomHelper']">
+
+        <!-- Seed Bag, instead of specific seeds (user selects ala color for bedroll) -->
+        <block name="rbtTreeSeedVariantHelper">
+            <property name="Extends" value="treePlantedOak1m"/>
+            <property name="CreativeMode" value="Player"/>
+            <property name="CustomIcon" value="treePlantedOak1m"/>
+            <property name="CustomIconTint" value="9caf88"/>
+            <property name="ItemTypeIcon" value="all_blocks"/>
+            <property name="DescriptionKey" value="rbtTreeSeedVariantHelperDesc"/>
+            <property name="SelectAlternates" value="true"/>
+            <property name="PlaceAltBlockValue" value="treePlantedOak1m,treePlantedMountainPine1m,treePlantedWinterPine1m"/>
+            <property name="SortOrder1" value="R120"/>
+            <property name="Group" value="Resources"/>
+            <property name="FilterTags" value="MC_outdoor,SC_trees,MC_helpers,MC_playerBlocks,SC_playerHelpers"/>
+        </block>
+
+        <!-- Helper that will pick a random, biome appropriate tree for a respawn [REF:  'BLOCKPLACEHOLDERS.XML'] -->
+        <block name="rbtAllTreesRandomHelper">
+            <property name="Extends" value="treeOakSml01"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="PlantGrowing.FertileLevel" value="0"/>
+            <property name="DescriptionKey" value="rbtAllTreesRandomHelperDesc"/>
+            <property name="CustomIcon" value="treeOakSml01"/>
+            <property name="CustomIconTint" value="9caf88"/>
+            <property name="ItemTypeIcon" value="other"/>
+            <property name="MultiBlockDim" value="1,19,1"/>
+            <property name="SortOrder1" value="R220"/>
+            <property name="FilterTags" value="MC_outdoor,SC_trees"/>
+        </block>
+
+    </insertAfter>
+
+    <!-- Cacti -->
+    <insertAfter xpath="/blocks/block[@name='treeCactus06']">
+
+        <!-- Helper that will pick a random cacti for a respawn [REF:  'BLOCKPLACEHOLDERS.XML'] -->
+        <block name="rbtAllCactiRandomHelper">
+            <property name="Extends" value="treeCactus01"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="PlantGrowing.FertileLevel" value="0"/>
+            <property name="DescriptionKey" value="rbtAllCactiRandomHelperDesc"/>
+            <property name="CustomIcon" value="treeCactus03"/>
+            <property name="CustomIconTint" value="9caf88"/>
+            <property name="ItemTypeIcon" value="other"/>
+            <property name="MultiBlockDim" value="1,5,1"/>
+            <property name="SortOrder1" value="R221"/>
+            <property name="FilterTags" value="MC_outdoor,SC_shrubbery"/>
+        </block>
+
+    </insertAfter>
+
+</blocks>

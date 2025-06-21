@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<blocks>
+
+<include filename="./blocks_flora_custom.xml" />
+<include filename="./blocks_flora_helpers.xml" />
+<include filename="./blocks_flora_respawners.xml" />
+
+<!-- ************************
+
+     Here's where we 'hijack' the existing blocks to do our bidding.
+     Remove/comment out below to remove what's not wanted
+
+ ************************ -->
+
+<!-- Tweak the trees as we'd like
+        - Insert the DowngradeBlock
+        - 'FallOver' is required.  Else, the animation will stop the stump downgrade from happending
+        - Ignoring (too small to have trunks like the stump):
+            treePlantedOak1m
+            treePlantedMountainPine1m
+            treePlantedWinterPine1m
+ -->
+
+    <!-- Tree(s) that normally wouldn't give seeds -->
+    <append xpath="//block[starts-with(@name, 'treeDeadTree0')]">
+        <property name="DowngradeBlock" value="rbtTreeStumpRandomRespawner"/>
+        <property name="PassThroughDamage" value="false"/>
+        <property name="FallOver" value="false"/>
+    </append>
+
+    <append xpath="//block[@name='treePlainsTree2']">
+        <property name="DowngradeBlock" value="rbtTreeStumpRandomRespawner"/>
+        <property name="PassThroughDamage" value="false"/>
+        <property name="FallOver" value="false"/>
+    </append>
+
+    <append xpath="//block[starts-with(@name, 'treeBurntMaple0')]">
+        <property name="DowngradeBlock" value="rbtTreeStumpBurntRandomRespawner"/>
+        <property name="PassThroughDamage" value="false"/>
+        <property name="FallOver" value="false"/>
+    </append>
+
+    <!-- Existing, seed-giving tree(s) -->
+    <!-- OAK -->
+    <remove xpath="//block[starts-with(@name, 'treeOakMed0') or @name='treeOakLrg01']/drop[@event='Destroy' and starts-with(@name, 'treePlanted')]"/>
+    <append xpath="//block[starts-with(@name, 'treeOakMed0') or @name='treeOakLrg01']">
+        <property name="DowngradeBlock" value="rbtTreeStumpRandomRespawner"/>
+        <property name="PassThroughDamage" value="false"/>
+        <property name="FallOver" value="false"/>
+    </append>
+
+    <!-- Saplings (treePlantedOak1m) shouldn't give seeds back' -->
+    <remove xpath="//block[starts-with(@name, 'treePlantedOak')]/drop[@event='Destroy' and starts-with(@name, 'treePlanted')]"/>
+    <append xpath="//block[starts-with(@name, 'treePlantedOak') and not (@name='treePlantedOak1m')]">
+        <property name="DowngradeBlock" value="rbtTreeStumpRandomRespawner"/>
+        <property name="PassThroughDamage" value="false"/>
+        <property name="FallOver" value="false"/>
+    </append>
+
+    <!-- MOUNTAIN_PINE -->
+    <remove xpath="//block[starts-with(@name, 'treeMountainPine') or @name='treeFirLrg01']/drop[@event='Destroy' and starts-with(@name, 'treePlanted')]"/>
+    <append xpath="//block[starts-with(@name, 'treeMountainPine') or @name='treeFirLrg01']">
+        <property name="DowngradeBlock" value="rbtTreeStumpRandomRespawner"/>
+        <property name="PassThroughDamage" value="false"/>
+        <property name="FallOver" value="false"/>
+    </append>
+
+    <remove xpath="//block[starts-with(@name, 'treePineBurnt')]/drop[@event='Destroy' and starts-with(@name, 'treePlanted')]"/>
+    <append xpath="//block[starts-with(@name, 'treePineBurnt')]">
+        <property name="DowngradeBlock" value="rbtTreeStumpBurntRandomRespawner"/>
+        <property name="PassThroughDamage" value="false"/>
+        <property name="FallOver" value="false"/>
+    </append>
+
+    <!-- Saplings (treePlantedMountainPine1m) shouldn't give seeds back' -->
+    <remove xpath="//block[starts-with(@name, 'treePlantedMountainPine')]/drop[@event='Destroy' and starts-with(@name, 'treePlanted')]"/>
+    <append xpath="//block[starts-with(@name, 'treePlantedMountainPine') and not (@name='treePlantedMountainPine1m')]">
+        <property name="DowngradeBlock" value="rbtTreeStumpRandomRespawner"/>
+        <property name="PassThroughDamage" value="false"/>
+        <property name="FallOver" value="false"/>
+    </append>
+
+    <!-- WINTER -->
+    <remove xpath="//block[starts-with(@name, 'treeWinterPine') or (@name='treeWinterEverGreen')]/drop[@event='Destroy' and starts-with(@name, 'treePlanted')]"/>
+    <append xpath="//block[starts-with(@name, 'treeWinterPine') or (@name='treeWinterEverGreen')]">
+        <property name="DowngradeBlock" value="rbtTreeStumpWinterRandomRespawner"/>
+        <property name="PassThroughDamage" value="false"/>
+        <property name="FallOver" value="false"/>
+    </append>
+
+    <!-- Saplings (treePlantedWinterPine1m) shouldn't give seeds back' -->
+    <remove xpath="//block[starts-with(@name, 'treePlantedWinterPine') and not (@name='treePlantedWinterPine6m')]/drop[@event='Destroy' and starts-with(@name, 'treePlanted')]"/>
+    <append xpath="//block[starts-with(@name, 'treePlantedWinterPine') and not (@name='treePlantedWinterPine1m') and not (@name='treePlantedWinterPine6m')]">
+        <property name="DowngradeBlock" value="rbtTreeStumpWinterRandomRespawner"/>
+        <property name="PassThroughDamage" value="false"/>
+        <property name="FallOver" value="false"/>
+    </append>
+
+<!-- Tweak the cacti as we'd like
+        - Insert the DowngradeBlock
+ -->
+    <append xpath="//block[@name='treeCactus01']">
+        <property name="DowngradeBlock" value="rbtCactiRandomRespawner"/>
+        <property name="PassThroughDamage" value="false"/>
+    </append>
+
+<!-- Tweak the Chrysanthemum as we'd like
+        - Insert the DowngradeBlock
+ -->
+    <append xpath="//block[@name='plantedChrysanthemum3Harvest']">
+        <property name="DowngradeBlock" value="rbtChrysanthemumRespawner"/>
+        <property name="PassThroughDamage" value="false"/>
+    </append>
+
+<!-- Tweak the Cotton as we'd like
+        - Insert the DowngradeBlock
+ -->
+    <append xpath="//block[@name='plantedCotton3Harvest']">
+        <property name="DowngradeBlock" value="rbtCottonRespawner"/>
+        <property name="PassThroughDamage" value="false"/>
+    </append>
+
+<!-- Tweak the Goldenrod as we'd like
+        - Insert the DowngradeBlock
+ -->
+    <append xpath="//block[@name='plantedGoldenrod3Harvest']">
+        <property name="DowngradeBlock" value="rbtGoldenrodRespawner"/>
+        <property name="PassThroughDamage" value="false"/>
+    </append>
+
+<!-- Tweak the treeDeadPineLeaf as we'd like
+        - Insert the DowngradeBlock
+ -->
+    <append xpath="//block[@name='treeDeadPineLeaf']">
+        <property name="DowngradeBlock" value="rbtTreeDeadPineLeafRespawner"/>
+        <property name="PassThroughDamage" value="false"/>
+    </append>
+
+<!-- Tweak the plantShrub as we'd like
+        - Insert the DowngradeBlock
+ -->
+    <append xpath="//block[@name='plantShrub']">
+        <property name="DowngradeBlock" value="rbtPlantShrubRespawner"/>
+        <property name="PassThroughDamage" value="false"/>
+    </append>
+
+</blocks>
+
+<!-- *** BASE GAME:
+
+SHRUBS
+
+    treePlainsTree - wirery shrub-like'
+    treeDeadPineLeaf
+    treeSnowyDeadBush
+
+    treeAzalea - actual shrubs
+    plantShrub
+    plantShrubSnow
+    plantShrubDead
+    plantHedge
+    plantHedgeSnow
+    plantHedgeDead
+
+TREES
+
+    treeGrassMaster
+        treeSnowyGrassDiagonal
+        treeBrownGrassDiagonal
+        treeTallGrassDiagonal
+        treeShortGrass
+        treeDesertShrub
+        treeForestGrassDiagonal
+        treeGreenBrownGrassDiagonal
+    treeMaster
+        treeMasterGrowing
+            treePlantedOak1m
+            treePlantedOak08m
+            treePlantedOak16m
+            treePlantedOak27m
+                treeTraderRandomHelper
+            treePlantedMountainPine1m
+                treePlantedWinterPine1m
+            treePlantedMountainPine12m
+            treePlantedMountainPine19m
+            treePlantedMountainPine27m
+            treePlantedWinterPine6m
+            treePlantedWinterPine13m
+            treePlantedWinterPine19m
+        treeDeadTree01                      - single slender trunk, few branches, pretty straight up
+        treeDeadTree02                      - single THIN trunk, lots of branches, 45 degress lean (think dead med oak)
+        treePlainsTree2                     - large trunk w/ 'Y' split, lots of branches up high, pretty straight up
+        treeMountainPineDry21m              - single large trunk, pretty straight up, few & broken branches on top 1/2
+        treeOakSml01
+            treeSmallRandomHelper
+        treeOakMed01
+            treeMediumRandomHelper
+            treeLargeRandomHelper
+        treeOakMed02
+        treeOakLrg01
+            treePlantedOak41m
+        treeJuniper4m
+            treeSmallThinRandomHelper
+        treeMountainPine12m
+        treeMountainPine19m
+        treeMountainPine27m
+        treeMountainPine31m
+        treeMountainPine41m
+            treePlantedMountainPine41m
+        treeMountainPine48m
+        treeFirLrg01
+        treeWinterEverGreen
+        treeWinterEverGreenLarge
+        treeWinterPine13m
+        treeWinterPine19m
+        treeWinterPine28m
+            treePlantedWinterPine28m
+        treePineBurntLrg                      - Yep, looks like the description (w/ broken branches up the whole of the trunk)
+        treePineBurntMed                      - Smaller version of above
+        treePineBurntFullMed                  - Same as the 'treePineBurntLrg', but w/ more/full branches up the trunk
+        treeBurntMaple01                      - small trunk splits into 3, bare
+        treeBurntMaple02                      - next size of above, many random/bare branches 
+        treeBurntMaple03                      - next size of above, fewer random/bare branches 
+        treeBurntMaple04                      - next size of above, even less random/bare branches 
+    driftwood[2|3]
+    treePlant02
+    treePlainsTree
+    treeDeadPineLeaf
+    treeSnowyDeadBush
+    treeAzalea
+    treeDeadTree01
+    treeStump
+    treeStumpPOI
+    treeCactus01
+        treeCactus02
+        treeCactus03
+            treeCactusTwitch02
+        treeCactus04
+        treeCactus05
+            treeCactusTwitch03
+        treeCactus06
+        treeCactusTwitch01
+
+*** HELPERS ***
+
+    treeSmallRandomHelper
+    treeSmallThinRandomHelper
+    treeMediumRandomHelper
+    treeLargeRandomHelper
+    treeTraderRandomHelper
+
+
+*** TREE vs. SEEDS ***
+
+    driftwood                   treePlantedMountainPine1m
+    treeMountainPineDry21m      treePlantedMountainPine1m
+    treeOakSml01                treePlantedOak1m
+    treeOakMed01                treePlantedOak1m
+    treeOakMed02                treePlantedOak1m
+    treeOakLrg01                treePlantedOak1m
+    treePlantedOak1m            treePlantedOak1m
+    treePlantedOak08m           treePlantedOak1m
+    treePlantedOak16m           treePlantedOak1m
+    treePlantedOak27m           treePlantedOak1m
+    treePlantedOak41m           treePlantedOak1m
+    treeJuniper4m               treePlantedMountainPine1m
+    treeMountainPine12m         treePlantedMountainPine1m
+    treeMountainPine19m         treePlantedMountainPine1m
+    treeMountainPine27m         treePlantedMountainPine1m
+    treeMountainPine31m         treePlantedMountainPine1m
+    treeMountainPine41m         treePlantedMountainPine1m
+    treeMountainPine48m         treePlantedMountainPine1m
+    treeFirLrg01                treePlantedMountainPine1m
+    treePlantedMountainPine1m   treePlantedMountainPine1m
+    treePlantedMountainPine12m  treePlantedMountainPine1m
+    treePlantedMountainPine19m  treePlantedMountainPine1m
+    treePlantedMountainPine27m  treePlantedMountainPine1m
+    treePlantedMountainPine41m  treePlantedMountainPine1m
+    treeWinterEverGreen         treePlantedWinterPine1m
+    treeWinterEverGreenLarge    treePlantedWinterPine1m
+    treeWinterPine13m           treePlantedWinterPine1m
+    treeWinterPine19m           treePlantedWinterPine1m
+    treeWinterPine28m           treePlantedWinterPine1m
+    treePlantedWinterPine6m     treePlantedWinterPine1m
+    treePlantedWinterPine13m    treePlantedWinterPine1m
+    treePlantedWinterPine19m    treePlantedWinterPine1m
+    treePlantedWinterPine28m    treePlantedWinterPine1m
+    treePineBurntLrg            treePlantedMountainPine1m
+    treePineBurntMed            treePlantedMountainPine1m
+    treePineBurntFullMed        treePlantedMountainPine1m
+
+
+*** TREES+ (no seeds given) ***
+
+    treePlainsTree          - large 'tumbleweed'        [Ignored]
+    treeDeadPineLeaf        - small 'tumbleweed'        [Ignored]
+    treeSnowyDeadBush       - small, snowy 'tumbleweed' [Ignored]
+    treeDeadTree01          - short leafless tree
+    treeDeadTree02          - short leafless tree w/ branches leaning sideways
+    treePlainsTree2         - tall leafless tree
+    treeBurntMaple01        - small maple tree w/ limbs but no leaves
+    treeBurntMaple02        - med maple tree w/ limbs but no leaves
+    treeBurntMaple03        - lrg maple tree w/ limbs but no leaves
+
+
+*** (Forest) TREES (gives seeds) ***
+
+    treeOakSml01            - med 'sapling' [Ignored]
+    treeOakMed01
+    treeOakMed02
+
+* Growth *
+
+    treePlantedOak1m (seed) ->  [Ignored]
+        treePlantedOak08m ->
+            treePlantedOak16m -> 
+                treePlantedOak27m -> 
+                    treePlantedOak41m ->
+                        treeOakLrg01 (end)
+
+
+*** (Pine) TREES (gives seeds) ***
+
+    driftwood               - [Ignored]
+    driftwood2              - [Ignored]
+    driftwood3              - [Ignored]
+    treeMountainPineDry21m  - tall, dead pine w/ limbs & no leaves
+    treeJuniper4m
+    treeMountainPine12m
+    treeMountainPine19m
+    treeMountainPine27m
+    treeMountainPine31m
+    treeMountainPine41m
+    treeMountainPine48m
+    treeFirLrg01
+    treePineBurntLrg        - pine tree w/ very few limbs
+    treePineBurntMed        - pine tree w/ very few limbs
+    treePineBurntFullMed    - pine tree w/ limbs & no needles
+
+* Growth *
+
+    treePlantedMountainPine1m (seed) -> [Ignored]
+        treePlantedMountainPine12m ->
+            treePlantedMountainPine19m ->
+                treePlantedMountainPine27m -> 
+                    treePlantedMountainPine41m (end)
+
+
+*** (Winter/Snow) TREES (gives seeds) ***
+
+    treeWinterEverGreen
+    treeWinterPine13m
+    treeWinterPine19m
+    treeWinterPine28m
+
+* Growth *
+
+    treePlantedWinterPine1m (seed) ->  [Ignored]
+        treePlantedWinterPine6m ->  [Ignored]
+            treePlantedWinterPine13m ->
+                treePlantedWinterPine19m ->
+                    treePlantedWinterPine28m (end)
+-->

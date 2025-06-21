@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<blocks>
+
+<!--    
+    - If 'FertileLevel' is higher than the fertile_level of the block directly below then the upgrade will not occur.
+    - Set 'GrowthRate' time as desired.  EX:  Given 2 Days at 60-min days, use '120'.  Using '0.2' for testing seems to work well.
+    - Set 'MaxDamage' as desired.  IMO, enough so players know it's not vanilla, but low enough they can still stop any respawns, if they want(ed).
+    - Set the 'Drop event=Havest|Destroy' items and probabilities to your liking (remembering all items will filter down to the 'child' block(s)).
+-->
+
+<!-- MASTER blocks -->
+    <insertAfter xpath="/blocks/block[@name='decoEntityGlassMaster']">
+
+        <!-- Air\Respawner [This master controls all the blocks that it 'Extends' from] -->
+        <block name="rbtAirRespawnMaster">
+            <property name="Extends" value="air"/>
+            <property name="Class" value="PlantGrowing"/>
+            <property name="CreativeMode" value="None"/>
+            <property name="PlantGrowing.GrowthRate" value="0.2"/>
+            <property name="PlantGrowing.FertileLevel" value="0"/>
+        </block>
+
+        <!-- Boulder\Respawner [This master controls all the blocks that it 'Extends' from] -->
+        <block name="rbtBoulderRespawnMaster">
+            <property name="Class" value="PlantGrowing"/>
+            <property name="CreativeMode" value="None"/>
+            <property name="HarvestOverdamage" value="false"/>
+            <property name="CustomIcon" value="rock01"/>
+            <property name="Material" value="Mstone"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="@:Entities/OutdoorDecor/stoneAPrefab.prefab"/>
+            <property name="ImposterDontBlock" value="true"/>
+            <property name="WaterFlow" value="permitted"/>
+            <property name="Collide" value="melee,bullet,arrow,rocket"/>
+            <property name="IsTerrainDecoration" value="true"/>
+            <property name="CanDecorateOnSlopes" value="true"/>
+            <property name="StabilitySupport" value="false"/>
+            <property name="PassThroughDamage" value="false"/>
+            <property name="PlaceAsRandomRotation" value="true"/>
+            <property name="OnlySimpleRotations" value="true"/>
+            <property name="PlantGrowing.GrowthRate" value="0.2"/>
+            <property name="PlantGrowing.FertileLevel" value="0"/>
+            <property name="PlantGrowing.Next" value="rbtAllBouldersRandomHelper"/>
+            <property name="CanPlayersSpawnOn" value="false"/>
+            <property name="CanMobsSpawnOn" value="false"/>
+            <property name="MaxDamage" value="100"/>
+            <property name="CanPickup" value="true" param1="resourceRockSmall"/>
+            <drop event="Destroy" name="resourceRockSmall" count="1"/>
+        </block>
+
+        <!-- Grass\Respawner [This master controls all the blocks that it 'Extends' from] -->
+        <block name="rbtGrassRespawnMaster">
+            <property name="Class" value="PlantGrowing"/>
+            <property name="CreativeMode" value="None"/>
+            <property name="HarvestOverdamage" value="false"/>
+            <property name="CustomIcon" value="treeBrownGrassDiagonal"/>
+            <property name="Material" value="Mtallgrass"/>
+            <property name="Shape" value="Grass"/>
+            <property name="Mesh" value="grass"/>
+            <property name="Texture" value="350,368,369,370,350,368"/>
+            <property name="ImposterDontBlock" value="true"/>
+            <property name="WaterFlow" value="permitted"/>
+            <property name="Collide" value="melee"/>
+            <property name="IsTerrainDecoration" value="true"/>
+            <property name="IsDecoration" value="true"/>
+            <property name="CanDecorateOnSlopes" value="true"/>
+            <property name="StabilitySupport" value="false"/>
+            <property name="PassThroughDamage" value="false"/>
+            <property name="PlaceAsRandomRotation" value="true"/>
+            <property name="OnlySimpleRotations" value="true"/>
+            <property name="PlantGrowing.GrowthRate" value="0.2"/>
+            <property name="PlantGrowing.FertileLevel" value="0"/>
+            <property name="PlantGrowing.Next" value="rbtAllTreesRandomHelper"/>
+            <property name="CanPlayersSpawnOn" value="false"/>
+            <property name="CanMobsSpawnOn" value="false"/>
+            <property name="MaxDamage" value="100"/>
+            <drop event="Harvest" name="resourceYuccaFibers" count="2" tag="allHarvest"/>
+            <drop event="Destroy" count="0"/>
+            <drop event="Fall" name="resourceYuccaFibers" count="0" prob="1" stick_chance="0"/>
+        </block>
+
+        <!-- Tree Stump\Respawner [This master controls all the blocks that it 'Extends' from] -->
+        <block name="rbtTreeStumpRespawnMaster">
+            <property name="Class" value="PlantGrowing"/>
+            <property name="CreativeMode" value="None"/>
+            <property name="Material" value="MtreeWoodSmall"/>
+            <property name="IsPlant" value="true"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#Entities/Trees?Prefabs/Stump.prefab"/>
+            <property name="ModelOffset" value="0,0,0"/>
+            <property name="ImposterDontBlock" value="true"/>
+            <property name="WaterFlow" value="permitted"/>
+            <property name="Path" value="solid"/>
+            <property name="BigDecorationRadius" value="3"/>
+            <property name="IsTerrainDecoration" value="true"/>
+            <property name="StabilitySupport" value="false"/>
+            <property name="PassThroughDamage" value="false"/>
+            <property name="PlaceAsRandomRotation" value="true"/>
+            <property name="OnlySimpleRotations" value="true"/>
+            <property name="PlantGrowing.GrowthRate" value="0.2"/>
+            <property name="PlantGrowing.FertileLevel" value="0"/>
+            <property name="PlantGrowing.Next" value="rbtAllTreesRandomHelper"/>
+            <property name="CanPlayersSpawnOn" value="false"/>
+            <property name="CanMobsSpawnOn" value="false"/>
+            <property name="MaxDamage" value="500"/>
+            <drop event="Fall" count="0" prob="0"/>
+        </block>
+
+    </insertAfter>
+
+    <insertAfter xpath="/blocks/block[@name='cntCar03SedanDamage2Master']">
+
+        <!-- Vehicle Respawner [This master controls all the blocks that it 'Extends' from]
+                - If 'FertileLevel' is higher than the fertile_level of the block directly below then the upgrade will not occur.
+                - Set 'GrowthRate' time below.  EX:  Given 2 Days at 60-min days, use '120' [using '0.2' for testing seems to work well]
+                - Set the 'Drop event=Havest|Destroy' items and probabilities to your liking (remembering all items will filter down to the 'child' block(s))
+         -->
+        <block name="rbtVehicleRespawnMaster">
+            <property name="Class" value="PlantGrowing"/>
+            <property name="CreativeMode" value="None"/>
+            <property name="CustomIcon" value="decoCarWheelFlat"/>
+            <property name="Material" value="Mplastics"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="@:Entities/Vehicles/Car/car_wheelPrefab.prefab"/>
+            <property name="Texture" value="282"/>
+            <property name="IsTerrainDecoration" value="true"/>
+            <property name="FuelValue" value="100"/>
+            <property name="EconomicValue" value="5"/>
+            <property name="EconomicBundleSize" value="1"/>
+            <property name="WaterFlow" value="permitted"/>
+            <property name="Collide" value="melee,bullet,arrow,rocket,movement"/>
+            <property class="RepairItems">
+                <property name="resourceScrapPolymers" value="3"/>
+            </property>
+            <property name="OnlySimpleRotations" value="true"/>
+            <property name="PlantGrowing.GrowthRate" value="0.2"/>
+            <property name="PlantGrowing.FertileLevel" value="0"/>
+            <property name="PlantGrowing.Next" value="carsRandomHelper"/>
+            <property name="CanPlayersSpawnOn" value="false"/>
+            <property name="CanMobsSpawnOn" value="false"/>
+            <property name="MaxDamage" value="500"/>
+            <drop event="Destroy" name="resourceScrapPolymers" count="3,6" tag="oreWoodHarvest"/>
+            <drop event="Destroy" name="resourceScrapIron" count="3,6" tag="oreWoodHarvest"/>
+            <drop event="Fall" name="resourceScrapPolymers" count="3" prob="0.3" stick_chance="0"/>
+            <property name="Group" value="Decor/Miscellaneous"/>
+            <property name="SortOrder1" value="R050"/>
+            <property name="SortOrder2" value="9050"/>
+            <property name="FilterTags" value="MC_building,SC_automotive"/>
+        </block>
+
+    </insertAfter>
+
+</blocks>

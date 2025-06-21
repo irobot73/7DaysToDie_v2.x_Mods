@@ -10,6 +10,20 @@ Custom, SERVER-side mods for any 7 Days To Die v2.x EAC-enabled servers
 [I_Robot73-Loot_Lingers_Longer](https://github.com/irobot73/7DaysToDie_v2.x_Mods/tree/main/I_Robot73-Loot_Lingers_Longer)
 * Increases the duration of loot bags before they de-spawn.
 
+[I_Robot73-Regrow_All-n-One](https://github.com/irobot73/7DaysToDie_v2.x_Mods/tree/main/I_Robot73-Regrow_All-n-One)
+* Regrows, after a time:
+    * Trees
+    * Boulders
+    * Cacti
+    * Goldenrod, cotton, Chrysanthemum
+    * Vehicles (cars, tractors, semi-truck, trailers+)
+    * Nests
+    * ATMs
+    * Vending machines
+    * Street lights (on poles)
+    * Utility transformers (on poles)
+    * Added 'looted' ATM and police car
+
 [I_Robot73-Slow_Your_Roll](https://github.com/irobot73/7DaysToDie_v2.x_Mods/tree/main/I_Robot73-Slow_Your_Roll)
 * Increases the XP required between levels. 
 

@@ -1,0 +1,220 @@
+Key,File,Type,UsedInMainMenu,NoTranslate,english
+rbtTreeSeedVariantHelper,blocks,Block,,,"Bag of tree seeds"
+rbtTreeSeedVariantHelperDesc,blocks,Variant,,,"With this bag on your hotbar, hold the Reload action and select a seed from the radial menu. Click or Shift-Click to select a seed to plant."
+
+rbtAllTreesRandomHelper,blocks,Block,,,"Tree randomizer for respawn"
+rbtAllTreesRandomHelperDesc,blocks,block,,,"Will randomly select a biome appropriate tree for a respawn event."
+
+rbtAllCactiRandomHelper,blocks,Block,,,"Cacti randomizer for respawn"
+rbtAllCactiRandomHelperDesc,blocks,block,,,"Will randomly select biome appropriate flora for a respawn event."
+
+rbtAllBouldersRandomHelper,blocks,Block,,,"Boulder randomizer for respawn"
+rbtAllBouldersRandomHelperDesc,blocks,block,,,"Will randomly select a boulder for a respawn event."
+
+rbtTreeStumpRandomRespawner,blocks,Block,,,"Tree respawner"
+rbtTreeStumpRandomRespawnerDesc,blocks,block,,,"Will respawn a random, biome appropiate tree after a set time."
+
+rbtTreeStumpWinterRandomRespawner,blocks,Block,,,"Winter tree respawner"
+rbtTreeStumpWinterRandomRespawnerDesc,blocks,block,,,"Lower harvest results.  Will respawn a random, biome appropiate tree after a set time."
+
+rbtTreeStumpBurntRandomRespawner,blocks,Block,,,"Burnt tree respawner"
+rbtTreeStumpBurntRandomRespawnerDesc,blocks,block,,,"Lowest harvest results.  Will respawn a random, biome appropiate tree after a set time."
+
+rbtTreeStumpWastelandRandomRespawner,blocks,Block,,,"Wasteland tree respawner"
+rbtTreeStumpWastelandRandomRespawnerDesc,blocks,block,,,"Negligible harvest results.  Will respawn a random, biome appropiate tree after a set time."
+
+rbtBirdNestRespawner,blocks,Block,,,"Bird nest respawner"
+rbtBirdNestRespawnerDesc,blocks,Block,,,"Will spawn a new bird's nest after a set time."
+
+rbtCactiRandomRespawner,blocks,Block,,,"Desert flora respawner"
+rbtCactiRandomRespawnerDesc,blocks,block,,,"Will respawn random, biome appropriate flora after a set time."
+
+rbtAllBoulderRandomRespawner,blocks,Block,,,"Boulder respawner"
+rbtAllBoulderRandomRespawnerDesc,blocks,block,,,"Will respawn a random boulder after a set time."
+
+rbtChrysanthemumRespawner,blocks,Block,,,"Chrysanthemum respawner"
+rbtChrysanthemumRespawnerDesc,blocks,block,,,"Will respawn a chrysanthemum plant after a set time."
+
+rbtCottonRespawner,blocks,Block,,,"Cotton respawner"
+rbtCottonRespawnerDesc,blocks,block,,,"Will respawn a cotton plant after a set time."
+
+rbtGoldenrodRespawner,blocks,Block,,,"Goldenrod respawner"
+rbtGoldenrodRespawnerDesc,blocks,block,,,"Will respawn a goldenrod plant after a set time."
+
+rbtTreeDeadPineLeafRespawner,blocks,Block,,,"Dead pine leaf respawner"
+rbtTreeDeadPineLeafRespawnerDesc,blocks,block,,,"Will respawn a leafless shrub, commonly found in the Forest biome, after a set time."
+
+rbtPlantShrubRespawner,blocks,Block,,,"Shrub respawner"
+rbtPlantShrubRespawnerDesc,blocks,block,,,"Will respawn a leafy shrub, commonly found in the Forest biome, after a set time."
+
+rbtAllVehiclesRandomHelper,blocks,Block,,,"Vehicle randomizer for respawn"
+rbtAllVehiclesRandomHelperDesc,blocks,block,,,"Will randomly select a vehicle for a respawn event."
+
+rbtAllSedansRandomHelper,blocks,Block,,,"Sedan randomizer for respawn"
+rbtAllSedansRandomHelperDesc,blocks,block,,,"Will randomly select a sedan style vehicle for a respawn event."
+
+rbtAllMinivansRandomHelper,blocks,Block,,,"Minivan randomizer for respawn"
+rbtAllMinivansRandomHelperDesc,blocks,block,,,"Will randomly select a minivan style vehicle for a respawn event."
+
+rbtAllSUVsRandomHelper,blocks,Block,,,"SUV randomizer for respawn"
+rbtAllSUVsRandomHelperDesc,blocks,block,,,"Will randomly select a SUV style vehicle for a respawn event."
+
+rbtAllPickupTrucksRandomHelper,blocks,Block,,,"Pickup truck randomizer for respawn"
+rbtAllPickupTrucksRandomHelperDesc,blocks,block,,,"Will randomly select a pickup truck for a respawn event."
+
+rbtAllPoliceCarRandomHelper,blocks,Block,,,"Police car randomizer for respawn"
+rbtAllPoliceCarRandomHelperDesc,blocks,block,,,"Will randomly select a pickup police car for a respawn event."
+
+rbtAllCrushedCarsRandomHelper,blocks,Block,,,"Crushed car stack randomizer for respawn"
+rbtAllCrushedCarsRandomHelperDesc,blocks,block,,,"Will randomly select a crushed car stack for a respawn event."
+
+cntAllBusesRandomHelper,blocks,Block,,,"Bus randomizer for respawn"
+cntAllBusesRandomHelperDesc,blocks,block,,,"Will randomly select a bus style vehicle for a respawn event."
+
+rbtAllServiceTrucksRandomHelper,blocks,Block,,,"Service truck randomizer for respawn"
+rbtAllServiceTrucksRandomHelperDesc,blocks,block,,,"Will randomly select a service truck style vehicle for a respawn event."
+
+rbtAllTractorsRandomHelper,blocks,Block,,,"Tractor randomizer for respawn"
+rbtAllTractorsRandomHelperDesc,blocks,block,,,"Will randomly select a tracktor for a respawn event."
+
+rbtAllExcavatorsRandomHelper,blocks,Block,,,"Excavator randomizer for respawn"
+rbtAllExcavatorsRandomHelperDesc,blocks,block,,,"Will randomly select an excavator for a respawn event."
+
+rbtAllBackhoesRandomHelper,blocks,Block,,,"Backhoe randomizer for respawn"
+rbtAllBackhoesRandomHelperDesc,blocks,block,,,"Will randomly select a backhoe for a respawn event."
+
+rbtAllForkLiftsRandomHelper,blocks,Block,,,"Sedan randomizer for respawn"
+rbtAllForkLiftsRandomHelperDesc,blocks,block,,,"Will randomly select a forklift for a respawn event."
+
+rbtAllCarRandomRespawner,blocks,Block,,,"Any vehicle respawner (custom list)"
+rbtAllCarRandomRespawnerDesc,blocks,block,,,"Will respawn, from a custom list, a random, in style and condition, vehicle."
+
+rbtVehicleRandomRespawner,blocks,Block,,,"Any vehicle respawner (in-game list)"
+rbtVehicleRandomRespawnerDesc,blocks,block,,,"Will respawn, from an in-game list, a random, in style and condition, vehicle."
+
+rbtCar3WideRandomRespawner,blocks,Block,,,"Sedan '3-wide' respawner"
+rbtCar3WideRandomRespawnerDesc,blocks,block,,,"Will respawn a random, 3-wide, sedan style vehicle after a set time."
+
+rbtAllSedanRandomSpawner,blocks,Block,,,"Sedan respawner"
+rbtAllSedanRandomSpawnerDesc,blocks,block,,,"Will respawn a random sedan style vehicle after a set time."
+
+rbtMinivanRandomRespawner,blocks,Block,,,"Minivan respawner (in-game list)"
+rbtMinivanRandomRespawnerDesc,blocks,block,,,"Will respawn, from an in-game list, a random minivan style vehicle after a set time."
+
+rbtMinivan3WideRandomRespawner,blocks,Block,,,"Minivan '3-wide' respawner"
+rbtMinivan3WideRandomRespawnerDesc,blocks,block,,,"Will respawn a random, 3-wide, minivan style vehicle after a set time."
+
+rbtAllMinivanRandomRespawner,blocks,Block,,,"Minivan respawner (custom list)"
+rbtAllMinivanRandomRespawnerDesc,blocks,block,,,"Will respawn, from a custom list, a random minivan style vehicle after a set time."
+
+rbtAllSUVRandomRespawner,blocks,Block,,,"SUV respawner"
+rbtAllSUVRandomRespawnerDesc,blocks,block,,,"Will respawn a random SUV style vehicle after a set time."
+
+rbtAllPickupTruckRandomRespawner,blocks,Block,,,"Pickup truck respawner"
+rbtAllPickupTruckRandomRespawnerDesc,blocks,block,,,"Will respawn a random pickup truck after a set time."
+
+rbtSemiTruckRandomRespawner,blocks,Block,,,"Semi-truck respawner"
+rbtSemiTruckRandomRespawnerDesc,blocks,block,,,"Will respawn a random semi-truck after a set time."
+
+rbtSemiTruckModularFrontRandomRespawner,blocks,Block,,,"Modular, semi-truck respawner"
+rbtSemiTruckModularFrontRandomRespawnerDesc,blocks,block,,,"Will respawn a random modular, semi-truck after a set time."
+
+rbtPoliceCarRandomRespawner,blocks,Block,,,"Police car respawner"
+rbtPoliceCarRandomRespawnerDesc,blocks,block,,,"Will respawn a random police car after a set time."
+
+rbtFireTruckRandomRespawner,blocks,Block,,,"Fire truck respawner"
+rbtFireTruckRandomRespawnerDesc,blocks,block,,,"Will respawn a random fire truck after a set time."
+
+rbtCrushedCar01RandomRespawner,blocks,Block,,,"Crushed car stack (01) respawner (in-game list)"
+rbtCrushedCar01RandomRespawnerDesc,blocks,block,,,"Will respawn, from an in-game list, a random crushed car stack (01) after a set time."
+
+rbtCrushedCar02RandomRespawner,blocks,Block,,,"Crushed car stack (02) respawner (in-game list)"
+rbtCrushedCar02RandomRespawnerDesc,blocks,block,,,"Will respawn, from an in-game list, a random crushed car stack (02) after a set time."
+
+rbtAllCrushedCarRandomRespawner,blocks,Block,,,"Crushed car stack respawner (custom list)"
+rbtAllCrushedCarRandomRespawnerDesc,blocks,block,,,"Will respawn, from a custom list, a random crushed car stack after a set time."
+
+rbtBusRandomRespawner,blocks,Block,,,"Bus respawner"
+rbtBusRandomRespawnerDesc,blocks,block,,,"Will respawn a random bus after a set time."
+
+rbtAmbulanceRespawner,blocks,Block,,,"Ambulance respawner"
+rbtAmbulanceRespawnerDesc,blocks,block,,,"Will respawn an ambulance after a set time."
+
+rbtGenericSvcTruckRandomRespawner,blocks,Block,,,"Generic service truck respawner"
+rbtGenericSvcTruckRandomRespawnerDesc,blocks,block,,,"Will respawn a random generic service truck after a set time."
+
+rbtBoxTruckRandomRespawner,blocks,Block,,,"Box truck respawner"
+rbtBoxTruckRandomRespawnerDesc,blocks,block,,,"Will respawn a random box truck after a set time."
+
+rbtArmyTruckRandomRespawner,blocks,Block,,,"Army truck respawner"
+rbtArmyTruckRandomRespawnerDesc,blocks,block,,,"Will respawn a random army truck after a set time."
+
+rbtFarmTruckRandomRespawner,blocks,Block,,,"Farm truck respawner"
+rbtFarmTruckRandomRespawnerDesc,blocks,block,,,"Will respawn a random farm truck after a set time."
+
+rbtTractorRandomRespawner,blocks,Block,,,"Tractor respawner"
+rbtTractorRandomRespawnerDesc,blocks,block,,,"Will respawn a random tractor after a set time."
+
+rbtExcavatorRandomRespawner,blocks,Block,,,"Excavator respawner"
+rbtExcavatorRandomRespawnerDesc,blocks,block,,,"Will respawn a random excavator after a set time."
+
+rbtBackhoeRandomRespawner,blocks,Block,,,"Backhoe respawner"
+rbtBackhoeRandomRespawnerDesc,blocks,block,,,"Will respawn a random backhoe after a set time."
+
+rbtForkliftRandomRespawner,blocks,Block,,,"Forklift respawner"
+rbtForkliftRandomRespawnerDesc,blocks,block,,,"Will respawn a random forklift after a set time."
+
+rbtAllATMsRandomHelper,blocks,Block,,,"ATM randomizer for respawn"
+rbtAllATMsRandomHelperDesc,blocks,block,,,"Will randomly select an ATM for a respawn event."
+
+rbtATMRandomRespawner,blocks,Block,,,"ATM respawner"
+rbtATMRandomRespawnerDesc,blocks,block,,,"Will respawn a random ATM after a set time."
+
+rbtAllDrinksVendingMachineRandomRespawner,blocks,Block,,,"Drink vending machine respawner"
+rbtAllDrinksVendingMachineRandomRespawnerDesc,blocks,block,,,"Will respawn a random drink vending after a set time."
+
+rbtAllSnacksVendingMachineRandomRespawner,blocks,Block,,,"Snack vending machine respawner"
+rbtAllSnacksVendingMachineRandomRespawnerDesc,blocks,block,,,"Will respawn a random snack vending after a set time."
+
+rbtAllStreeLightsRandomHelper,blocks,Block,,,"Street light randomizer for respawn"
+rbtAllStreeLightsRandomHelperDesc,blocks,block,,,"Will randomly select a street light for a respawn event."
+
+rbtAllStreeLightRandomRespawner,blocks,Block,,,"Street light respawner"
+rbtAllStreeLightRandomRespawnerDesc,blocks,block,,,"Will respawn a random street light after a set time."
+
+rbtUtilityTransformerRespawner,blocks,Block,,,"Utility transformer respawner"
+rbtUtilityTransformerRespawnerDesc,blocks,block,,,"Will respawn a utility transformer after a set time."
+
+rbtUtilityTransformerHangingRespawner,blocks,Block,,,"Hanging utility transformer respawner"
+rbtUtilityTransformerHangingRespawnerDesc,blocks,block,,,"Will respawn a hanging utility transformer after a set time."
+
+rbtEmptyPostMailbox,blocks,Block,,,Mail Drop Box
+rbtEmptyPostMailboxDesc,blocks,Block,,,"An old postal drop-box, empty from looting."
+
+rbtAllPostMailboxesRandomHelper,blocks,Block,,,"Post mailbox randomizer for respawn"
+rbtAllPostMailboxesRandomHelperDesc,blocks,block,,,"Will randomly select a post mailbox for a respawn event."
+
+rbtPostMailboxRandomRespawner,blocks,Block,,,"Post mailbox machine respawner"
+rbtPostMailboxRandomRespawnerDesc,blocks,block,,,"Will respawn a random post mailbox after a set time."
+
+rbtEmptyNewsDispenseFreeGreen,blocks,Block,,,Free Newspaper Dispenser
+rbtEmptyNewsDispenseFreeGreenDesc,blocks,Block,,,"An old free newspaper dispenser, empty from looting."
+rbtEmptyNewsDispenseFreeOrange,blocks,Block,,,Free Newspaper Dispenser
+rbtEmptyNewsDispenseFreeOrangeDesc,blocks,Block,,,"An old free newspaper dispenser, empty from looting."
+rbtEmptyNewspaperDispenserStandBlue,blocks,Block,,,Newspaper Dispenser
+rbtEmptyNewspaperDispenserStandBlueDesc,blocks,Block,,,"An old newspaper dispenser, empty from looting."
+rbtEmptyNewspaperDispenserStandYellow,blocks,Block,,,Newspaper Dispenser
+rbtEmptyNewspaperDispenserStandYellowDesc,blocks,Block,,,"An old newspaper dispenser, empty from looting."
+
+rbtAllNewsDispensersRandomHelper,blocks,Block,,,"News dispenser randomizer for respawn"
+rbtAllNewsDispensersRandomHelperDesc,blocks,block,,,"Will randomly select a news dispenser for a respawn event."
+
+rbtNewsDispenserRandomRespawner,blocks,Block,,,"News dispenser respawner"
+rbtNewsDispenserRandomRespawnerDesc,blocks,block,,,"Will respawn a random news dispenser after a set time."
+
+rbtLootedATM,blocks,Block,,,"ATM"
+rbtLootedATMDesc,blocks,block,,,"An ATM, empty from looting."
+
+rbtLootedPoliceCar,blocks,Block,,,"Police cruiser"
+rbtLootedPoliceCarDesc,blocks,block,,,"A police cruiser, empty from looting."
+

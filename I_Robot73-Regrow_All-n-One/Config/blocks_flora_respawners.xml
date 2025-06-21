@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<blocks>
+
+    <!-- Trees -->
+    <insertAfter xpath="/blocks/block[@name='shippingContainerSide2mBlue']">
+
+        <!-- 'Standard' stump
+                - NOTE:  You can set the 'Destroy' name from 'treePlantedOak1m' to 'rbtTreeSeedVariantHelper' for a radial 'Seed Bag'
+         -->
+        <block name="rbtTreeStumpRandomRespawner">
+            <property name="Extends" value="rbtTreeStumpRespawnMaster"/>
+            <property name="CustomIcon" value="treeStump"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="DescriptionKey" value="rbtTreeStumpRandomRespawnerDesc"/>
+            <drop event="Harvest" name="resourceWood" count="10,20" tag="oreWoodHarvest,lumberjackHarvest"/>
+            <drop event="Destroy" name="treePlantedOak1m" count="1" prob=".75"/>
+            <drop event="Destroy" name="foodHoney" count="1" prob="0.15"/>
+            <property name="SortOrder1" value="R421"/>
+            <property name="SortOrder2" value="9421"/>
+        </block>
+
+        <!-- Winter stumps:  Smaller chance of honey and seed
+                - NOTE:  You can set the 'Destroy' name from 'treePlantedWinterPine1m' to 'rbtTreeSeedVariantHelper' for a radial 'Seed Bag'
+         -->
+        <block name="rbtTreeStumpWinterRandomRespawner">
+            <property name="Extends" value="rbtTreeStumpRespawnMaster"/>
+            <property name="CustomIcon" value="treeStump"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="DescriptionKey" value="rbtTreeStumpWinterRandomRespawnerDesc"/>
+            <drop event="Harvest" name="resourceWood" count="10,20" tag="oreWoodHarvest,lumberjackHarvest"/>
+            <drop event="Harvest" name="resourceSnowBall" count="2" tag="allHarvest"/>
+            <drop event="Destroy" name="foodHoney" count="1" prob="0.1"/>
+            <drop event="Destroy" name="treePlantedWinterPine1m" count="1" prob="0.5"/>
+            <property name="SortOrder1" value="R422"/>
+            <property name="SortOrder2" value="9422"/>
+        </block>
+
+        <!-- Burnt stumps:  No honey, least chance of seed but does give some coal & wood
+                - NOTE:  You can set the 'Destroy' name from 'treePlantedMountainPine1m' to 'rbtTreeSeedVariantHelper' for a radial 'Seed Bag'
+         -->
+        <block name="rbtTreeStumpBurntRandomRespawner">
+            <property name="Extends" value="rbtTreeStumpRespawnMaster"/>
+            <property name="CustomIcon" value="treeStump"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="DescriptionKey" value="rbtTreeStumpBurntRandomRespawnerDesc"/>
+            <property name="MaxDamage" value="250"/>
+            <drop event="Harvest" name="resourceWood" count="3,10" tag="oreWoodHarvest,lumberjackHarvest"/>
+            <drop event="Harvest" name="resourceCoal" count="5,20" tag="oreWoodHarvest,lumberjackHarvest"/>
+            <drop event="Harvest" name="resourceCoal" count="5,20" tag="coalHarvest"/>
+            <drop event="Destroy" name="treePlantedMountainPine1m" count="1" prob="0.25"/>
+            <property name="SortOrder1" value="R423"/>
+            <property name="SortOrder2" value="9423"/>
+        </block>
+
+        <!-- Wateland stumps:  No honey, small chance of radiated mushrooms but does give some coal & wood
+                - NOTE:  You can set the 'Destroy' name from 'treePlantedMountainPine1m' to 'rbtTreeSeedVariantHelper' for a radial 'Seed Bag'
+         -->
+        <block name="rbtTreeStumpWastelandRandomRespawner">
+            <property name="Extends" value="rbtTreeStumpRespawnMaster"/>
+            <property name="CustomIcon" value="treeStump"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="DescriptionKey" value="rbtTreeStumpWastelandRandomRespawnerDesc"/>
+            <property name="MaxDamage" value="250"/>
+            <drop event="Harvest" name="resourceWood" count="1,5" tag="oreWoodHarvest,lumberjackHarvest"/>
+            <drop event="Harvest" name="resourceCoal" count="5,20" tag="oreWoodHarvest,lumberjackHarvest"/>
+            <drop event="Harvest" name="resourceCoal" count="5,20" tag="coalHarvest"/>
+            <drop event="Destroy" name="foodCropMushroomsRadiated" count="1" prob="0.1"/>
+            <property name="SortOrder1" value="R423"/>
+            <property name="SortOrder2" value="9423"/>
+        </block>
+
+    </insertAfter>
+
+    <!-- Cacti -->
+    <insertAfter xpath="/blocks/block[@name='cntBirdnestCorner']">
+
+        <block name="rbtCactiRandomRespawner">
+            <property name="Extends" value="rbtGrassRespawnMaster"/>
+            <property name="CustomIcon" value="treeCactus04"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="DescriptionKey" value="rbtCactiRandomRespawnerDesc"/>
+            <property name="PlantGrowing.Next" value="rbtAllCactiRandomHelper"/>
+            <property name="Texture" value="201,306,371,201,306,371"/>
+            <property name="MaxDamage" value="2"/>
+            <property name="SortOrder1" value="R425"/>
+            <property name="SortOrder2" value="9425"/>
+        </block>
+
+    </insertAfter>
+
+    <!-- Chrysanthemum -->
+    <insertAfter xpath="/blocks/block[@name='plantedChrysanthemum3HarvestPlayer']">
+
+        <block name="rbtChrysanthemumRespawner">
+            <property name="Extends" value="rbtGrassRespawnMaster"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="DescriptionKey" value="rbtChrysanthemumRespawnerDesc"/>
+            <property name="CustomIcon" value="plantedChrysanthemum1"/>
+            <property name="PlantGrowing.Next" value="plantedChrysanthemum3Harvest"/>
+            <property name="Texture" value="201,306,371,201,306,371"/>
+            <property name="MaxDamage" value="2"/>
+            <drop event="Harvest" count="0"/>
+            <property name="SortOrder1" value="R426"/>
+            <property name="SortOrder2" value="9426"/>
+        </block>
+
+    </insertAfter>
+
+    <!-- Cotton -->
+    <insertAfter xpath="/blocks/block[@name='plantedCotton3HarvestPlayer']">
+
+        <block name="rbtCottonRespawner">
+            <property name="Extends" value="rbtGrassRespawnMaster"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="DescriptionKey" value="rbtCottonRespawnerDesc"/>
+            <property name="CustomIcon" value="plantedCotton1"/>
+            <property name="PlantGrowing.Next" value="plantedCotton3Harvest"/>
+            <property name="Texture" value="201,306,371,201,306,371"/>
+            <property name="MaxDamage" value="2"/>
+            <property name="SortOrder1" value="R427"/>
+            <property name="SortOrder2" value="9427"/>
+        </block>
+
+    </insertAfter>
+
+    <!-- Goldenrod -->
+    <insertAfter xpath="/blocks/block[@name='plantedGoldenrod3HarvestPlayer']">
+
+        <block name="rbtGoldenrodRespawner">
+            <property name="Extends" value="rbtGrassRespawnMaster"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="DescriptionKey" value="rbtGoldenrodRespawnerDesc"/>
+            <property name="CustomIcon" value="plantedGoldenrod1"/>
+            <property name="PlantGrowing.Next" value="plantedGoldenrod3Harvest"/>
+            <property name="Texture" value="201,306,371,201,306,371"/>
+            <property name="MaxDamage" value="2"/>
+            <property name="SortOrder1" value="R428"/>
+            <property name="SortOrder2" value="9428"/>
+        </block>
+
+    </insertAfter>
+
+    <!-- Tree Dead Pine Leaf (bare 'shrub' found in Forest biome) -->
+    <insertAfter xpath="/blocks/block[@name='treeDeadPineLeaf']">
+
+        <block name="rbtTreeDeadPineLeafRespawner">
+            <property name="Extends" value="rbtGrassRespawnMaster"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="DescriptionKey" value="rbtTreeDeadPineLeafRespawnerDesc"/>
+            <property name="CustomIcon" value="treeDeadPineLeaf"/>
+            <property name="PlantGrowing.Next" value="treeDeadPineLeaf"/>
+            <property name="Texture" value="201,306,371,201,306,371"/>
+            <property name="MaxDamage" value="2"/>
+            <property name="SortOrder1" value="R429"/>
+            <property name="SortOrder2" value="9429"/>
+        </block>
+
+    </insertAfter>
+
+    <!-- Tree Dead Pine Leaf (bare 'shrub' found in Forest biome) -->
+    <insertAfter xpath="/blocks/block[@name='plantShrub']">
+
+        <block name="rbtPlantShrubRespawner">
+            <property name="Extends" value="rbtGrassRespawnMaster"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="DescriptionKey" value="rbtPlantShrubRespawnerDesc"/>
+            <property name="CustomIcon" value="plantShrub"/>
+            <property name="PlantGrowing.Next" value="plantShrub"/>
+            <property name="Texture" value="201,306,371,201,306,371"/>
+            <property name="MaxDamage" value="2"/>
+            <property name="SortOrder1" value="R430"/>
+            <property name="SortOrder2" value="9430"/>
+        </block>
+
+    </insertAfter>
+
+</blocks>

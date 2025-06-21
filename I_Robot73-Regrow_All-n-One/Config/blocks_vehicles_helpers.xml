@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<blocks>
+
+    <insertAfter xpath="/blocks/block[@name='cntServiceTruckWorkingStiffToolsRandomLootHelper']">
+
+        <!-- *** ROBOT_DEFAULT -->
+        <block name="rbtAllVehiclesRandomHelper">
+             <!-- This is the game's default vehicle helper -->
+	        <property name="Extends" value="carsRandomHelper"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="CustomIcon" value="cntSedan01White"/>
+	        <property name="CustomIconTint" value="9caf88"/>
+	        <property name="ItemTypeIcon" value="other"/>
+            <property name="DescriptionKey" value="rbtAllVehiclesRandomHelperDesc"/>
+	        <property name="SortOrder1" value="R350"/>
+        </block>
+
+        <!-- *** OLD_SEDAN_DAMAGE_00_COLORS -->
+	    <!-- *** OLD_SEDAN_DAMAGE_01_COLORS -->
+	    <!-- *** OLD_SEDAN_DAMAGE_02_COLORS -->
+
+	    <!-- *** SEDANS
+                    - Using game built-in 'cntMinivan01RandomHelper'
+        -->
+	    <!-- *** 3M_WIDE_OLD_SEDANS
+                    - Using game built-in 'cars3WideRandomHelper'
+        -->
+	    <!-- *** BURNT_SEDAN
+                    - Using game built-in 'cntMinivan01RandomHelper'
+        -->
+	    <!-- *** 3M_WIDE_BURNT_SEDAN
+                    - Using game built-in 'cntMinivan01RandomHelper'
+        -->
+	    <!-- *** 3M_WIDE_SEDANS
+                    - Using game built-in 'cntMinivan01RandomHelper'
+        -->
+	    <!-- *** FRONT_CRUMPLED_SEDAN
+                    - Using game built-in 'cntMinivan01RandomHelper'
+        -->
+        <block name="rbtAllSedansRandomHelper">
+	        <property name="Extends" value="carsRandomHelper"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="CustomIcon" value="cntMinivan01White"/>
+	        <property name="CustomIconTint" value="9caf88"/>
+	        <property name="ItemTypeIcon" value="other"/>
+            <property name="DescriptionKey" value="rbtAllSedansRandomHelperDesc"/>
+	        <property name="SortOrder1" value="R351"/>
+        </block>
+
+	    <!-- *** MINIVANS
+                    - Using game built-in 'cntMinivan01RandomHelper'
+        -->
+	    <!-- *** 3_WIDE_MINIVANS
+                    - Using game built-in 'cntMinivan3Wide01RandomHelper'
+        -->
+        <!-- *** ALL_MINIVANS
+                - Didn't see much need to split it out, so made a combo-HELPER.  I kept the individual blocks if someone wants to use 'em.
+         -->
+        <block name="rbtAllMinivansRandomHelper">
+	        <property name="Extends" value="carsRandomHelper"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="CustomIcon" value="cntMinivan01White"/>
+	        <property name="CustomIconTint" value="9caf88"/>
+	        <property name="ItemTypeIcon" value="other"/>
+            <property name="DescriptionKey" value="rbtAllMinivansRandomHelperDesc"/>
+	        <property name="SortOrder1" value="R355"/>
+        </block>
+
+	    <!-- *** SUVs
+                    - Using game built-in 'cntSUV01RandomHelper'
+        -->
+        <!-- *** ABANDONED_SUV
+                    - Using game built-in 'abandonedSUV01RandomHelper'
+        -->
+	    <!-- *** ABANDONED_SUV_DOORS
+                    - Using game built-in 'abandonedSUV01DoorsRandomHelper'
+        -->
+	    <!-- *** 3_WIDE_SUVS
+                    - Using game built-in 'cntSUV3Wide01RandomHelper'
+        -->
+        <!-- *** ABANDONED_3M_WIDE_SUV
+                    - Using game built-in 'abandonedSUV3Wide01RandomHelper'
+        -->
+	    <!-- *** ABANDONED_SUV_3M_WIDE_DOORS
+                    - Using game built-in 'abandonedSUV3Wide01DoorsRandomHelper'
+        -->
+        <!-- ALL_SUVS
+                - Use it, or not.
+         -->
+        <block name="rbtAllSUVsRandomHelper">
+	        <property name="Extends" value="carsRandomHelper"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="CustomIcon" value="cntSUV01White"/>
+	        <property name="CustomIconTint" value="9caf88"/>
+	        <property name="ItemTypeIcon" value="other"/>
+            <property name="DescriptionKey" value="rbtAllSUVsRandomHelperDesc"/>
+	        <property name="SortOrder1" value="R365"/>
+        </block>
+
+	    <!-- *** PICKUPTRUCKS
+                    - Using game built-in 'cntPickupTruck01RandomHelper'
+        -->
+	    <!-- *** ABANDONED_PICKUP_TRUCK
+                    - Using game built-in 'abandonedPickupTruck01RandomHelper'
+        -->
+	    <!-- *** ABANDONED_PICKUP_TRUCK_DOOR
+                    - Using game built-in 'abandonedPickupTruck01DoorRandomHelper'
+        -->
+	    <!-- *** 3_WIDE_PICKUPTRUCKS
+                    - Using game built-in 'cntPickupTruck3Wide01RandomHelper'
+        -->
+	    <!-- *** ABANDONED_PICKUP_TRUCK_3M_WIDE
+                    - Using game built-in 'abandonedPickupTruck3Wide01RandomHelper'
+        -->
+	    <!-- *** ABANDONED_PICKUP_TRUCK_3M_WIDE_DOOR
+                    - Using game built-in 'abandonedPickupTruck3Wide01DoorRandomHelper'
+        -->
+        <!-- *** ALL_PICKUPTRUCKS
+                - Use it, or not.
+         -->
+        <block name="rbtAllPickupTrucksRandomHelper">
+	        <property name="Extends" value="carsRandomHelper"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="CustomIcon" value="cntPickupTruck01White"/>
+	        <property name="CustomIconTint" value="9caf88"/>
+	        <property name="ItemTypeIcon" value="other"/>
+            <property name="DescriptionKey" value="rbtAllPickupTrucksRandomHelperDesc"/>
+	        <property name="SortOrder1" value="R375"/>
+        </block>
+
+	    <!-- *** SEMI_TRUCK
+                    - Using game built-in 'cntSemiTruck01RandomHelper'
+        -->
+
+	    <!-- *** SEMI_TRUCK_MODULAR
+                    - Using game built-in 'cntSemiTruck01ModularFrontRandomHelper'
+        -->
+
+	    <!-- *** POLICE_CAR -->
+        <block name="rbtAllPoliceCarRandomHelper">
+	        <property name="Extends" value="carsRandomHelper"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="CustomIcon" value="cntPoliceCar01"/>
+	        <property name="CustomIconTint" value="9caf88"/>
+	        <property name="ItemTypeIcon" value="other"/>
+            <property name="DescriptionKey" value="rbtAllPoliceCarRandomHelperDesc"/>
+	        <property name="SortOrder1" value="R380"/>
+        </block>
+
+	    <!-- *** CRUSHED_CARS_01
+                    - Using game built-in 'crushedCars01RandomHelper'
+        -->
+	    <!-- *** CRUSHED_CARS_02
+                    - Using game built-in 'crushedCars02RandomHelper'
+        -->
+        <!-- *** ALL_CRUSHED_CARS
+                - Didn't see much need to combine, but I made a combo-HELPER anyway.  Use it...or not.
+         -->
+        <block name="rbtAllCrushedCarsRandomHelper">
+	        <property name="Extends" value="carsRandomHelper"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="CustomIcon" value="crushedCars01White"/>
+	        <property name="CustomIconTint" value="9caf88"/>
+	        <property name="ItemTypeIcon" value="other"/>
+            <property name="DescriptionKey" value="rbtAllCrushedCarsRandomHelperDesc"/>
+	        <property name="SortOrder1" value="R385"/>
+        </block>
+
+	    <!-- *** BUSES -->
+        <block name="cntAllBusesRandomHelper">
+	        <property name="Extends" value="carsRandomHelper"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="CustomIcon" value="cntBusSchool"/>
+	        <property name="CustomIconTint" value="9caf88"/>
+	        <property name="ItemTypeIcon" value="other"/>
+            <property name="DescriptionKey" value="cntAllBusesRandomHelperDesc"/>
+	        <property name="SortOrder1" value="R386"/>
+        </block>
+
+	    <!-- *** SERVICE_VEHICLES
+            - cntServiceTruckMoPower: (SEE:  'GENERIC_SERVICE_TRUCK')
+            - cntServiceTruckWorkingStiffTools: (SEE:  'GENERIC_SERVICE_TRUCK')
+
+            - cntAmbulanceTruck01 (can only spawn itself)
+        -->
+
+	    <!-- *** GENERIC_SERVICE_TRUCK -->
+        <block name="rbtAllServiceTrucksRandomHelper">
+	        <property name="Extends" value="carsRandomHelper"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="CustomIcon" value="cntServiceTruckWhite"/>
+	        <property name="CustomIconTint" value="9caf88"/>
+	        <property name="ItemTypeIcon" value="other"/>
+            <property name="DescriptionKey" value="rbtAllServiceTrucksRandomHelperDesc"/>
+	        <property name="SortOrder1" value="R390"/>
+        </block>
+
+	    <!-- *** BOX_TRUCK
+                    - Using game built-in 'cntBoxTruckRandomLootHelper'
+        -->
+	    <!-- *** ARMY_TRUCKS
+                    - Using game built-in 'cntArmyTruckRandomLootHelper'
+        -->
+	    <!-- *** FARM_TRUCKS
+                    - Using game built-in 'cntFarmTruckRandomLootHelper'
+        -->
+	    <!-- *** TRACTORS -->
+        <block name="rbtAllTractorsRandomHelper">
+	        <property name="Extends" value="carsRandomHelper"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="CustomIcon" value="tractorWhite"/>
+	        <property name="CustomIconTint" value="9caf88"/>
+	        <property name="ItemTypeIcon" value="other"/>
+            <property name="DescriptionKey" value="rbtAllTractorsRandomHelperDesc"/>
+	        <property name="SortOrder1" value="R395"/>
+        </block>
+
+	    <!-- *** EXCAVATORS -->
+        <block name="rbtAllExcavatorsRandomHelper">
+	        <property name="Extends" value="carsRandomHelper"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="CustomIcon" value="excavatorWhite"/>
+	        <property name="CustomIconTint" value="9caf88"/>
+	        <property name="ItemTypeIcon" value="other"/>
+            <property name="DescriptionKey" value="rbtAllExcavatorsRandomHelperDesc"/>
+	        <property name="SortOrder1" value="R396"/>
+        </block>
+
+	    <!-- *** BACKHOES -->
+        <block name="rbtAllBackhoesRandomHelper">
+	        <property name="Extends" value="carsRandomHelper"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="CustomIcon" value="backhoeWhite"/>
+	        <property name="CustomIconTint" value="9caf88"/>
+	        <property name="ItemTypeIcon" value="other"/>
+            <property name="DescriptionKey" value="rbtAllBackhoesRandomHelperDesc"/>
+	        <property name="SortOrder1" value="R397"/>
+        </block>
+
+	    <!-- *** FORKLIFTS -->
+        <block name="rbtAllForkLiftsRandomHelper">
+	        <property name="Extends" value="carsRandomHelper"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="CustomIcon" value="forkliftWhite"/>
+	        <property name="CustomIconTint" value="9caf88"/>
+	        <property name="ItemTypeIcon" value="other"/>
+            <property name="DescriptionKey" value="rbtAllForkLiftsRandomHelperDesc"/>
+	        <property name="SortOrder1" value="R398"/>
+        </block>
+
+	    <!-- *** FRONT_CRUMPLED_SEDAN -->
+
+    </insertAfter>
+
+</blocks>

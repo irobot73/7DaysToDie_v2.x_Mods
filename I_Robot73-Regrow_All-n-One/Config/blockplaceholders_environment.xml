@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<blockplaceholders>
+
+<!--
+
+    - Adjust the probabilities as desired.
+    - You can also add in duplicate entries (better chance of being picked, esp. as the 'prob' reaches '1.0')
+
+        EG:
+            
+	    <placeholder name="rbtExampleRandomHelper">
+		    <block name="rock01" randomrotation="true" prob="0.2"/> <- dupe
+		    <block name="rock02" randomrotation="true" prob=".20"/>
+		    <block name="rock04" randomrotation="true" prob=".20"/>
+		    <block name="rock01" randomrotation="true" prob="0.80"/> <- dupe
+-->
+
+    <append xpath="/blockplaceholders">
+
+<!-- *** Post Boxes -->
+		<placeholder name="rbtAllPostMailboxesRandomHelper">
+			<block name="cntPostMailbox" prob=".4"/>
+			<block name="rbtEmptyPostMailbox" prob=".6"/>
+		</placeholder>
+
+<!-- *** Free News Dispensers -->
+		<placeholder name="rbtAllNewsDispensersRandomHelper">
+			<block name="cntNewsDispenseFreeGreen" prob=".4"/>
+			<block name="rbtEmptyNewsDispenseFreeGreen" prob=".6"/>
+			<block name="cntNewsDispenseFreeOrange" prob=".4"/>
+			<block name="rbtEmptyNewsDispenseFreeOrange" prob=".6"/>
+			<block name="cntNewspaperDispenserStandBlue" prob=".4"/>
+			<block name="rbtEmptyNewspaperDispenserStandBlue" prob=".6"/>
+			<block name="cntNewspaperDispenserStandYellow" prob=".4"/>
+			<block name="rbtEmptyNewspaperDispenserStandYellow" prob=".6"/>
+		</placeholder>
+
+<!-- *** ATMS -->
+		<placeholder name="rbtAllATMsRandomHelper">
+			<block name="cntATMSecure" prob=".6"/>
+			<block name="cntATMInsecure" prob=".1"/>
+			<block name="rbtLootedATM" prob=".4"/>
+		</placeholder>
+
+<!-- *** STREET_LIGHTS -->
+		<placeholder name="rbtAllStreeLightsRandomHelper">
+			<block name="streetLight01" prob=".4"/>
+			<block name="streetLight02" prob=".4"/>
+			<block name="streetLight03" prob=".4"/>
+			<block name="streetLight04" prob=".4"/>
+			<block name="streetLightBroken" prob=".5"/>
+			<block name="streetLightBrokenDestroyed" prob=".6"/>
+		</placeholder>
+
+<!-- *** BOULDERS -->
+	    <placeholder name="rbtAllRocksRandomHelper">
+		    <block name="rock01" randomrotation="true" prob="0.2"/>
+		    <block name="rock02" randomrotation="true" prob="0.2"/>
+		    <block name="rock04" randomrotation="true" prob="0.2"/>
+		    <block name="rock05" randomrotation="true" prob="0.2"/>
+		    <block name="rock06" randomrotation="true" prob="0.2"/>
+		    <block name="rock07" randomrotation="true" prob="0.2"/>
+	    </placeholder>
+
+	    <placeholder name="rbtAllBouldersRandomHelper">
+		    <block name="resourceRock01" randomrotation="true" prob="0.35"/>
+		    <block name="resourceRock02" randomrotation="true" prob="0.25"/>
+		    <block name="resourceRock03" randomrotation="true" prob="0.3"/>
+	    </placeholder>
+
+    </append>
+
+</blockplaceholders>

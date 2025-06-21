@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<blocks>
+
+<!-- Insert the new, custom BLOCKS before any usage -->
+
+    <!-- Post Mailbox (looted) -->
+    <insertAfter xpath="/blocks/block[@name='cntPostMailbox']">
+
+        <block name="rbtEmptyPostMailbox">
+            <property name="Extends" value="cntPostMailbox"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="LootList" value="mailboxEmpty"/>
+            <property name="CustomIcon" value="cntPostMailbox"/>
+            <property name="DescriptionKey" value="rbtEmptyPostMailboxDesc"/>
+            <property name="FilterTags" value="MC_building,SC_commercial,MC_outdoor,SC_decor"/>
+            <property name="SortOrder1" value="B463"/>
+            <property name="SortOrder2" value="0004"/>
+        </block>
+
+    </insertAfter>
+
+    <!-- News Dispensers (looted) -->
+    <insertAfter xpath="/blocks/block[@name='cntNewspaperDispenserStandYellow']">
+
+        <block name="rbtEmptyNewsDispenseFreeGreen">
+            <property name="Extends" value="cntNewsDispenseFreeGreen"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="LootList" value="mailboxEmpty"/>
+            <property name="CustomIcon" value="cntNewsDispenseFreeGreen"/>
+            <property name="DescriptionKey" value="rbtEmptyNewsDispenseFreeGreenDesc"/>
+            <property name="SortOrder1" value="B463"/>
+            <property name="SortOrder2" value="0006"/>
+        </block>
+        <block name="rbtEmptyNewsDispenseFreeOrange">
+            <property name="Extends" value="cntNewsDispenseFreeOrange"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="LootList" value="mailboxEmpty"/>
+            <property name="CustomIcon" value="cntNewsDispenseFreeOrange"/>
+            <property name="DescriptionKey" value="rbtEmptyNewsDispenseFreeOrangeDesc"/>
+            <property name="SortOrder1" value="B463"/>
+            <property name="SortOrder2" value="0007"/>
+        </block>
+        <block name="rbtEmptyNewspaperDispenserStandBlue">
+            <property name="Extends" value="cntNewspaperDispenserStandBlue"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="LootList" value="mailboxEmpty"/>
+            <property name="CustomIcon" value="cntNewspaperDispenserStandBlue"/>
+            <property name="DescriptionKey" value="rbtEmptyNewspaperDispenserStandBlueDesc"/>
+            <property name="SortOrder1" value="B463"/>
+            <property name="SortOrder2" value="0008"/>
+        </block>
+        <block name="rbtEmptyNewspaperDispenserStandYellow">
+            <property name="Extends" value="cntNewspaperDispenserStandYellow"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="LootList" value="mailboxEmpty"/>
+            <property name="CustomIcon" value="cntNewspaperDispenserStandYellow"/>
+            <property name="DescriptionKey" value="rbtEmptyNewspaperDispenserStandYellowDesc"/>
+            <property name="SortOrder1" value="B463"/>
+            <property name="SortOrder2" value="0009"/>
+        </block>
+
+    </insertAfter>
+
+    <!-- ATM (looted) -->
+    <insertAfter xpath="/blocks/block[@name='cntATMInsecure']">
+
+        <block name="rbtLootedATM">
+            <property name="Extends" value="cntATMInsecure"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="LootList" value="atmEmpty"/>
+            <property name="CustomIcon" value="cntATMSecure"/>
+            <property name="DescriptionKey" value="rbtLootedATMDesc"/>
+            <property name="FilterTags" value="MC_building"/>
+            <property name="SortOrder1" value="B453"/>
+            <property name="SortOrder2" value="0003"/>
+        </block>
+
+    </insertAfter>
+
+</blocks>

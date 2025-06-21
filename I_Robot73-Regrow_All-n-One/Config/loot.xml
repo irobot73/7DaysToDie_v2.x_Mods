@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<loot>
+
+    <append xpath="/lootcontainers">
+
+        <lootcontainer name="mailboxEmpty" count="1" size="6,2" sound_open="UseActions/open_mailbox" sound_close="UseActions/close_mailbox" loot_quality_template="qualBaseTemplate" ignore_loot_abundance="true">
+	        <item name="cobweb" count="0"/>
+        </lootcontainer>
+
+        <lootcontainer name="atmEmpty" count="1" size="6,1" sound_open="UseActions/open_safe" sound_close="UseActions/close_safe" open_time="1" loot_quality_template="qualPlus1Template" ignore_loot_abundance="true">
+	        <item name="cobweb" count="0"/>
+        </lootcontainer>
+
+        <lootcontainer name="policeCarEmpty" count="1" size="7,4" sound_open="UseActions/open_vehicle" sound_close="UseActions/close_vehicle" open_time="4" loot_quality_template="qualBaseTemplate">
+	        <item name="cobweb" count="0"/>
+        </lootcontainer>
+
+    </append>
+
+</loot>

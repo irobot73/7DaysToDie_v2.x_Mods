@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<blocks>
+
+    <!-- Police cruiser (looted) -->
+    <insertAfter xpath="/blocks/block[@name='cntPoliceCar01AlarmUnlocked']">
+
+        <block name="rbtLootedPoliceCar">
+            <property name="Extends" value="cntPoliceCar01AlarmUnlocked"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="LootList" value="policeCarEmpty"/>
+            <property name="CustomIcon" value="cntPoliceCar01"/>
+            <property name="DescriptionKey" value="rbtLootedPoliceCarDesc"/>
+            <property name="FilterTags" value="MC_building,SC_automotive"/>
+            <property name="SortOrder1" value="B867"/>
+            <property name="SortOrder2" value="0004"/>
+        </block>
+
+    </insertAfter>
+
+</blocks>
