@@ -142,35 +142,49 @@
     </insertAfter>
 
     <!-- Tree Dead Pine Leaf (bare 'shrub' found in Forest biome) -->
-    <insertAfter xpath="/blocks/block[@name='treeDeadPineLeaf']">
+    <insertAfter xpath="/blocks/block[@name='plantShrubDead']">
 
         <block name="rbtTreeDeadPineLeafRespawner">
             <property name="Extends" value="rbtGrassRespawnMaster"/>
             <property name="CreativeMode" value="Dev"/>
             <property name="DescriptionKey" value="rbtTreeDeadPineLeafRespawnerDesc"/>
             <property name="CustomIcon" value="treeDeadPineLeaf"/>
-            <property name="PlantGrowing.Next" value="treeDeadPineLeaf"/>
+            <property name="PlantGrowing.Next" value="rbtAllBrushBushRandomHelper"/>
             <property name="Texture" value="201,306,371,201,306,371"/>
             <property name="MaxDamage" value="2"/>
             <property name="SortOrder1" value="R429"/>
             <property name="SortOrder2" value="9429"/>
         </block>
 
-    </insertAfter>
-
-    <!-- Tree Dead Pine Leaf (bare 'shrub' found in Forest biome) -->
-    <insertAfter xpath="/blocks/block[@name='plantShrub']">
+       <!-- Shrubs -->
 
         <block name="rbtPlantShrubRespawner">
             <property name="Extends" value="rbtGrassRespawnMaster"/>
             <property name="CreativeMode" value="Dev"/>
             <property name="DescriptionKey" value="rbtPlantShrubRespawnerDesc"/>
             <property name="CustomIcon" value="plantShrub"/>
-            <property name="PlantGrowing.Next" value="plantShrub"/>
+            <property name="PlantGrowing.Next" value="rbtAllShrubsRandomHelper"/>
             <property name="Texture" value="201,306,371,201,306,371"/>
             <property name="MaxDamage" value="2"/>
             <property name="SortOrder1" value="R430"/>
             <property name="SortOrder2" value="9430"/>
+        </block>
+
+    </insertAfter>
+
+    <!-- Mushrooms -->
+    <insertAfter xpath="/blocks/block[@name='mushroomRadiated04']">
+
+        <block name="rbtMushroomRespawner">
+            <property name="Extends" value="rbtGrassRespawnMaster"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="DescriptionKey" value="rbtMushroomRespawnerDesc"/>
+            <property name="CustomIcon" value="plantedMushroom3Harvest"/>
+            <property name="PlantGrowing.Next" value="plantedMushroom1"/>
+            <property name="Texture" value="201,306,371,201,306,371"/>
+            <property name="MaxDamage" value="2"/>
+            <property name="SortOrder1" value="R429"/>
+            <property name="SortOrder2" value="9429"/>
         </block>
 
     </insertAfter>

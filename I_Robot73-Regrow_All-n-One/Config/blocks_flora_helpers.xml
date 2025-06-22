@@ -55,4 +55,35 @@
 
     </insertAfter>
 
+    <!-- Shrubs & Brush_Bushes-->
+    <insertAfter xpath="/blocks/block[@name='plantShrubRandomHelper']">
+
+        <!-- Helper that will pick a random brush bush for a respawn [REF:  'BLOCKPLACEHOLDERS.XML'] -->
+        <block name="rbtAllBrushBushRandomHelper">
+            <property name="Extends" value="treeDeadPineLeaf"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="PlantGrowing.FertileLevel" value="0"/>
+            <property name="DescriptionKey" value="rbtAllBrushBushRandomHelperDesc"/>
+            <property name="CustomIcon" value="treeDeadPineLeaf"/>
+            <property name="CustomIconTint" value="9caf88"/>
+            <property name="ItemTypeIcon" value="other"/>
+            <property name="SortOrder1" value="R222"/>
+            <property name="FilterTags" value="MC_outdoor,SC_shrubbery"/>
+        </block>
+
+        <!-- Helper that will pick a random shrub for a respawn [REF:  'BLOCKPLACEHOLDERS.XML'] -->
+        <block name="rbtAllShrubsRandomHelper">
+            <property name="Extends" value="plantShrub"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="PlantGrowing.FertileLevel" value="0"/>
+            <property name="DescriptionKey" value="rbtAllShrubsRandomHelperDesc"/>
+            <property name="CustomIcon" value="plantShrub"/>
+            <property name="CustomIconTint" value="9caf88"/>
+            <property name="ItemTypeIcon" value="other"/>
+            <property name="SortOrder1" value="R223"/>
+            <property name="FilterTags" value="MC_outdoor,SC_shrubbery"/>
+        </block>
+
+    </insertAfter>
+
 </blocks>

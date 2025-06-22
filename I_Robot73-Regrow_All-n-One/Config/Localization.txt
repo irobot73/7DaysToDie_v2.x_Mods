@@ -218,3 +218,11 @@ rbtLootedATMDesc,blocks,block,,,"An ATM, empty from looting."
 rbtLootedPoliceCar,blocks,Block,,,"Police cruiser"
 rbtLootedPoliceCarDesc,blocks,block,,,"A police cruiser, empty from looting."
 
+rbtAllBrushBushRandomHelper,blocks,Block,,,"Brush bush randomizer for respawn"
+rbtAllBrushBushRandomHelperDesc,blocks,block,,,"Will randomly select a brush-style bush for a respawn event."
+
+rbtAllShrubsRandomHelper,blocks,Block,,,"Shrub randomizer for respawn"
+rbtAllShrubsRandomHelperDesc,blocks,block,,,"Will randomly select a shrub for a respawn event."
+
+rbtMushroomRespawner,blocks,Block,,,"Mushroom respawner"
+rbtMushroomRespawnerDesc,blocks,block,,,"Will respawn mushrooms after a set time."

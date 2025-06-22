@@ -129,19 +129,27 @@
         <property name="PassThroughDamage" value="false"/>
     </append>
 
-<!-- Tweak the treeDeadPineLeaf as we'd like
+<!-- Tweak the tumbleweed-looking brush as we'd like
         - Insert the DowngradeBlock
  -->
-    <append xpath="//block[@name='treeDeadPineLeaf']">
+    <append xpath="//block[@name='treeDeadPineLeaf' or @name='treePlainsTree' or @name='treeSnowyDeadBush']">
         <property name="DowngradeBlock" value="rbtTreeDeadPineLeafRespawner"/>
         <property name="PassThroughDamage" value="false"/>
     </append>
 
-<!-- Tweak the plantShrub as we'd like
+<!-- Tweak the Shrubs as we'd like
         - Insert the DowngradeBlock
  -->
-    <append xpath="//block[@name='plantShrub']">
+    <append xpath="//block[@name='treeAzalea' or @name='plantHedge' or @name='plantHedgeSnow' or @name='plantHedgeDead' or @name='plantShrub' or @name='plantShrubDead' or @name='plantShrubSnow']">
         <property name="DowngradeBlock" value="rbtPlantShrubRespawner"/>
+        <property name="PassThroughDamage" value="false"/>
+    </append>
+
+<!-- Tweak the Mushrooms as we'd like
+        - Insert the DowngradeBlock
+ -->
+    <append xpath="//block[@name='mushroom01' or @name='plantedMushroom3Harvest']">
+        <property name="DowngradeBlock" value="rbtMushroomRespawner"/>
         <property name="PassThroughDamage" value="false"/>
     </append>
 

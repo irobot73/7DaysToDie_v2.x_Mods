@@ -150,6 +150,40 @@
 			<block name="driftwood3"    randomrotation="true"   prob="0.05"/>
         </placeholder>
 
+<!-- *** SHRUBS_N_HEDGES -->
+        <placeholder name="rbtAllShrubsRandomHelper">
+		    <block name="treeAzalea"      randomrotation="true" prob="1.0"  biome="pine_forest"/>
+		    <block name="plantHedge"      randomrotation="true" prob="1.0"  biome="pine_forest"/>
+		    <block name="plantHedgeSnow"  randomrotation="true" prob="1.0"  biome="snow"/>
+		    <block name="plantHedgeDead"  randomrotation="true" prob="0.25" biome="pine_forest"/>
+		    <block name="plantHedgeDead"  randomrotation="true" prob="0.25" biome="burnt_forest"/>
+		    <block name="plantHedgeDead"  randomrotation="true" prob="0.25" biome="desert"/>
+		    <block name="plantHedgeDead"  randomrotation="true" prob="0.25" biome="snow"/>
+		    <block name="plantHedgeDead"  randomrotation="true" prob="1.0"  biome="wasteland"/>
+		    <block name="plantShrub"      randomrotation="true" prob="1.0"  biome="pine_forest"/>
+		    <block name="plantShrubDead"  randomrotation="true" prob="0.25" biome="pine_forest"/>
+		    <block name="plantShrubDead"  randomrotation="true" prob="1.0"  biome="burnt_forest"/>
+		    <block name="plantShrubDead"  randomrotation="true" prob="1.0"  biome="desert"/>
+		    <block name="plantShrubDead"  randomrotation="true" prob="1.0"  biome="snow"/>
+		    <block name="plantShrubDead"  randomrotation="true" prob="1.0"  biome="wasteland"/>
+		    <block name="plantShrubSnow"  randomrotation="true" prob="1.0"  biome="snow"/>
+        </placeholder>
+
+<!-- *** BRUSH_BUSH ('Tumbleweeds') -->
+        <placeholder name="rbtAllBrushBushRandomHelper">
+			<block name="treeDeadPineLeaf"  randomrotation="true" prob="1.0"  biome="pine_forest"/>
+			<block name="treeDeadPineLeaf"  randomrotation="true" prob="1.0"  biome="burnt_forest"/>
+			<block name="treeDeadPineLeaf"  randomrotation="true" prob="1.0"  biome="desert"/>
+			<block name="treeDeadPineLeaf"  randomrotation="true" prob="0.75" biome="snow"/>
+			<block name="treeDeadPineLeaf"  randomrotation="true" prob="1.0"  biome="wasteland"/>
+			<block name="treePlainsTree"    randomrotation="true" prob="0.5"  biome="pine_forest"/>
+			<block name="treePlainsTree"    randomrotation="true" prob="0.5"  biome="burnt_forest"/>
+			<block name="treePlainsTree"    randomrotation="true" prob="0.5"  biome="desert"/>
+			<block name="treePlainsTree"    randomrotation="true" prob="0.5"  biome="snow"/>
+			<block name="treePlainsTree"    randomrotation="true" prob="0.1"  biome="wasteland"/>
+			<block name="treeSnowyDeadBush" randomrotation="true" prob="1.0"  biome="snow"/>
+        </placeholder>
+
     </append>
 
 </blockplaceholders>
