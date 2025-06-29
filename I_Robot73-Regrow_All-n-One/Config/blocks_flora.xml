@@ -153,6 +153,38 @@
         <property name="PassThroughDamage" value="false"/>
     </append>
 
+<!-- Tweak Corn as we'd like
+        - Insert the DowngradeBlock
+ -->
+    <append xpath="//block[@name='plantedCorn1' or @name='plantedCorn3Harvest' or starts-with(@name, 'plantedCornDead') or @name='plantedGraceCorn1' or @name='plantedGraceCorn3Harvest']">
+        <property name="DowngradeBlock" value="rbtCornRespawner"/>
+        <property name="PassThroughDamage" value="false"/>
+    </append>
+
+<!-- Tweak Blueberries as we'd like
+        - Insert the DowngradeBlock
+ -->
+    <append xpath="//block[@name='plantedBlueberry1' or @name='plantedBlueberry2' or @name='plantedBlueberry3Harvest' or @name='plantedBlueberryDead']">
+        <property name="DowngradeBlock" value="rbtPlantShrubRespawner"/>
+        <property name="PassThroughDamage" value="false"/>
+    </append>
+
+<!-- Tweak Aloe as we'd like
+        - Insert the DowngradeBlock
+ -->
+    <append xpath="//block[@name='plantedAloe1' or @name='plantedAloe3Harvest' or @name='plantedAloeDead']">
+        <property name="DowngradeBlock" value="rbtPlantAloeRespawner"/>
+        <property name="PassThroughDamage" value="false"/>
+    </append>
+
+<!-- Tweak Yucca as we'd like
+        - Insert the DowngradeBlock
+ -->
+    <append xpath="//block[@name='plantedYucca1' or @name='plantedYucca3Harvest' or @name='plantedYuccaDead']">
+        <property name="DowngradeBlock" value="rbtPlantYuccaRespawner"/>
+        <property name="PassThroughDamage" value="false"/>
+    </append>
+
 </blocks>
 
 <!-- *** BASE GAME:

@@ -32,6 +32,9 @@
             <drop event="Harvest" name="resourceSnowBall" count="2" tag="allHarvest"/>
             <drop event="Destroy" name="foodHoney" count="1" prob="0.1"/>
             <drop event="Destroy" name="treePlantedWinterPine1m" count="1" prob="0.5"/>
+            <!-- 3.28 days @ 90-min/day -->
+            <!-- <property name="PlantGrowing.GrowthRate" value="295.2"/> -->
+	        <property name="PlantGrowing.GrowthRate" value="0.2"/>
             <property name="SortOrder1" value="R422"/>
             <property name="SortOrder2" value="9422"/>
         </block>
@@ -49,6 +52,9 @@
             <drop event="Harvest" name="resourceCoal" count="5,20" tag="oreWoodHarvest,lumberjackHarvest"/>
             <drop event="Harvest" name="resourceCoal" count="5,20" tag="coalHarvest"/>
             <drop event="Destroy" name="treePlantedMountainPine1m" count="1" prob="0.25"/>
+            <!-- 4.5 days @ 90-min/day -->
+            <!-- <property name="PlantGrowing.GrowthRate" value="405"/> -->
+	        <property name="PlantGrowing.GrowthRate" value="0.2"/>
             <property name="SortOrder1" value="R423"/>
             <property name="SortOrder2" value="9423"/>
         </block>
@@ -66,6 +72,9 @@
             <drop event="Harvest" name="resourceCoal" count="5,20" tag="oreWoodHarvest,lumberjackHarvest"/>
             <drop event="Harvest" name="resourceCoal" count="5,20" tag="coalHarvest"/>
             <drop event="Destroy" name="foodCropMushroomsRadiated" count="1" prob="0.1"/>
+            <!-- 5.75 days @ 90-min/day -->
+            <!-- <property name="PlantGrowing.GrowthRate" value="517.5"/> -->
+	        <property name="PlantGrowing.GrowthRate" value="0.2"/>
             <property name="SortOrder1" value="R423"/>
             <property name="SortOrder2" value="9423"/>
         </block>
@@ -81,8 +90,10 @@
             <property name="CreativeMode" value="Dev"/>
             <property name="DescriptionKey" value="rbtCactiRandomRespawnerDesc"/>
             <property name="PlantGrowing.Next" value="rbtAllCactiRandomHelper"/>
+            <!-- 2.5 days @ 90-min/day -->
+            <!-- <property name="PlantGrowing.GrowthRate" value="225"/> -->
+	        <property name="PlantGrowing.GrowthRate" value="0.2"/>
             <property name="Texture" value="201,306,371,201,306,371"/>
-            <property name="MaxDamage" value="2"/>
             <property name="SortOrder1" value="R425"/>
             <property name="SortOrder2" value="9425"/>
         </block>
@@ -98,8 +109,10 @@
             <property name="DescriptionKey" value="rbtChrysanthemumRespawnerDesc"/>
             <property name="CustomIcon" value="plantedChrysanthemum1"/>
             <property name="PlantGrowing.Next" value="plantedChrysanthemum3Harvest"/>
+            <!-- 2.8 days @ 90-min/day -->
+            <!-- <property name="PlantGrowing.GrowthRate" value="252"/> -->
+	        <property name="PlantGrowing.GrowthRate" value="0.2"/>
             <property name="Texture" value="201,306,371,201,306,371"/>
-            <property name="MaxDamage" value="2"/>
             <drop event="Harvest" count="0"/>
             <property name="SortOrder1" value="R426"/>
             <property name="SortOrder2" value="9426"/>
@@ -116,8 +129,10 @@
             <property name="DescriptionKey" value="rbtCottonRespawnerDesc"/>
             <property name="CustomIcon" value="plantedCotton1"/>
             <property name="PlantGrowing.Next" value="plantedCotton3Harvest"/>
+            <!-- 2 days @ 90-min/day -->
+            <!-- <property name="PlantGrowing.GrowthRate" value="180"/> -->
+	        <property name="PlantGrowing.GrowthRate" value="0.2"/>
             <property name="Texture" value="201,306,371,201,306,371"/>
-            <property name="MaxDamage" value="2"/>
             <property name="SortOrder1" value="R427"/>
             <property name="SortOrder2" value="9427"/>
         </block>
@@ -133,15 +148,17 @@
             <property name="DescriptionKey" value="rbtGoldenrodRespawnerDesc"/>
             <property name="CustomIcon" value="plantedGoldenrod1"/>
             <property name="PlantGrowing.Next" value="plantedGoldenrod3Harvest"/>
+            <!-- 2.5 days @ 90-min/day -->
+            <!-- <property name="PlantGrowing.GrowthRate" value="225"/> -->
+	        <property name="PlantGrowing.GrowthRate" value="0.2"/>
             <property name="Texture" value="201,306,371,201,306,371"/>
-            <property name="MaxDamage" value="2"/>
             <property name="SortOrder1" value="R428"/>
             <property name="SortOrder2" value="9428"/>
         </block>
 
     </insertAfter>
 
-    <!-- Tree Dead Pine Leaf (bare 'shrub' found in Forest biome) -->
+    <!-- Tree Dead Pine Leaf (bare 'shrub' found in all biomes) -->
     <insertAfter xpath="/blocks/block[@name='plantShrubDead']">
 
         <block name="rbtTreeDeadPineLeafRespawner">
@@ -151,7 +168,6 @@
             <property name="CustomIcon" value="treeDeadPineLeaf"/>
             <property name="PlantGrowing.Next" value="rbtAllBrushBushRandomHelper"/>
             <property name="Texture" value="201,306,371,201,306,371"/>
-            <property name="MaxDamage" value="2"/>
             <property name="SortOrder1" value="R429"/>
             <property name="SortOrder2" value="9429"/>
         </block>
@@ -165,7 +181,6 @@
             <property name="CustomIcon" value="plantShrub"/>
             <property name="PlantGrowing.Next" value="rbtAllShrubsRandomHelper"/>
             <property name="Texture" value="201,306,371,201,306,371"/>
-            <property name="MaxDamage" value="2"/>
             <property name="SortOrder1" value="R430"/>
             <property name="SortOrder2" value="9430"/>
         </block>
@@ -181,10 +196,69 @@
             <property name="DescriptionKey" value="rbtMushroomRespawnerDesc"/>
             <property name="CustomIcon" value="plantedMushroom3Harvest"/>
             <property name="PlantGrowing.Next" value="plantedMushroom1"/>
+            <!-- 3 days @ 90-min/day -->
+            <!-- <property name="PlantGrowing.GrowthRate" value="270"/> -->
+	        <property name="PlantGrowing.GrowthRate" value="0.2"/>
             <property name="Texture" value="201,306,371,201,306,371"/>
-            <property name="MaxDamage" value="2"/>
             <property name="SortOrder1" value="R429"/>
             <property name="SortOrder2" value="9429"/>
+        </block>
+
+    </insertAfter>
+
+    <!-- Corn -->
+    <insertAfter xpath="/blocks/block[@name='plantedGraceCorn3HarvestPlayer']">
+
+        <block name="rbtCornRespawner">
+            <property name="Extends" value="rbtGrassRespawnMaster"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="DescriptionKey" value="rbtCornRespawnerDesc"/>
+            <property name="CustomIcon" value="plantedCornDead"/>
+            <property name="PlantGrowing.Next" value="rbtAllplantedCornHarvestRandomHelper"/>
+            <!-- 3 days @ 90-min/day  -->
+            <!-- <property name="PlantGrowing.GrowthRate" value="270"/> -->
+            <property name="PlantGrowing.GrowthRate" value="0.2"/>
+            <property name="Texture" value="201,306,371,201,306,371"/>
+            <property name="SortOrder1" value="R430"/>
+            <property name="SortOrder2" value="9430"/>
+        </block>
+
+    </insertAfter>
+
+    <!-- Aloe -->
+    <insertAfter xpath="/blocks/block[@name='plantedAloe3HarvestPlayer']">
+
+        <block name="rbtPlantAloeRespawner">
+            <property name="Extends" value="rbtGrassRespawnMaster"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="DescriptionKey" value="rbtPlantAloeRespawnerDesc"/>
+            <property name="CustomIcon" value="plantedAloeDead"/>
+            <property name="PlantGrowing.Next" value="rbtAllPlantedAloeRandomHelper"/>
+            <!-- 3 days @ 90-min/day  -->
+            <!-- <property name="PlantGrowing.GrowthRate" value="270"/> -->
+            <property name="PlantGrowing.GrowthRate" value="0.2"/>
+            <property name="Texture" value="201,306,371,201,306,371"/>
+            <property name="SortOrder1" value="R431"/>
+            <property name="SortOrder2" value="9431"/>
+        </block>
+
+    </insertAfter>
+
+    <!-- Yucca -->
+    <insertAfter xpath="/blocks/block[@name='plantedYucca3HarvestPlayer']">
+
+        <block name="rbtPlantYuccaRespawner">
+            <property name="Extends" value="rbtGrassRespawnMaster"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="DescriptionKey" value="rbtPlantYuccaRespawnerDesc"/>
+            <property name="CustomIcon" value="plantedYuccaDead"/>
+            <property name="PlantGrowing.Next" value="rbtAllPlantedYuccaRandomHelper"/>
+            <!-- 3 days @ 90-min/day  -->
+            <!-- <property name="PlantGrowing.GrowthRate" value="270"/> -->
+            <property name="PlantGrowing.GrowthRate" value="0.2"/>
+            <property name="Texture" value="201,306,371,201,306,371"/>
+            <property name="SortOrder1" value="R432"/>
+            <property name="SortOrder2" value="9432"/>
         </block>
 
     </insertAfter>

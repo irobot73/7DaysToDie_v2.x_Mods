@@ -7,6 +7,7 @@
     - Set 'GrowthRate' time as desired.  EX:  Given 2 Days at 60-min days, use '120'.  Using '0.2' for testing seems to work well.
     - Set 'MaxDamage' as desired.  IMO, enough so players know it's not vanilla, but low enough they can still stop any respawns, if they want(ed).
     - Set the 'Drop event=Havest|Destroy' items and probabilities to your liking (remembering all items will filter down to the 'child' block(s)).
+    - NOTE:  Adding the 'DisplayInfo' property to a block, when present in the world, will display the block's BLOCK value from the LOCALIZATION file. -->
 -->
 
 <!-- MASTER blocks -->
@@ -17,7 +18,9 @@
             <property name="Extends" value="air"/>
             <property name="Class" value="PlantGrowing"/>
             <property name="CreativeMode" value="None"/>
-            <property name="PlantGrowing.GrowthRate" value="0.2"/>
+            <!-- 2.5 days @ 90-min/day -->
+            <!-- <property name="PlantGrowing.GrowthRate" value="225"/> -->
+	        <property name="PlantGrowing.GrowthRate" value="0.2"/>
             <property name="PlantGrowing.FertileLevel" value="0"/>
         </block>
 
@@ -39,45 +42,61 @@
             <property name="PassThroughDamage" value="false"/>
             <property name="PlaceAsRandomRotation" value="true"/>
             <property name="OnlySimpleRotations" value="true"/>
-            <property name="PlantGrowing.GrowthRate" value="0.2"/>
+            <!-- 2 days @ 90-min/day -->
+            <!-- <property name="PlantGrowing.GrowthRate" value="180"/> -->
+	        <property name="PlantGrowing.GrowthRate" value="0.2"/>
             <property name="PlantGrowing.FertileLevel" value="0"/>
             <property name="PlantGrowing.Next" value="rbtAllBouldersRandomHelper"/>
             <property name="CanPlayersSpawnOn" value="false"/>
             <property name="CanMobsSpawnOn" value="false"/>
-            <property name="MaxDamage" value="100"/>
+            <property name="MaxDamage" value="25"/>
             <property name="CanPickup" value="true" param1="resourceRockSmall"/>
             <drop event="Destroy" name="resourceRockSmall" count="1"/>
         </block>
 
         <!-- Grass\Respawner [This master controls all the blocks that it 'Extends' from] -->
+        <!--    Based on 'cropsGrowingMaster' -->
         <block name="rbtGrassRespawnMaster">
-            <property name="Class" value="PlantGrowing"/>
-            <property name="CreativeMode" value="None"/>
-            <property name="HarvestOverdamage" value="false"/>
-            <property name="CustomIcon" value="treeBrownGrassDiagonal"/>
-            <property name="Material" value="Mtallgrass"/>
-            <property name="Shape" value="Grass"/>
-            <property name="Mesh" value="grass"/>
-            <property name="Texture" value="350,368,369,370,350,368"/>
-            <property name="ImposterDontBlock" value="true"/>
-            <property name="WaterFlow" value="permitted"/>
-            <property name="Collide" value="melee"/>
-            <property name="IsTerrainDecoration" value="true"/>
-            <property name="IsDecoration" value="true"/>
-            <property name="CanDecorateOnSlopes" value="true"/>
-            <property name="StabilitySupport" value="false"/>
-            <property name="PassThroughDamage" value="false"/>
-            <property name="PlaceAsRandomRotation" value="true"/>
-            <property name="OnlySimpleRotations" value="true"/>
-            <property name="PlantGrowing.GrowthRate" value="0.2"/>
-            <property name="PlantGrowing.FertileLevel" value="0"/>
-            <property name="PlantGrowing.Next" value="rbtAllTreesRandomHelper"/>
-            <property name="CanPlayersSpawnOn" value="false"/>
-            <property name="CanMobsSpawnOn" value="false"/>
-            <property name="MaxDamage" value="100"/>
+            <!-- Class -->
+	        <property name="CreativeMode" value="None"/>
+	        <property name="Class" value="PlantGrowing"/>
+	        <property name="PlantGrowing.Next" value="plantedtreeGrassAirRandomHelper"/>
+                <!-- For testing, this rate (in minutes) should be set no lower than 2
+	        <property name="PlantGrowing.GrowthRate" value="360"/> -->
+	        <property name="PlantGrowing.GrowthRate" value="0.2"/>
+	        <property name="PlantGrowing.FertileLevel" value="0"/>
+	        <property name="PlantGrowing.IsRandom" value="false"/>
+	        <property name="HarvestOverdamage" value="false"/>
+	        <!-- UI_Info -->
+	        <property name="CustomIcon" value="treeForestGrassDiagonal"/>
+	        <property name="DisplayType" value="blockMulti"/>
+	        <property name="DescriptionKey" value="rbtGrassRespawnMasterDesc"/>
+	        <!-- Visual -->
+	        <property name="Material" value="Mtallgrass"/>
+	        <property name="Shape" value="Grass"/>
+	        <property name="Mesh" value="grass"/>
+            <property name="Texture" value="201,306,371,201,306,371"/>
+	        <property name="MultiBlockDim" value="1,1,1"/>
+	        <property name="ImposterDontBlock" value="true"/>
+	        <property name="LightOpacity" value="0"/>
+	        <property name="WaterFlow" value="permitted"/>
+	        <!-- Placement -->
+	        <property name="OnlySimpleRotations" value="true"/>
+	        <property name="Collide" value="melee,bullet,arrow,rocket"/>
+	        <property name="IsDecoration" value="true"/>
+	        <property name="IsTerrainDecoration" value="true"/>
+	        <property name="CanDecorateOnSlopes" value="true"/>
+	        <!-- Value -->
+	        <property name="VehicleHitScale" value=".1"/>
+	        <property name="EconomicValue" value="20"/>
+	        <!-- Interaction -->
+            <!-- <property name="MaxDamage" value="20"/> -->
+                <!-- Uncomment/enable 'CanPickup' and you can use <ACTION> to remove' -->
+            <!-- <property name="CanPickup" value="true" param1="resourceYuccaFibers"/> -->
             <drop event="Harvest" name="resourceYuccaFibers" count="2" tag="allHarvest"/>
-            <drop event="Destroy" count="0"/>
+	        <drop event="Destroy" count="0"/>
             <drop event="Fall" name="resourceYuccaFibers" count="0" prob="1" stick_chance="0"/>
+            <property name="PassThroughDamage" value="false"/>
         </block>
 
         <!-- Tree Stump\Respawner [This master controls all the blocks that it 'Extends' from] -->
@@ -98,7 +117,9 @@
             <property name="PassThroughDamage" value="false"/>
             <property name="PlaceAsRandomRotation" value="true"/>
             <property name="OnlySimpleRotations" value="true"/>
-            <property name="PlantGrowing.GrowthRate" value="0.2"/>
+            <!-- 2.5 days @ 90-min/day -->
+            <!-- <property name="PlantGrowing.GrowthRate" value="225"/> -->
+	        <property name="PlantGrowing.GrowthRate" value="0.2"/>
             <property name="PlantGrowing.FertileLevel" value="0"/>
             <property name="PlantGrowing.Next" value="rbtAllTreesRandomHelper"/>
             <property name="CanPlayersSpawnOn" value="false"/>
@@ -133,8 +154,11 @@
             <property class="RepairItems">
                 <property name="resourceScrapPolymers" value="3"/>
             </property>
+            <property name="PassThroughDamage" value="false"/>
             <property name="OnlySimpleRotations" value="true"/>
-            <property name="PlantGrowing.GrowthRate" value="0.2"/>
+            <!-- 4 days @ 90-min/day -->
+            <!-- <property name="PlantGrowing.GrowthRate" value="360"/> -->
+	        <property name="PlantGrowing.GrowthRate" value="0.2"/>
             <property name="PlantGrowing.FertileLevel" value="0"/>
             <property name="PlantGrowing.Next" value="carsRandomHelper"/>
             <property name="CanPlayersSpawnOn" value="false"/>

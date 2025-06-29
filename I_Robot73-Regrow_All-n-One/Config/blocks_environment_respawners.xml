@@ -11,6 +11,9 @@
             <property name="DescriptionKey" value="rbtBirdNestRespawnerDesc"/>
             <property name="CustomIcon" value="cntBirdnest"/>
             <property name="PlantGrowing.Next" value="cntBirdnest"/>
+            <!-- 3.5 days @ 90-min/day -->
+            <!-- <property name="PlantGrowing.GrowthRate" value="270"/> -->
+            <property name="PlantGrowing.GrowthRate" value="0.2"/>
             <property name="Texture" value="201,306,371,201,306,371"/>
             <property name="SortOrder1" value="R400"/>
             <property name="SortOrder2" value="9400"/>
@@ -59,6 +62,9 @@
             <property name="DescriptionKey" value="rbtATMRandomRespawnerDesc"/>
             <property name="CustomIcon" value="cntATMSecure"/>
             <property name="PlantGrowing.Next" value="rbtAllATMsRandomHelper"/>
+            <!-- 3.5 days @ 90-min/day -->
+            <!-- <property name="PlantGrowing.GrowthRate" value="315"/> -->
+	        <property name="PlantGrowing.GrowthRate" value="0.2"/>
             <property name="Texture" value="201,306,371,201,306,371"/>
             <property name="SortOrder1" value="R505"/>
             <property name="SortOrder2" value="9505"/>

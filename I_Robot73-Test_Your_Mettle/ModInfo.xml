@@ -4,9 +4,8 @@
 	<DisplayName value="Test Your Mettle (Robot Edition)" />
 	<Description value="Skips the 'Basic Survival' challanges, if you want." />
 	<Author value="I_Robot73, StormyG7"/>
-	<Version value="2.0.0-BETA"/>
+	<Version value="2.0.1"/>
 	<Website value="https://discord.gg/DEU5wmMvSn/"/>
-	<SkipWithAntiCheat value="false"/>
 </xml>
 
 <!-- https://github.com/irobot73/7DaysToDie_v2.x_Mods -->

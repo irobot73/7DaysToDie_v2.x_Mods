@@ -45,7 +45,7 @@ rbtTreeDeadPineLeafRespawner,blocks,Block,,,"Dead pine leaf respawner"
 rbtTreeDeadPineLeafRespawnerDesc,blocks,block,,,"Will respawn a leafless shrub, commonly found in the Forest biome, after a set time."
 
 rbtPlantShrubRespawner,blocks,Block,,,"Shrub respawner"
-rbtPlantShrubRespawnerDesc,blocks,block,,,"Will respawn a leafy shrub, commonly found in the Forest biome, after a set time."
+rbtPlantShrubRespawnerDesc,blocks,block,,,"Will respawn a biome appropiate shrub after a set time."
 
 rbtAllVehiclesRandomHelper,blocks,Block,,,"Vehicle randomizer for respawn"
 rbtAllVehiclesRandomHelperDesc,blocks,block,,,"Will randomly select a vehicle for a respawn event."
@@ -226,3 +226,21 @@ rbtAllShrubsRandomHelperDesc,blocks,block,,,"Will randomly select a shrub for a 
 
 rbtMushroomRespawner,blocks,Block,,,"Mushroom respawner"
 rbtMushroomRespawnerDesc,blocks,block,,,"Will respawn mushrooms after a set time."
+
+rbtCornRespawner,blocks,Block,,,"Corn respawner"
+rbtCornRespawnerDesc,blocks,block,,,"Will respawn corn after a set time."
+
+rbtAllplantedCornHarvestRandomHelper,blocks,Block,,,"Corn randomizer for respawn"
+rbtAllplantedCornHarvestRandomHelperDesc,blocks,block,,,"Will randomly select a corn plant for a respawn event."
+
+rbtPlantAloeRespawner,blocks,Block,,,"Aloe plant respawner"
+rbtPlantAloeRespawnerDesc,blocks,block,,,"Will respawn an Aloe plant after a set time."
+
+rbtAllPlantedAloeRandomHelper,blocks,Block,,,"Aloe plant randomizer for respawn"
+rbtAllPlantedAloeRandomHelperDesc,blocks,block,,,"Will randomly select an Aloe plant for a respawn event."
+
+rbtPlantYuccaRespawner,blocks,Block,,,"Yucca plant respawner"
+rbtPlantYuccaRespawnerDesc,blocks,block,,,"Will respawn a Yucca plant after a set time."
+
+rbtAllPlantedYuccaRandomHelper,blocks,Block,,,"Yucca plant randomizer for respawn"
+rbtAllPlantedYuccaRandomHelperDesc,blocks,block,,,"Will randomly select a Yucca plant for a respawn event."

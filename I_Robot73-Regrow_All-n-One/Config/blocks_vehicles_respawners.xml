@@ -64,6 +64,9 @@
             <property name="CreativeMode" value="Dev"/>
             <property name="DescriptionKey" value="rbtMinivanRandomRespawnerDesc"/>
             <property name="PlantGrowing.Next" value="cntMinivan01RandomHelper"/>
+            <!-- 4.5 days @ 90-min/day -->
+            <!-- <property name="PlantGrowing.GrowthRate" value="405"/> -->
+	        <property name="PlantGrowing.GrowthRate" value="0.2"/>
             <property name="SortOrder1" value="R571"/>
             <property name="SortOrder2" value="9571"/>
         </block>
@@ -75,6 +78,9 @@
             <property name="CreativeMode" value="Dev"/>
             <property name="DescriptionKey" value="rbtMinivan3WideRandomRespawnerDesc"/>
             <property name="PlantGrowing.Next" value="cntMinivan3Wide01RandomHelper"/>
+            <!-- 4.5 days @ 90-min/day -->
+            <!-- <property name="PlantGrowing.GrowthRate" value="405"/> -->
+	        <property name="PlantGrowing.GrowthRate" value="0.2"/>
             <property name="SortOrder1" value="R572"/>
             <property name="SortOrder2" value="9572"/>
         </block>
@@ -86,6 +92,9 @@
             <property name="CreativeMode" value="Dev"/>
             <property name="DescriptionKey" value="rbtAllMinivanRandomRespawnerDesc"/>
             <property name="PlantGrowing.Next" value="rbtAllMinivansRandomHelper"/>
+            <!-- 4.5 days @ 90-min/day -->
+            <!-- <property name="PlantGrowing.GrowthRate" value="405"/> -->
+	        <property name="PlantGrowing.GrowthRate" value="0.2"/>
             <property name="SortOrder1" value="R573"/>
             <property name="SortOrder2" value="9573"/>
         </block>
@@ -103,6 +112,9 @@
             <property name="CreativeMode" value="Dev"/>
             <property name="DescriptionKey" value="rbtAllSUVRandomRespawnerDesc"/>
             <property name="PlantGrowing.Next" value="rbtAllSUVsRandomHelper"/>
+            <!-- 4.8 days @ 90-min/day -->
+            <!-- <property name="PlantGrowing.GrowthRate" value="432"/> -->
+	        <property name="PlantGrowing.GrowthRate" value="0.2"/>
             <property name="SortOrder1" value="R580"/>
             <property name="SortOrder2" value="9580"/>
         </block>
@@ -120,6 +132,9 @@
             <property name="CreativeMode" value="Dev"/>
             <property name="DescriptionKey" value="rbtAllPickupTruckRandomRespawnerDesc"/>
             <property name="PlantGrowing.Next" value="rbtAllPickupTrucksRandomHelper"/>
+            <!-- 4.8 days @ 90-min/day -->
+            <!-- <property name="PlantGrowing.GrowthRate" value="432"/> -->
+	        <property name="PlantGrowing.GrowthRate" value="0.2"/>
             <property name="SortOrder1" value="R590"/>
             <property name="SortOrder2" value="9590"/>
         </block>
@@ -131,6 +146,9 @@
             <property name="CreativeMode" value="Dev"/>
             <property name="DescriptionKey" value="rbtSemiTruckRandomRespawnerDesc"/>
             <property name="PlantGrowing.Next" value="cntSemiTruck01RandomHelper"/>
+            <!-- 5 days @ 90-min/day -->
+            <!-- <property name="PlantGrowing.GrowthRate" value="450"/> -->
+	        <property name="PlantGrowing.GrowthRate" value="0.2"/>
             <property name="SortOrder1" value="R591"/>
             <property name="SortOrder2" value="9591"/>
         </block>
@@ -142,6 +160,9 @@
             <property name="CreativeMode" value="Dev"/>
             <property name="DescriptionKey" value="rbtSemiTruckModularFrontRandomRespawnerDesc"/>
             <property name="PlantGrowing.Next" value="cntSemiTruck01ModularFrontRandomHelper"/>
+            <!-- 5 days @ 90-min/day -->
+            <!-- <property name="PlantGrowing.GrowthRate" value="450"/> -->
+	        <property name="PlantGrowing.GrowthRate" value="0.2"/>
             <property name="SortOrder1" value="R592"/>
             <property name="SortOrder2" value="9592"/>
         </block>
@@ -153,6 +174,9 @@
             <property name="CreativeMode" value="Dev"/>
             <property name="DescriptionKey" value="rbtPoliceCarRandomRespawnerDesc"/>
             <property name="PlantGrowing.Next" value="rbtAllPoliceCarRandomHelper"/>
+            <!-- 5.5 days @ 90-min/day -->
+            <!-- <property name="PlantGrowing.GrowthRate" value="495"/> -->
+	        <property name="PlantGrowing.GrowthRate" value="0.2"/>
             <property name="SortOrder1" value="R593"/>
             <property name="SortOrder2" value="9593"/>
         </block>
@@ -175,6 +199,9 @@
             <property name="CreativeMode" value="Dev"/>
             <property name="DescriptionKey" value="rbtCrushedCar01RandomRespawnerDesc"/>
             <property name="PlantGrowing.Next" value="crushedCars01RandomHelper"/>
+            <!-- 3 days @ 90-min/day -->
+            <!-- <property name="PlantGrowing.GrowthRate" value="270"/> -->
+	        <property name="PlantGrowing.GrowthRate" value="0.2"/>
             <property name="SortOrder1" value="R597"/>
             <property name="SortOrder2" value="9597"/>
         </block>
@@ -186,6 +213,9 @@
             <property name="CreativeMode" value="Dev"/>
             <property name="DescriptionKey" value="rbtCrushedCar02RandomRespawnerDesc"/>
             <property name="PlantGrowing.Next" value="crushedCars02RandomHelper"/>
+            <!-- 3 days @ 90-min/day -->
+            <!-- <property name="PlantGrowing.GrowthRate" value="270"/> -->
+	        <property name="PlantGrowing.GrowthRate" value="0.2"/>
             <property name="SortOrder1" value="R597"/>
             <property name="SortOrder2" value="9597"/>
         </block>
@@ -197,6 +227,9 @@
             <property name="CreativeMode" value="Dev"/>
             <property name="DescriptionKey" value="rbtAllCrushedCarRandomRespawnerDesc"/>
             <property name="PlantGrowing.Next" value="rbtAllCrushedCarsRandomHelper"/>
+            <!-- 3 days @ 90-min/day -->
+            <!-- <property name="PlantGrowing.GrowthRate" value="270"/> -->
+	        <property name="PlantGrowing.GrowthRate" value="0.2"/>
             <property name="SortOrder1" value="R597"/>
             <property name="SortOrder2" value="9597"/>
         </block>
@@ -224,6 +257,9 @@
             <property name="CreativeMode" value="Dev"/>
             <property name="DescriptionKey" value="rbtAmbulanceRespawnerDesc"/>
             <property name="PlantGrowing.Next" value="cntAmbulanceTruck01"/>
+            <!-- 5.5 days @ 90-min/day -->
+            <!-- <property name="PlantGrowing.GrowthRate" value="495"/> -->
+	        <property name="PlantGrowing.GrowthRate" value="0.2"/>
             <property name="SortOrder1" value="R605"/>
             <property name="SortOrder2" value="9605"/>
         </block>
@@ -257,6 +293,9 @@
             <property name="CreativeMode" value="Dev"/>
             <property name="DescriptionKey" value="rbtArmyTruckRandomRespawnerDesc"/>
             <property name="PlantGrowing.Next" value="cntArmyTruckRandomLootHelper"/>
+            <!-- 6 days @ 90-min/day -->
+            <!-- <property name="PlantGrowing.GrowthRate" value="540"/> -->
+	        <property name="PlantGrowing.GrowthRate" value="0.2"/>
             <property name="SortOrder1" value="R608"/>
             <property name="SortOrder2" value="9608"/>
         </block>

@@ -30,7 +30,7 @@
                 <property name="Class" value="OpenBundle"/>
                 <property name="Delay" value="0"/>
                 <!-- Enough to complete all the BASIC challenges w/ 25 fiber, wood, stone & arrows -->
-                <property name="Create_item" value="bedrollBlockVariantHelper,drinkJarBoiledWater,foodCanChili,medicalFirstAidBandage,meleeToolTorch,resourceYuccaFibers,resourceWood,resourceRockSmall,resourceFeather"/>
+                <property name="Create_item" value="bedrollBlockVariantHelper,drinkJarBoiledWater,foodCanChili,medicalFirstAidBandage,meleeToolTorch,resourceYuccaFibers,resourceWood,resourceRockSmall,resourceFeather,noteDuke01"/>
                 <property name="Create_item_count" value="1,1,1,1,1,35,70,52,25"/>
             </property>
         </item>

@@ -5,6 +5,9 @@
     <!--  Remove all the rewards when completing the BASICS challenges -->
     <remove xpath="/gameevents/action_sequence[@name='challenge_group_reward_basics']/action" />
 
+    <!--  Remove the 'buffDukeNote' from the 'game_first_spawn' event -->
+    <remove xpath="/gameevents/action_sequence[@name='game_first_spawn']/action[@class='AddBuff']" />
+
     <!--  Add the 'challenge_group_reward_basics' rewards to the 'game_first_spawn' event -->
     <append xpath="/gameevents/action_sequence[@name='game_first_spawn']">
 
