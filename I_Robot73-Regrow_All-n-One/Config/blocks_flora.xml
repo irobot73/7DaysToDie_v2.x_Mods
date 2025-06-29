@@ -15,28 +15,17 @@
 
 <!-- Tweak the trees as we'd like
         - Insert the DowngradeBlock
-        - 'FallOver' is required.  Else, the animation will stop the stump downgrade from happending
+        - 'FallOver' being FALSE is required.  Else, the animation will stop the stump downgrade from happending
         - Ignoring (too small to have trunks like the stump):
             treePlantedOak1m
             treePlantedMountainPine1m
             treePlantedWinterPine1m
+            treeJuniper4m
  -->
 
     <!-- Tree(s) that normally wouldn't give seeds -->
-    <append xpath="//block[starts-with(@name, 'treeDeadTree0')]">
+    <append xpath="//block[starts-with(@name, 'treeDeadTree0') or starts-with(@name, 'treeBurntMaple0') or @name='treePlainsTree2']">
         <property name="DowngradeBlock" value="rbtTreeStumpRandomRespawner"/>
-        <property name="PassThroughDamage" value="false"/>
-        <property name="FallOver" value="false"/>
-    </append>
-
-    <append xpath="//block[@name='treePlainsTree2']">
-        <property name="DowngradeBlock" value="rbtTreeStumpRandomRespawner"/>
-        <property name="PassThroughDamage" value="false"/>
-        <property name="FallOver" value="false"/>
-    </append>
-
-    <append xpath="//block[starts-with(@name, 'treeBurntMaple0')]">
-        <property name="DowngradeBlock" value="rbtTreeStumpBurntRandomRespawner"/>
         <property name="PassThroughDamage" value="false"/>
         <property name="FallOver" value="false"/>
     </append>
@@ -82,8 +71,8 @@
     </append>
 
     <!-- WINTER -->
-    <remove xpath="//block[starts-with(@name, 'treeWinterPine') or (@name='treeWinterEverGreen')]/drop[@event='Destroy' and starts-with(@name, 'treePlanted')]"/>
-    <append xpath="//block[starts-with(@name, 'treeWinterPine') or (@name='treeWinterEverGreen')]">
+    <remove xpath="//block[starts-with(@name, 'treeWinterPine') or starts-with(@name, 'treeWinterEverGreen')]/drop[@event='Destroy' and starts-with(@name, 'treePlanted')]"/>
+    <append xpath="//block[starts-with(@name, 'treeWinterPine') or starts-with(@name, 'treeWinterEverGreen')]">
         <property name="DowngradeBlock" value="rbtTreeStumpWinterRandomRespawner"/>
         <property name="PassThroughDamage" value="false"/>
         <property name="FallOver" value="false"/>
@@ -97,7 +86,12 @@
         <property name="FallOver" value="false"/>
     </append>
 
-<!-- Tweak the cacti as we'd like
+    <!-- Trees not touched CAN FallOver (if they don't already)-->
+    <append xpath="//block[@name='treeJuniper4m']">
+        <property name="FallOver" value="true"/>
+    </append>
+
+<!-- Tweak the Cacti as we'd like
         - Insert the DowngradeBlock
  -->
     <append xpath="//block[@name='treeCactus01']">

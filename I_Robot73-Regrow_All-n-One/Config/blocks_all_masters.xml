@@ -2,18 +2,18 @@
 
 <blocks>
 
-<!--    
+<!-- These masters control the blocks that 'Extends' from them (parent -> child)
     - If 'FertileLevel' is higher than the fertile_level of the block directly below then the upgrade will not occur.
     - Set 'GrowthRate' time as desired.  EX:  Given 2 Days at 60-min days, use '120'.  Using '0.2' for testing seems to work well.
     - Set 'MaxDamage' as desired.  IMO, enough so players know it's not vanilla, but low enough they can still stop any respawns, if they want(ed).
     - Set the 'Drop event=Havest|Destroy' items and probabilities to your liking (remembering all items will filter down to the 'child' block(s)).
-    - NOTE:  Adding the 'DisplayInfo' property to a block, when present in the world, will display the block's BLOCK value from the LOCALIZATION file. -->
+    - NOTE:  Adding the 'DisplayInfo' property to the block, when present in the world, will display the block's BLOCK value from the LOCALIZATION file. -->
 -->
 
 <!-- MASTER blocks -->
     <insertAfter xpath="/blocks/block[@name='decoEntityGlassMaster']">
 
-        <!-- Air\Respawner [This master controls all the blocks that it 'Extends' from] -->
+    <!-- Air\Respawner -->
         <block name="rbtAirRespawnMaster">
             <property name="Extends" value="air"/>
             <property name="Class" value="PlantGrowing"/>
@@ -24,7 +24,7 @@
             <property name="PlantGrowing.FertileLevel" value="0"/>
         </block>
 
-        <!-- Boulder\Respawner [This master controls all the blocks that it 'Extends' from] -->
+    <!-- Boulder\Respawner -->
         <block name="rbtBoulderRespawnMaster">
             <property name="Class" value="PlantGrowing"/>
             <property name="CreativeMode" value="None"/>
@@ -54,8 +54,7 @@
             <drop event="Destroy" name="resourceRockSmall" count="1"/>
         </block>
 
-        <!-- Grass\Respawner [This master controls all the blocks that it 'Extends' from] -->
-        <!--    Based on 'cropsGrowingMaster' -->
+    <!-- Grass\Respawner [Based on 'cropsGrowingMaster'] -->
         <block name="rbtGrassRespawnMaster">
             <!-- Class -->
 	        <property name="CreativeMode" value="None"/>
@@ -99,7 +98,7 @@
             <property name="PassThroughDamage" value="false"/>
         </block>
 
-        <!-- Tree Stump\Respawner [This master controls all the blocks that it 'Extends' from] -->
+    <!-- Tree Stump\Respawner -->
         <block name="rbtTreeStumpRespawnMaster">
             <property name="Class" value="PlantGrowing"/>
             <property name="CreativeMode" value="None"/>
@@ -132,11 +131,7 @@
 
     <insertAfter xpath="/blocks/block[@name='cntCar03SedanDamage2Master']">
 
-        <!-- Vehicle Respawner [This master controls all the blocks that it 'Extends' from]
-                - If 'FertileLevel' is higher than the fertile_level of the block directly below then the upgrade will not occur.
-                - Set 'GrowthRate' time below.  EX:  Given 2 Days at 60-min days, use '120' [using '0.2' for testing seems to work well]
-                - Set the 'Drop event=Havest|Destroy' items and probabilities to your liking (remembering all items will filter down to the 'child' block(s))
-         -->
+    <!-- Vehicle Respawner -->
         <block name="rbtVehicleRespawnMaster">
             <property name="Class" value="PlantGrowing"/>
             <property name="CreativeMode" value="None"/>

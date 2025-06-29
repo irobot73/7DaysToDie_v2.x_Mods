@@ -2,10 +2,10 @@
 
 <blocks>
 
-    <!-- Trees -->
+<!-- Trees -->
     <insertAfter xpath="/blocks/block[@name='shippingContainerSide2mBlue']">
 
-        <!-- 'Standard' stump
+    <!-- 'Standard' stump
                 - NOTE:  You can set the 'Destroy' name from 'treePlantedOak1m' to 'rbtTreeSeedVariantHelper' for a radial 'Seed Bag'
          -->
         <block name="rbtTreeStumpRandomRespawner">
@@ -20,7 +20,7 @@
             <property name="SortOrder2" value="9421"/>
         </block>
 
-        <!-- Winter stumps:  Smaller chance of honey and seed
+    <!-- Winter stumps:  Smaller chance of honey and seed
                 - NOTE:  You can set the 'Destroy' name from 'treePlantedWinterPine1m' to 'rbtTreeSeedVariantHelper' for a radial 'Seed Bag'
          -->
         <block name="rbtTreeStumpWinterRandomRespawner">
@@ -39,7 +39,7 @@
             <property name="SortOrder2" value="9422"/>
         </block>
 
-        <!-- Burnt stumps:  No honey, least chance of seed but does give some coal & wood
+    <!-- Burnt stumps:  No honey, least chance of seed but does give some coal & wood
                 - NOTE:  You can set the 'Destroy' name from 'treePlantedMountainPine1m' to 'rbtTreeSeedVariantHelper' for a radial 'Seed Bag'
          -->
         <block name="rbtTreeStumpBurntRandomRespawner">
@@ -59,7 +59,7 @@
             <property name="SortOrder2" value="9423"/>
         </block>
 
-        <!-- Wateland stumps:  No honey, small chance of radiated mushrooms but does give some coal & wood
+    <!-- Wateland stumps:  No honey, small chance of radiated mushrooms but does give some coal & wood
                 - NOTE:  You can set the 'Destroy' name from 'treePlantedMountainPine1m' to 'rbtTreeSeedVariantHelper' for a radial 'Seed Bag'
          -->
         <block name="rbtTreeStumpWastelandRandomRespawner">
@@ -81,7 +81,7 @@
 
     </insertAfter>
 
-    <!-- Cacti -->
+<!-- Cacti -->
     <insertAfter xpath="/blocks/block[@name='cntBirdnestCorner']">
 
         <block name="rbtCactiRandomRespawner">
@@ -100,7 +100,7 @@
 
     </insertAfter>
 
-    <!-- Chrysanthemum -->
+<!-- Chrysanthemum -->
     <insertAfter xpath="/blocks/block[@name='plantedChrysanthemum3HarvestPlayer']">
 
         <block name="rbtChrysanthemumRespawner">
@@ -120,7 +120,7 @@
 
     </insertAfter>
 
-    <!-- Cotton -->
+<!-- Cotton -->
     <insertAfter xpath="/blocks/block[@name='plantedCotton3HarvestPlayer']">
 
         <block name="rbtCottonRespawner">
@@ -139,7 +139,7 @@
 
     </insertAfter>
 
-    <!-- Goldenrod -->
+<!-- Goldenrod -->
     <insertAfter xpath="/blocks/block[@name='plantedGoldenrod3HarvestPlayer']">
 
         <block name="rbtGoldenrodRespawner">
@@ -158,7 +158,7 @@
 
     </insertAfter>
 
-    <!-- Tree Dead Pine Leaf (bare 'shrub' found in all biomes) -->
+<!-- Tree Dead Pine Leaf (bare 'shrub' found in all biomes) -->
     <insertAfter xpath="/blocks/block[@name='plantShrubDead']">
 
         <block name="rbtTreeDeadPineLeafRespawner">
@@ -172,7 +172,7 @@
             <property name="SortOrder2" value="9429"/>
         </block>
 
-       <!-- Shrubs -->
+   <!-- Shrubs -->
 
         <block name="rbtPlantShrubRespawner">
             <property name="Extends" value="rbtGrassRespawnMaster"/>
@@ -187,7 +187,7 @@
 
     </insertAfter>
 
-    <!-- Mushrooms -->
+<!-- Mushrooms -->
     <insertAfter xpath="/blocks/block[@name='mushroomRadiated04']">
 
         <block name="rbtMushroomRespawner">
@@ -206,7 +206,7 @@
 
     </insertAfter>
 
-    <!-- Corn -->
+<!-- Corn -->
     <insertAfter xpath="/blocks/block[@name='plantedGraceCorn3HarvestPlayer']">
 
         <block name="rbtCornRespawner">
@@ -225,7 +225,7 @@
 
     </insertAfter>
 
-    <!-- Aloe -->
+<!-- Aloe -->
     <insertAfter xpath="/blocks/block[@name='plantedAloe3HarvestPlayer']">
 
         <block name="rbtPlantAloeRespawner">
@@ -244,7 +244,7 @@
 
     </insertAfter>
 
-    <!-- Yucca -->
+<!-- Yucca -->
     <insertAfter xpath="/blocks/block[@name='plantedYucca3HarvestPlayer']">
 
         <block name="rbtPlantYuccaRespawner">
