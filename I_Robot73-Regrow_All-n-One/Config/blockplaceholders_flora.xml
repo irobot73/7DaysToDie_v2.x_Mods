@@ -18,7 +18,18 @@
 
     <append xpath="/blockplaceholders">
 
-<!-- *** TREES_SEEDS -->
+<!-- *** TREES -->
+
+        <!-- Stumps -->
+        <placeholder name="rbtAllTreeStumpsRandomHelper">
+		    <block name="rbtTreeStumpPineForestRandomRespawner" randomrotation="true" prob="1.0" biome="pine_forest"/>
+		    <block name="rbtTreeStumpBurntRandomRespawner"      randomrotation="true" prob="1.0" biome="burnt_forest"/>
+		    <block name="rbtTreeStumpDesertRandomRespawner"     randomrotation="true" prob="1.0" biome="desert"/>
+		    <block name="rbtTreeStumpSnowRandomRespawner"       randomrotation="true" prob="1.0" biome="snow"/>
+		    <block name="rbtTreeStumpWastelandRandomRespawner"  randomrotation="true" prob="1.0" biome="wasteland"/>
+        </placeholder>
+
+        <!-- Seeds -->
         <placeholder name="rbtTreeSeedRandomHelper">
 			<block name="treePlantedOak1m"          prob="1.0"  biome="desert"/>
 			<block name="treePlantedOak1m"          prob="1.0"  biome="pine_forest"/>
@@ -33,9 +44,10 @@
 		    <block biome="burnt_forest" randomrotation="true" name="treeDeadTree01"                 prob="1.0"/>
 		    <block biome="burnt_forest" randomrotation="true" name="treeDeadTree02"                 prob="0.8"/>
 		    <block biome="burnt_forest" randomrotation="true" name="treeBurntMaple01"               prob="1.0"/>
+		    <!--
 		    <block biome="burnt_forest" randomrotation="true" name="driftwood"                      prob="0.4"/>
 		    <block biome="burnt_forest" randomrotation="true" name="driftwood2"                     prob="0.3"/>
-		    <block biome="burnt_forest" randomrotation="true" name="driftwood3"                     prob="0.2"/>
+		    <block biome="burnt_forest" randomrotation="true" name="driftwood3"                     prob="0.2"/> -->
 		    <block biome="burnt_forest" randomrotation="true" name="treePineBurntLrg"               prob="0.8"/>
 		    <block biome="burnt_forest" randomrotation="true" name="treePineBurntMed"               prob="0.7"/>
 		    <block biome="burnt_forest" randomrotation="true" name="treePineBurntFullMed"           prob="0.5"/>
@@ -50,9 +62,10 @@
 		    <block biome="wasteland"    randomrotation="true" name="treePineBurntLrg"               prob="0.4"/>
 		    <block biome="wasteland"    randomrotation="true" name="treePineBurntMed"               prob="0.3"/>
 		    <block biome="wasteland"    randomrotation="true" name="treePineBurntFullMed"           prob="0.2"/>
-		    <block biome="wasteland"    randomrotation="true" name="driftwood"                      prob="0.3"/>
+		    <!--
+            <block biome="wasteland"    randomrotation="true" name="driftwood"                      prob="0.3"/>
 		    <block biome="wasteland"    randomrotation="true" name="driftwood2"                     prob="0.2"/>
-		    <block biome="wasteland"    randomrotation="true" name="driftwood3"                     prob="0.1"/>
+		    <block biome="wasteland"    randomrotation="true" name="driftwood3"                     prob="0.1"/> -->
 		    <block biome="wasteland"    randomrotation="true" name="treeBurntMaple02"               prob="0.75"/>
 		    <block biome="wasteland"    randomrotation="true" name="treeBurntMaple03"               prob="0.5"/>
 		    <block biome="wasteland"    randomrotation="true" name="treeMountainPineDry21m"         prob="0.2"/>
@@ -60,10 +73,10 @@
 
             <!-- Personal pref., being they ARE from the Desert biome.  Keep or comment out.
                  Their chance of seed generation during harvest is REAL low (REF:  game's 'BLOCKS.XML' file)
-            -->
+            
 		    <block biome="desert"       randomrotation="true" name="driftwood"                      prob="0.05"/>
 		    <block biome="desert"       randomrotation="true" name="driftwood2"                     prob="0.08"/>
-		    <block biome="desert"       randomrotation="true" name="driftwood3"                     prob="0.05"/>
+		    <block biome="desert"       randomrotation="true" name="driftwood3"                     prob="0.05"/> -->
 
 		    <block biome="desert"       randomrotation="true" name="treeOakSml01"                   prob="0.2"/>
 		    <block biome="desert"       randomrotation="true" name="treeOakMed01"                   prob="0.1"/>
@@ -115,40 +128,24 @@
 		    <block biome="snow"         randomrotation="true" name="treePineBurntLrg"               prob="0.15"/>
 		    <block biome="snow"         randomrotation="true" name="treePineBurntMed"               prob="0.1"/>
 		    <block biome="snow"         randomrotation="true" name="treePineBurntFullMed"           prob="0.5"/>
-		    <block biome="snow"         randomrotation="true" name="treePlantedMountainPine1m"      prob="1.0"/>
-		    <block biome="snow"         randomrotation="true" name="treePlantedMountainPine12m"     prob="1.0"/>
-		    <block biome="snow"         randomrotation="true" name="treePlantedMountainPine19m"     prob="1.0"/>
-		    <block biome="snow"         randomrotation="true" name="treePlantedMountainPine27m"     prob="1.0"/>
-		    <block biome="snow"         randomrotation="true" name="treePlantedMountainPine41m"     prob="1.0"/>
+		    <block biome="snow"         randomrotation="true" name="treePlantedMountainPine1m"      prob="0.8"/>
+		    <block biome="snow"         randomrotation="true" name="treePlantedMountainPine12m"     prob="0.7"/>
+		    <block biome="snow"         randomrotation="true" name="treePlantedMountainPine19m"     prob="0.5"/>
+		    <block biome="snow"         randomrotation="true" name="treePlantedMountainPine27m"     prob="0.3"/>
+		    <block biome="snow"         randomrotation="true" name="treePlantedMountainPine41m"     prob="0.1"/>
 		    <block biome="snow"         randomrotation="true" name="treeMountainPine12m"            prob="0.8"/>
 		    <block biome="snow"         randomrotation="true" name="treeMountainPine19m"            prob="0.7"/>
 		    <block biome="snow"         randomrotation="true" name="treeMountainPine27m"            prob="0.6"/>
 		    <block biome="snow"         randomrotation="true" name="treeMountainPine31m"            prob="0.5"/>
 		    <block biome="snow"         randomrotation="true" name="treeMountainPine41m"            prob="0.4"/>
 		    <block biome="snow"         randomrotation="true" name="treeMountainPine48m"            prob="0.3"/>
-		    <block biome="snow"         randomrotation="true" name="treePlantedWinterPine1m"        prob="0.8"/>
-		    <block biome="snow"         randomrotation="true" name="treePlantedWinterPine6m"        prob="0.7"/>
-		    <block biome="snow"         randomrotation="true" name="treePlantedWinterPine13m"       prob="0.5"/>
-		    <block biome="snow"         randomrotation="true" name="treePlantedWinterPine19m"       prob="0.3"/>
-		    <block biome="snow"         randomrotation="true" name="treePlantedWinterPine28m"       prob="0.1"/>
+		    <block biome="snow"         randomrotation="true" name="treePlantedWinterPine1m"        prob="1.0"/>
+		    <block biome="snow"         randomrotation="true" name="treePlantedWinterPine6m"        prob="1.0"/>
+		    <block biome="snow"         randomrotation="true" name="treePlantedWinterPine13m"       prob="1.0"/>
+		    <block biome="snow"         randomrotation="true" name="treePlantedWinterPine19m"       prob="1.0"/>
+		    <block biome="snow"         randomrotation="true" name="treePlantedWinterPine28m"       prob="1.0"/>
 		    <block biome="snow"         randomrotation="true" name="treeFirLrg01"                   prob="1.0"/>
 	    </placeholder>
-
-<!-- *** CACTI -->
-        <placeholder name="rbtAllCactiRandomHelper">
-			<block name="treeCactus01"  randomrotation="true"   prob="0.4"/>
-			<block name="treeCactus02"  randomrotation="true"   prob="0.4"/>
-			<block name="treeCactus03"  randomrotation="true"   prob="0.4"/>
-			<block name="treeCactus04"  randomrotation="true"   prob="0.4"/>
-			<block name="treeCactus05"  randomrotation="true"   prob="0.4"/>
-			<block name="treeCactus06"  randomrotation="true"   prob="0.4"/>
-            <!-- Personal pref., being they ARE from the Desert biome.  Keep or comment out.
-                 Their chance of seed generation during harvest is REAL low (REF:  game's 'BLOCKS.XML' file)
-            -->
-			<block name="driftwood"     randomrotation="true"   prob="0.05"/>
-			<block name="driftwood2"    randomrotation="true"   prob="0.08"/>
-			<block name="driftwood3"    randomrotation="true"   prob="0.05"/>
-        </placeholder>
 
 <!-- *** SHRUBS_N_HEDGES -->
         <placeholder name="rbtAllShrubsRandomHelper">
@@ -187,6 +184,29 @@
 			<block name="treePlainsTree"    randomrotation="true" prob="0.5"  biome="snow"/>
 			<block name="treePlainsTree"    randomrotation="true" prob="0.1"  biome="wasteland"/>
 			<block name="treeSnowyDeadBush" randomrotation="true" prob="1.0"  biome="snow"/>
+        </placeholder>
+
+<!-- *** DRIFTWOOD -->
+        <placeholder name="rbtAllDriftwoodRandomHelper">
+		    <block name="driftwood"  randomrotation="true" prob="0.66"/>
+		    <block name="driftwood2" randomrotation="true" prob="0.33"/>
+		    <block name="driftwood3" randomrotation="true" prob="0.20"/>
+        </placeholder>
+
+<!-- *** CACTI -->
+        <placeholder name="rbtAllCactiRandomHelper">
+			<block name="treeCactus01"  randomrotation="true"   prob="0.4"/>
+			<block name="treeCactus02"  randomrotation="true"   prob="0.4"/>
+			<block name="treeCactus03"  randomrotation="true"   prob="0.4"/>
+			<block name="treeCactus04"  randomrotation="true"   prob="0.4"/>
+			<block name="treeCactus05"  randomrotation="true"   prob="0.4"/>
+			<block name="treeCactus06"  randomrotation="true"   prob="0.4"/>
+            <!-- Personal pref., being they ARE from the Desert biome.  Keep or comment out.
+                 Their chance of seed generation during harvest is REAL low (REF:  game's 'BLOCKS.XML' file)
+            -->
+			<block name="driftwood"     randomrotation="true"   prob="0.05"/>
+			<block name="driftwood2"    randomrotation="true"   prob="0.08"/>
+			<block name="driftwood3"    randomrotation="true"   prob="0.05"/>
         </placeholder>
 
 <!-- *** CORN -->

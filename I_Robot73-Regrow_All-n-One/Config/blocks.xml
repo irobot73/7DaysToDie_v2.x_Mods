@@ -2,9 +2,14 @@
 
 <!-- Sort KEY:
 
-    - Variants  100-199
-    - Helpers   200-399
-    - Spawners  400-799
+    - Environment:  000-399
+    - Flora:        400-699
+    - Vehicle:      700-999
+
+    - Custom:       000-099
+    - Variants:     100-199
+    - Helpers:      200-399
+    - Spawners:     400-799
     - 
 -->
 

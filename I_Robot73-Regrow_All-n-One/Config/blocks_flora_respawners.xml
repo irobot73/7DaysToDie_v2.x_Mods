@@ -5,42 +5,33 @@
 <!-- Trees -->
     <insertAfter xpath="/blocks/block[@name='shippingContainerSide2mBlue']">
 
-    <!-- 'Standard' stump
-                - NOTE:  You can set the 'Destroy' name from 'treePlantedOak1m' to 'rbtTreeSeedVariantHelper' for a radial 'Seed Bag'
+    <!-- 'Pine Forest' stump
+                - Adjust the 'GrowthRate' & drop event(s) as you wish
+                - If keeping the 'DestroyEvent', this will have the lowest chance, furthest spawn distance & a single swarm.
+                - NOTE:  You can add a 'Destroy' property with "name='rbtTreeSeedVariantHelper'" for a radial 'Seed Bag' (player can pick which sapling will get planted)
          -->
-        <block name="rbtTreeStumpRandomRespawner">
+        <block name="rbtTreeStumpPineForestRandomRespawner">
             <property name="Extends" value="rbtTreeStumpRespawnMaster"/>
             <property name="CustomIcon" value="treeStump"/>
             <property name="CreativeMode" value="Dev"/>
-            <property name="DescriptionKey" value="rbtTreeStumpRandomRespawnerDesc"/>
+            <property name="DescriptionKey" value="rbtTreeStumpPineForestRandomRespawnerDesc"/>
+            <property name="MaxDamage" value="400"/>
             <drop event="Harvest" name="resourceWood" count="10,20" tag="oreWoodHarvest,lumberjackHarvest"/>
             <drop event="Destroy" name="treePlantedOak1m" count="1" prob=".75"/>
             <drop event="Destroy" name="foodHoney" count="1" prob="0.15"/>
-            <property name="SortOrder1" value="R421"/>
-            <property name="SortOrder2" value="9421"/>
-        </block>
-
-    <!-- Winter stumps:  Smaller chance of honey and seed
-                - NOTE:  You can set the 'Destroy' name from 'treePlantedWinterPine1m' to 'rbtTreeSeedVariantHelper' for a radial 'Seed Bag'
-         -->
-        <block name="rbtTreeStumpWinterRandomRespawner">
-            <property name="Extends" value="rbtTreeStumpRespawnMaster"/>
-            <property name="CustomIcon" value="treeStump"/>
-            <property name="CreativeMode" value="Dev"/>
-            <property name="DescriptionKey" value="rbtTreeStumpWinterRandomRespawnerDesc"/>
-            <drop event="Harvest" name="resourceWood" count="10,20" tag="oreWoodHarvest,lumberjackHarvest"/>
-            <drop event="Harvest" name="resourceSnowBall" count="2" tag="allHarvest"/>
-            <drop event="Destroy" name="foodHoney" count="1" prob="0.1"/>
-            <drop event="Destroy" name="treePlantedWinterPine1m" count="1" prob="0.5"/>
-            <!-- 3.28 days @ 90-min/day -->
-            <!-- <property name="PlantGrowing.GrowthRate" value="295.2"/> -->
+            <!-- 2.5 days @ 90-min/day -->
+            <!-- <property name="PlantGrowing.GrowthRate" value="225"/> -->
 	        <property name="PlantGrowing.GrowthRate" value="0.2"/>
+            <!-- Delect/comment out the 'DestroyedEvent' to stop any chance of bees spawning after harvest -->
+            <property name="DestroyedEvent" value="block_tree_stump_bees_forest"/>
+            <property name="PlantGrowing.Next" value="rbtAllTreesRandomHelper"/>
             <property name="SortOrder1" value="R422"/>
             <property name="SortOrder2" value="9422"/>
         </block>
 
-    <!-- Burnt stumps:  No honey, least chance of seed but does give some coal & wood
-                - NOTE:  You can set the 'Destroy' name from 'treePlantedMountainPine1m' to 'rbtTreeSeedVariantHelper' for a radial 'Seed Bag'
+    <!-- Burnt stumps:  Small chance of honey, least chance of seed but does give some coal & wood
+                - Adjust the 'GrowthRate' & drop event(s) as you wish
+                - NOTE:  You can add a 'Destroy' property with "name='rbtTreeSeedVariantHelper'" for a radial 'Seed Bag' (player can pick which sapling will get planted)
          -->
         <block name="rbtTreeStumpBurntRandomRespawner">
             <property name="Extends" value="rbtTreeStumpRespawnMaster"/>
@@ -49,18 +40,73 @@
             <property name="DescriptionKey" value="rbtTreeStumpBurntRandomRespawnerDesc"/>
             <property name="MaxDamage" value="250"/>
             <drop event="Harvest" name="resourceWood" count="3,10" tag="oreWoodHarvest,lumberjackHarvest"/>
-            <drop event="Harvest" name="resourceCoal" count="5,20" tag="oreWoodHarvest,lumberjackHarvest"/>
-            <drop event="Harvest" name="resourceCoal" count="5,20" tag="coalHarvest"/>
+            <drop event="Harvest" name="resourceCoal" count="6,20" tag="oreWoodHarvest,lumberjackHarvest"/>
+            <drop event="Harvest" name="resourceCoal" count="6,20" tag="coalHarvest"/>
+            <drop event="Destroy" name="foodHoney" count="1" prob="0.10"/>
             <drop event="Destroy" name="treePlantedMountainPine1m" count="1" prob="0.25"/>
-            <!-- 4.5 days @ 90-min/day -->
-            <!-- <property name="PlantGrowing.GrowthRate" value="405"/> -->
+            <!-- 3 days @ 90-min/day -->
+            <!-- <property name="PlantGrowing.GrowthRate" value="270"/> -->
 	        <property name="PlantGrowing.GrowthRate" value="0.2"/>
+            <!-- Delect/comment out the 'DestroyedEvent' to stop any chance of bees spawning after harvest -->
+            <property name="DestroyedEvent" value="block_tree_stump_bees_burnt_forest"/>
+            <property name="PlantGrowing.Next" value="rbtAllTreesRandomHelper"/>
             <property name="SortOrder1" value="R423"/>
             <property name="SortOrder2" value="9423"/>
         </block>
 
+    <!-- Desert stumps:  Smaller chance of honey, least chance of seed but does give some sand, rocks & wood
+                - Adjust the 'GrowthRate' & drop event(s) as you wish
+                - NOTE:  You can add a 'Destroy' property with "name='rbtTreeSeedVariantHelper'" for a radial 'Seed Bag' (player can pick which sapling will get planted)
+         -->
+        <block name="rbtTreeStumpDesertRandomRespawner">
+            <property name="Extends" value="rbtTreeStumpRespawnMaster"/>
+            <property name="CustomIcon" value="treeStump"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="DescriptionKey" value="rbtTreeStumpDesertRandomRespawnerDesc"/>
+            <property name="MaxDamage" value="250"/>
+            <drop event="Harvest" name="resourceRockSmall" count="3,5" tag="allHarvest,perkJunkMiner"/>
+            <drop event="Harvest" name="resourceWood" count="3,10" tag="oreWoodHarvest,lumberjackHarvest"/>
+            <drop event="Harvest" name="resourceCrushedSand" count="2,4" tag="allHarvest,perkJunkMiner"/>
+            <drop event="Destroy" name="foodHoney" count="1" prob="0.05"/>
+            <drop event="Destroy" name="treePlantedMountainPine1m" count="1" prob="0.25"/>
+            <!-- 4 days @ 90-min/day -->
+            <!-- <property name="PlantGrowing.GrowthRate" value="360"/> -->
+	        <property name="PlantGrowing.GrowthRate" value="0.2"/>
+            <!-- Delect/comment out the 'DestroyedEvent' to stop any chance of bees spawning after harvest -->
+            <property name="DestroyedEvent" value="block_tree_stump_bees_desert"/>
+            <property name="PlantGrowing.Next" value="rbtAllTreesRandomHelper"/>
+            <property name="SortOrder1" value="R424"/>
+            <property name="SortOrder2" value="9424"/>
+        </block>
+
+    <!-- Winter stumps:  Smallest chance of honey and seed
+                - Adjust the 'GrowthRate' & drop event(s) as you wish
+                - NOTE:  You can add a 'Destroy' property with "name='rbtTreeSeedVariantHelper'" for a radial 'Seed Bag' (player can pick which sapling will get planted)
+         -->
+        <block name="rbtTreeStumpSnowRandomRespawner">
+            <property name="Extends" value="rbtTreeStumpRespawnMaster"/>
+            <property name="CustomIcon" value="treeStump"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="DescriptionKey" value="rbtTreeStumpSnowRandomRespawnerDesc"/>
+            <property name="MaxDamage" value="300"/>
+            <drop event="Harvest" name="resourceWood" count="10,20" tag="oreWoodHarvest,lumberjackHarvest"/>
+            <drop event="Harvest" name="resourceSnowBall" count="2" tag="allHarvest"/>
+            <drop event="Destroy" name="foodHoney" count="1" prob="0.025"/>
+            <drop event="Destroy" name="treePlantedWinterPine1m" count="1" prob="0.5"/>
+            <!-- 4.5 days @ 90-min/day -->
+            <!-- <property name="PlantGrowing.GrowthRate" value="405"/> -->
+	        <property name="PlantGrowing.GrowthRate" value="0.2"/>
+            <!-- Delect/comment out the 'DestroyedEvent' to stop any chance of bees spawning after harvest -->
+            <property name="DestroyedEvent" value="block_tree_stump_bees_snow"/>
+            <property name="PlantGrowing.Next" value="rbtAllTreesRandomHelper"/>
+            <property name="SortOrder1" value="R425"/>
+            <property name="SortOrder2" value="9425"/>
+        </block>
+
     <!-- Wateland stumps:  No honey, small chance of radiated mushrooms but does give some coal & wood
-                - NOTE:  You can set the 'Destroy' name from 'treePlantedMountainPine1m' to 'rbtTreeSeedVariantHelper' for a radial 'Seed Bag'
+                - Adjust the 'GrowthRate' & drop event(s) as you wish
+                - If keeping the 'DestroyEvent', this will have the highest chance, closest spawn distance & most swarms
+                - NOTE:  You can add a 'Destroy' property with "name='rbtTreeSeedVariantHelper'" for a radial 'Seed Bag' (player can pick which sapling will get planted)
          -->
         <block name="rbtTreeStumpWastelandRandomRespawner">
             <property name="Extends" value="rbtTreeStumpRespawnMaster"/>
@@ -69,14 +115,17 @@
             <property name="DescriptionKey" value="rbtTreeStumpWastelandRandomRespawnerDesc"/>
             <property name="MaxDamage" value="250"/>
             <drop event="Harvest" name="resourceWood" count="1,5" tag="oreWoodHarvest,lumberjackHarvest"/>
-            <drop event="Harvest" name="resourceCoal" count="5,20" tag="oreWoodHarvest,lumberjackHarvest"/>
-            <drop event="Harvest" name="resourceCoal" count="5,20" tag="coalHarvest"/>
+            <drop event="Harvest" name="resourceCoal" count="3,15" tag="oreWoodHarvest,lumberjackHarvest"/>
+            <drop event="Harvest" name="resourceCoal" count="3,15" tag="coalHarvest"/>
             <drop event="Destroy" name="foodCropMushroomsRadiated" count="1" prob="0.1"/>
             <!-- 5.75 days @ 90-min/day -->
             <!-- <property name="PlantGrowing.GrowthRate" value="517.5"/> -->
 	        <property name="PlantGrowing.GrowthRate" value="0.2"/>
-            <property name="SortOrder1" value="R423"/>
-            <property name="SortOrder2" value="9423"/>
+            <!-- Delect/comment out the 'DestroyedEvent' to stop any chance of bees spawning after harvest -->
+            <property name="DestroyedEvent" value="block_tree_stump_bees_wasteland"/>
+            <property name="PlantGrowing.Next" value="rbtAllTreesRandomHelper"/>
+            <property name="SortOrder1" value="R426"/>
+            <property name="SortOrder2" value="9426"/>
         </block>
 
     </insertAfter>
@@ -94,8 +143,8 @@
             <!-- <property name="PlantGrowing.GrowthRate" value="225"/> -->
 	        <property name="PlantGrowing.GrowthRate" value="0.2"/>
             <property name="Texture" value="201,306,371,201,306,371"/>
-            <property name="SortOrder1" value="R425"/>
-            <property name="SortOrder2" value="9425"/>
+            <property name="SortOrder1" value="R429"/>
+            <property name="SortOrder2" value="9429"/>
         </block>
 
     </insertAfter>
@@ -114,8 +163,8 @@
 	        <property name="PlantGrowing.GrowthRate" value="0.2"/>
             <property name="Texture" value="201,306,371,201,306,371"/>
             <drop event="Harvest" count="0"/>
-            <property name="SortOrder1" value="R426"/>
-            <property name="SortOrder2" value="9426"/>
+            <property name="SortOrder1" value="R430"/>
+            <property name="SortOrder2" value="9430"/>
         </block>
 
     </insertAfter>
@@ -133,8 +182,8 @@
             <!-- <property name="PlantGrowing.GrowthRate" value="180"/> -->
 	        <property name="PlantGrowing.GrowthRate" value="0.2"/>
             <property name="Texture" value="201,306,371,201,306,371"/>
-            <property name="SortOrder1" value="R427"/>
-            <property name="SortOrder2" value="9427"/>
+            <property name="SortOrder1" value="R431"/>
+            <property name="SortOrder2" value="9431"/>
         </block>
 
     </insertAfter>
@@ -152,8 +201,8 @@
             <!-- <property name="PlantGrowing.GrowthRate" value="225"/> -->
 	        <property name="PlantGrowing.GrowthRate" value="0.2"/>
             <property name="Texture" value="201,306,371,201,306,371"/>
-            <property name="SortOrder1" value="R428"/>
-            <property name="SortOrder2" value="9428"/>
+            <property name="SortOrder1" value="R432"/>
+            <property name="SortOrder2" value="9432"/>
         </block>
 
     </insertAfter>
@@ -168,8 +217,8 @@
             <property name="CustomIcon" value="treeDeadPineLeaf"/>
             <property name="PlantGrowing.Next" value="rbtAllBrushBushRandomHelper"/>
             <property name="Texture" value="201,306,371,201,306,371"/>
-            <property name="SortOrder1" value="R429"/>
-            <property name="SortOrder2" value="9429"/>
+            <property name="SortOrder1" value="R433"/>
+            <property name="SortOrder2" value="9433"/>
         </block>
 
    <!-- Shrubs -->
@@ -181,8 +230,8 @@
             <property name="CustomIcon" value="plantShrub"/>
             <property name="PlantGrowing.Next" value="rbtAllShrubsRandomHelper"/>
             <property name="Texture" value="201,306,371,201,306,371"/>
-            <property name="SortOrder1" value="R430"/>
-            <property name="SortOrder2" value="9430"/>
+            <property name="SortOrder1" value="R434"/>
+            <property name="SortOrder2" value="9434"/>
         </block>
 
     </insertAfter>
@@ -200,8 +249,8 @@
             <!-- <property name="PlantGrowing.GrowthRate" value="270"/> -->
 	        <property name="PlantGrowing.GrowthRate" value="0.2"/>
             <property name="Texture" value="201,306,371,201,306,371"/>
-            <property name="SortOrder1" value="R429"/>
-            <property name="SortOrder2" value="9429"/>
+            <property name="SortOrder1" value="R435"/>
+            <property name="SortOrder2" value="9435"/>
         </block>
 
     </insertAfter>
@@ -219,8 +268,8 @@
             <!-- <property name="PlantGrowing.GrowthRate" value="270"/> -->
             <property name="PlantGrowing.GrowthRate" value="0.2"/>
             <property name="Texture" value="201,306,371,201,306,371"/>
-            <property name="SortOrder1" value="R430"/>
-            <property name="SortOrder2" value="9430"/>
+            <property name="SortOrder1" value="R440"/>
+            <property name="SortOrder2" value="9440"/>
         </block>
 
     </insertAfter>
@@ -238,8 +287,8 @@
             <!-- <property name="PlantGrowing.GrowthRate" value="270"/> -->
             <property name="PlantGrowing.GrowthRate" value="0.2"/>
             <property name="Texture" value="201,306,371,201,306,371"/>
-            <property name="SortOrder1" value="R431"/>
-            <property name="SortOrder2" value="9431"/>
+            <property name="SortOrder1" value="R441"/>
+            <property name="SortOrder2" value="9441"/>
         </block>
 
     </insertAfter>
@@ -257,8 +306,27 @@
             <!-- <property name="PlantGrowing.GrowthRate" value="270"/> -->
             <property name="PlantGrowing.GrowthRate" value="0.2"/>
             <property name="Texture" value="201,306,371,201,306,371"/>
-            <property name="SortOrder1" value="R432"/>
-            <property name="SortOrder2" value="9432"/>
+            <property name="SortOrder1" value="R442"/>
+            <property name="SortOrder2" value="9442"/>
+        </block>
+
+    </insertAfter>
+
+<!-- Driftwood -->
+    <insertAfter xpath="/blocks/block[@name='driftwood3']">
+
+        <block name="rbtDriftwoodRandomRespawner">
+            <property name="Extends" value="rbtGrassRespawnMaster"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="DescriptionKey" value="rbtDriftwoodRandomRespawnerDesc"/>
+            <property name="CustomIcon" value="driftwood"/>
+            <property name="PlantGrowing.Next" value="rbtAllDriftwoodRandomHelper"/>
+            <!-- 3 days @ 90-min/day  -->
+            <!-- <property name="PlantGrowing.GrowthRate" value="270"/> -->
+            <property name="PlantGrowing.GrowthRate" value="0.2"/>
+            <property name="Texture" value="201,306,371,201,306,371"/>
+            <property name="SortOrder1" value="R443"/>
+            <property name="SortOrder2" value="9443"/>
         </block>
 
     </insertAfter>

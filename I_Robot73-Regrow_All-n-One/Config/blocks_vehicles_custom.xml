@@ -12,8 +12,8 @@
             <property name="CustomIcon" value="cntPoliceCar01"/>
             <property name="DescriptionKey" value="rbtLootedPoliceCarDesc"/>
             <property name="FilterTags" value="MC_building,SC_automotive"/>
-            <property name="SortOrder1" value="B867"/>
-            <property name="SortOrder2" value="0004"/>
+            <property name="SortOrder1" value="R710"/>
+            <property name="SortOrder2" value="9710"/>
         </block>
 
     </insertAfter>

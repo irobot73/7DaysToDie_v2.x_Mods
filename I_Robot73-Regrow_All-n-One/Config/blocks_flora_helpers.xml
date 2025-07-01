@@ -15,8 +15,9 @@
             <property name="DescriptionKey" value="rbtTreeSeedVariantHelperDesc"/>
             <property name="SelectAlternates" value="true"/>
             <property name="PlaceAltBlockValue" value="treePlantedOak1m,treePlantedMountainPine1m,treePlantedWinterPine1m"/>
-            <property name="SortOrder1" value="R120"/>
             <property name="Group" value="Resources"/>
+            <property name="SortOrder1" value="R405"/>
+            <property name="SortOrder2" value="9405"/>
             <property name="FilterTags" value="MC_outdoor,SC_trees,MC_helpers,MC_playerBlocks,SC_playerHelpers"/>
         </block>
 
@@ -30,8 +31,25 @@
             <property name="CustomIconTint" value="9caf88"/>
             <property name="ItemTypeIcon" value="other"/>
             <property name="MultiBlockDim" value="1,19,1"/>
-            <property name="SortOrder1" value="R220"/>
+            <property name="SortOrder1" value="R500"/>
+            <property name="SortOrder2" value="9500"/>
             <property name="FilterTags" value="MC_outdoor,SC_trees"/>
+        </block>
+
+        <!-- Tree Stump Helper -->
+        <block name="rbtAllTreeStumpsRandomHelper">
+	        <property name="Extends" value="treeStump" param1="MultiBlockDim"/>
+	        <property name="CreativeMode" value="Dev"/>
+	        <property name="PlantGrowing.FertileLevel" value="0"/>
+	        <property name="CustomIcon" value="treeStump"/>
+	        <property name="CustomIconTint" value="9caf88"/>
+	        <property name="ItemTypeIcon" value="other"/>
+	        <property name="ModelOffset" value="0,0,0"/>
+	        <property name="OversizedBounds" value="(-0.5,9.5,-0.5),(2,20,2)"/>
+	        <property name="DescriptionKey" value="rbtAllTreeStumpsRandomHelperDesc"/>
+            <property name="SortOrder1" value="R505"/>
+            <property name="SortOrder2" value="9505"/>
+	        <property name="FilterTags" value="MC_helpers,SC_helperOutdoor"/>
         </block>
 
     </insertAfter>
@@ -49,7 +67,8 @@
             <property name="CustomIconTint" value="9caf88"/>
             <property name="ItemTypeIcon" value="other"/>
             <property name="MultiBlockDim" value="1,5,1"/>
-            <property name="SortOrder1" value="R221"/>
+            <property name="SortOrder1" value="R510"/>
+            <property name="SortOrder2" value="9510"/>
             <property name="FilterTags" value="MC_outdoor,SC_shrubbery"/>
         </block>
 
@@ -67,7 +86,8 @@
             <property name="CustomIcon" value="treeDeadPineLeaf"/>
             <property name="CustomIconTint" value="9caf88"/>
             <property name="ItemTypeIcon" value="other"/>
-            <property name="SortOrder1" value="R222"/>
+            <property name="SortOrder1" value="R515"/>
+            <property name="SortOrder2" value="9515"/>
             <property name="FilterTags" value="MC_outdoor,SC_shrubbery"/>
         </block>
 
@@ -80,7 +100,8 @@
             <property name="CustomIcon" value="plantShrub"/>
             <property name="CustomIconTint" value="9caf88"/>
             <property name="ItemTypeIcon" value="other"/>
-            <property name="SortOrder1" value="R223"/>
+            <property name="SortOrder1" value="R520"/>
+            <property name="SortOrder2" value="9520"/>
             <property name="FilterTags" value="MC_outdoor,SC_shrubbery"/>
         </block>
 
@@ -99,7 +120,8 @@
             <property name="CustomIconTint" value="9caf88"/>
             <property name="ItemTypeIcon" value="other"/>
             <property name="MultiBlockDim" value="1,5,1"/>
-            <property name="SortOrder1" value="R224"/>
+            <property name="SortOrder1" value="R525"/>
+            <property name="SortOrder2" value="9525"/>
             <property name="FilterTags" value="MC_helpers,SC_helperOutdoor"/>
         </block>
 
@@ -117,7 +139,8 @@
             <property name="CustomIcon" value="plantedAloeDead"/>
             <property name="CustomIconTint" value="9caf88"/>
             <property name="ItemTypeIcon" value="other"/>
-            <property name="SortOrder1" value="R225"/>
+            <property name="SortOrder1" value="R230"/>
+            <property name="SortOrder2" value="9530"/>
             <property name="FilterTags" value="MC_helpers,SC_helperOutdoor"/>
         </block>
 
@@ -135,7 +158,27 @@
             <property name="CustomIcon" value="plantedYuccaDead"/>
             <property name="CustomIconTint" value="9caf88"/>
             <property name="ItemTypeIcon" value="other"/>
-            <property name="SortOrder1" value="R226"/>
+            <property name="SortOrder1" value="R535"/>
+            <property name="SortOrder2" value="9535"/>
+            <property name="FilterTags" value="MC_helpers,SC_helperOutdoor"/>
+        </block>
+
+    </insertAfter>
+
+    <!-- Driftwood -->
+    <insertAfter xpath="/blocks/block[@name='driftwood3']">
+
+        <!-- Helper that will pick a random driftwood for a respawn [REF:  'BLOCKPLACEHOLDERS.XML'] -->
+        <block name="rbtAllDriftwoodRandomHelper">
+            <property name="Extends" value="driftwood"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="PlantGrowing.FertileLevel" value="0"/>
+            <property name="DescriptionKey" value="rbtAllDriftwoodRandomHelperDesc"/>
+            <property name="CustomIcon" value="driftwood"/>
+            <property name="CustomIconTint" value="9caf88"/>
+            <property name="ItemTypeIcon" value="other"/>
+            <property name="SortOrder1" value="R240"/>
+            <property name="SortOrder2" value="9540"/>
             <property name="FilterTags" value="MC_helpers,SC_helperOutdoor"/>
         </block>
 

@@ -4,6 +4,22 @@
 
 <!-- Insert the new, custom BLOCKS before any usage -->
 
+    <!-- ATM (looted) -->
+    <insertAfter xpath="/blocks/block[@name='cntATMInsecure']">
+
+        <block name="rbtLootedATM">
+            <property name="Extends" value="cntATMInsecure"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="LootList" value="atmEmpty"/>
+            <property name="CustomIcon" value="cntATMSecure"/>
+            <property name="DescriptionKey" value="rbtLootedATMDesc"/>
+            <property name="FilterTags" value="MC_building"/>
+            <property name="SortOrder1" value="R010"/>
+            <property name="SortOrder2" value="9010"/>
+        </block>
+
+    </insertAfter>
+
     <!-- Post Mailbox (looted) -->
     <insertAfter xpath="/blocks/block[@name='cntPostMailbox']">
 
@@ -14,8 +30,8 @@
             <property name="CustomIcon" value="cntPostMailbox"/>
             <property name="DescriptionKey" value="rbtEmptyPostMailboxDesc"/>
             <property name="FilterTags" value="MC_building,SC_commercial,MC_outdoor,SC_decor"/>
-            <property name="SortOrder1" value="B463"/>
-            <property name="SortOrder2" value="0004"/>
+            <property name="SortOrder1" value="R030"/>
+            <property name="SortOrder2" value="9030"/>
         </block>
 
     </insertAfter>
@@ -29,8 +45,8 @@
             <property name="LootList" value="mailboxEmpty"/>
             <property name="CustomIcon" value="cntNewsDispenseFreeGreen"/>
             <property name="DescriptionKey" value="rbtEmptyNewsDispenseFreeGreenDesc"/>
-            <property name="SortOrder1" value="B463"/>
-            <property name="SortOrder2" value="0006"/>
+            <property name="SortOrder1" value="R040"/>
+            <property name="SortOrder2" value="9040"/>
         </block>
         <block name="rbtEmptyNewsDispenseFreeOrange">
             <property name="Extends" value="cntNewsDispenseFreeOrange"/>
@@ -38,8 +54,8 @@
             <property name="LootList" value="mailboxEmpty"/>
             <property name="CustomIcon" value="cntNewsDispenseFreeOrange"/>
             <property name="DescriptionKey" value="rbtEmptyNewsDispenseFreeOrangeDesc"/>
-            <property name="SortOrder1" value="B463"/>
-            <property name="SortOrder2" value="0007"/>
+            <property name="SortOrder1" value="R041"/>
+            <property name="SortOrder2" value="9041"/>
         </block>
         <block name="rbtEmptyNewspaperDispenserStandBlue">
             <property name="Extends" value="cntNewspaperDispenserStandBlue"/>
@@ -47,8 +63,8 @@
             <property name="LootList" value="mailboxEmpty"/>
             <property name="CustomIcon" value="cntNewspaperDispenserStandBlue"/>
             <property name="DescriptionKey" value="rbtEmptyNewspaperDispenserStandBlueDesc"/>
-            <property name="SortOrder1" value="B463"/>
-            <property name="SortOrder2" value="0008"/>
+            <property name="SortOrder1" value="R042"/>
+            <property name="SortOrder2" value="9042"/>
         </block>
         <block name="rbtEmptyNewspaperDispenserStandYellow">
             <property name="Extends" value="cntNewspaperDispenserStandYellow"/>
@@ -56,24 +72,8 @@
             <property name="LootList" value="mailboxEmpty"/>
             <property name="CustomIcon" value="cntNewspaperDispenserStandYellow"/>
             <property name="DescriptionKey" value="rbtEmptyNewspaperDispenserStandYellowDesc"/>
-            <property name="SortOrder1" value="B463"/>
-            <property name="SortOrder2" value="0009"/>
-        </block>
-
-    </insertAfter>
-
-    <!-- ATM (looted) -->
-    <insertAfter xpath="/blocks/block[@name='cntATMInsecure']">
-
-        <block name="rbtLootedATM">
-            <property name="Extends" value="cntATMInsecure"/>
-            <property name="CreativeMode" value="Dev"/>
-            <property name="LootList" value="atmEmpty"/>
-            <property name="CustomIcon" value="cntATMSecure"/>
-            <property name="DescriptionKey" value="rbtLootedATMDesc"/>
-            <property name="FilterTags" value="MC_building"/>
-            <property name="SortOrder1" value="B453"/>
-            <property name="SortOrder2" value="0003"/>
+            <property name="SortOrder1" value="R043"/>
+            <property name="SortOrder2" value="9043"/>
         </block>
 
     </insertAfter>

@@ -11,14 +11,17 @@ rbtAllCactiRandomHelperDesc,blocks,block,,,"Will randomly select biome appropria
 rbtAllBouldersRandomHelper,blocks,Block,,,"Boulder randomizer for respawn"
 rbtAllBouldersRandomHelperDesc,blocks,block,,,"Will randomly select a boulder for a respawn event."
 
-rbtTreeStumpRandomRespawner,blocks,Block,,,"Tree respawner"
-rbtTreeStumpRandomRespawnerDesc,blocks,block,,,"Will respawn a random, biome appropiate tree after a set time."
+rbtTreeStumpPineForestRandomRespawner,blocks,Block,,,"Pine forest tree respawner"
+rbtTreeStumpPineForestRandomRespawnerDesc,blocks,block,,,"Will respawn a random, biome appropiate tree after a set time."
 
-rbtTreeStumpWinterRandomRespawner,blocks,Block,,,"Winter tree respawner"
-rbtTreeStumpWinterRandomRespawnerDesc,blocks,block,,,"Lower harvest results.  Will respawn a random, biome appropiate tree after a set time."
+rbtTreeStumpBurntRandomRespawner,blocks,Block,,,"Burnt forest tree respawner"
+rbtTreeStumpBurntRandomRespawnerDesc,blocks,block,,,"Lower harvest results.  Will respawn a random, biome appropiate tree after a set time."
 
-rbtTreeStumpBurntRandomRespawner,blocks,Block,,,"Burnt tree respawner"
-rbtTreeStumpBurntRandomRespawnerDesc,blocks,block,,,"Lowest harvest results.  Will respawn a random, biome appropiate tree after a set time."
+rbtTreeStumpDesertRandomRespawner,blocks,Block,,,"Desert tree respawner"
+rbtTreeStumpDesertRandomRespawnerDesc,blocks,block,,,"Lowest harvest results.  Will respawn a random, biome appropiate tree after a set time."
+
+rbtTreeStumpSnowRandomRespawner,blocks,Block,,,"Snow biome tree respawner"
+rbtTreeStumpSnowRandomRespawnerDesc,blocks,block,,,"Lower harvest results.  Will respawn a random, biome appropiate tree after a set time."
 
 rbtTreeStumpWastelandRandomRespawner,blocks,Block,,,"Wasteland tree respawner"
 rbtTreeStumpWastelandRandomRespawnerDesc,blocks,block,,,"Negligible harvest results.  Will respawn a random, biome appropiate tree after a set time."
@@ -28,6 +31,12 @@ rbtBirdNestRespawnerDesc,blocks,Block,,,"Will spawn a new bird's nest after a se
 
 rbtCactiRandomRespawner,blocks,Block,,,"Desert flora respawner"
 rbtCactiRandomRespawnerDesc,blocks,block,,,"Will respawn random, biome appropriate flora after a set time."
+
+rbtDriftwoodRandomRespawner,blocks,Block,,,"Desert driftwood respawner"
+rbtDriftwoodRandomRespawnerDesc,blocks,block,,,"Will respawn a random piece of driftwood after a set time."
+
+rbtAllDriftwoodRandomHelper,blocks,Block,,,"Driftwood randomizer for respawn"
+rbtAllDriftwoodRandomHelperDesc,blocks,block,,,"Will randomly select piece of driftwood for a respawn event."
 
 rbtAllBoulderRandomRespawner,blocks,Block,,,"Boulder respawner"
 rbtAllBoulderRandomRespawnerDesc,blocks,block,,,"Will respawn a random boulder after a set time."

@@ -116,14 +116,10 @@
             <property name="PassThroughDamage" value="false"/>
             <property name="PlaceAsRandomRotation" value="true"/>
             <property name="OnlySimpleRotations" value="true"/>
-            <!-- 2.5 days @ 90-min/day -->
-            <!-- <property name="PlantGrowing.GrowthRate" value="225"/> -->
-	        <property name="PlantGrowing.GrowthRate" value="0.2"/>
             <property name="PlantGrowing.FertileLevel" value="0"/>
-            <property name="PlantGrowing.Next" value="rbtAllTreesRandomHelper"/>
+            <property name="PlantGrowing.Next" value="rbtAllTreeStumpsRandomHelper"/>
             <property name="CanPlayersSpawnOn" value="false"/>
             <property name="CanMobsSpawnOn" value="false"/>
-            <property name="MaxDamage" value="500"/>
             <drop event="Fall" count="0" prob="0"/>
         </block>
 

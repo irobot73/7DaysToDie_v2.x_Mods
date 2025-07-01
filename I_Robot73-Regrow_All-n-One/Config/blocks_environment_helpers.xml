@@ -2,6 +2,23 @@
 
 <blocks>
 
+    <!-- ATM Helper -->
+    <insertAfter xpath="/blocks/block[@name='cntATMInsecure']">
+
+        <!-- Helper that will pick a random ATM for a respawn [REF:  'BLOCKPLACEHOLDERS.XML'] -->
+        <block name="rbtAllATMsRandomHelper">
+            <property name="Extends" value="cntATMInsecure"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="CustomIcon" value="cntATMSecure"/>
+            <property name="CustomIconTint" value="9caf88"/>
+            <property name="ItemTypeIcon" value="other"/>
+            <property name="DescriptionKey" value="rbtAllATMsRandomHelperDesc"/>
+            <property name="SortOrder1" value="R012"/>
+            <property name="SortOrder2" value="9012"/>
+        </block>
+
+    </insertAfter>
+
     <!-- Post Mailbox Helper -->
     <insertAfter xpath="/blocks/block[@name='rbtEmptyPostMailbox']">
 
@@ -13,7 +30,8 @@
             <property name="CustomIconTint" value="9caf88"/>
             <property name="ItemTypeIcon" value="other"/>
             <property name="DescriptionKey" value="rbtAllPostMailboxesRandomHelperDesc"/>
-            <property name="SortOrder1" value="R215"/>
+            <property name="SortOrder1" value="R032"/>
+            <property name="SortOrder2" value="9032"/>
         </block>
 
     </insertAfter>
@@ -29,23 +47,8 @@
             <property name="CustomIconTint" value="9caf88"/>
             <property name="ItemTypeIcon" value="other"/>
             <property name="DescriptionKey" value="rbtAllNewsDispensersRandomHelperDesc"/>
-            <property name="SortOrder1" value="R220"/>
-        </block>
-
-    </insertAfter>
-
-    <!-- ATM Helper -->
-    <insertAfter xpath="/blocks/block[@name='cntATMInsecure']">
-
-        <!-- Helper that will pick a random ATM for a respawn [REF:  'BLOCKPLACEHOLDERS.XML'] -->
-        <block name="rbtAllATMsRandomHelper">
-            <property name="Extends" value="cntATMInsecure"/>
-            <property name="CreativeMode" value="Dev"/>
-            <property name="CustomIcon" value="cntATMSecure"/>
-            <property name="CustomIconTint" value="9caf88"/>
-            <property name="ItemTypeIcon" value="other"/>
-            <property name="DescriptionKey" value="rbtAllATMsRandomHelperDesc"/>
-            <property name="SortOrder1" value="R205"/>
+            <property name="SortOrder1" value="R045"/>
+            <property name="SortOrder2" value="9045"/>
         </block>
 
     </insertAfter>
@@ -61,7 +64,8 @@
             <property name="CustomIconTint" value="9caf88"/>
             <property name="ItemTypeIcon" value="other"/>
             <property name="DescriptionKey" value="rbtAllStreeLightsRandomHelperDesc"/>
-            <property name="SortOrder1" value="R207"/>
+            <property name="SortOrder1" value="R060"/>
+            <property name="SortOrder2" value="9060"/>
         </block>
 
     </insertAfter>
@@ -77,7 +81,8 @@
             <property name="CustomIconTint" value="9caf88"/>
             <property name="ItemTypeIcon" value="other"/>
             <property name="DescriptionKey" value="rbtAllBouldersRandomHelperDesc"/>
-            <property name="SortOrder1" value="R202"/>
+            <property name="SortOrder1" value="R070"/>
+            <property name="SortOrder2" value="9070"/>
         </block>
 
     </insertAfter>

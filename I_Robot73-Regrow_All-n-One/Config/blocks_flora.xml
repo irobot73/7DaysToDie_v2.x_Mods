@@ -25,7 +25,7 @@
 
     <!-- Tree(s) that normally wouldn't give seeds -->
     <append xpath="//block[starts-with(@name, 'treeDeadTree0') or starts-with(@name, 'treeBurntMaple0') or @name='treePlainsTree2']">
-        <property name="DowngradeBlock" value="rbtTreeStumpRandomRespawner"/>
+        <property name="DowngradeBlock" value="rbtAllTreeStumpsRandomHelper"/>
         <property name="PassThroughDamage" value="false"/>
         <property name="FallOver" value="false"/>
     </append>
@@ -34,7 +34,7 @@
     <!-- OAK -->
     <remove xpath="//block[starts-with(@name, 'treeOakMed0') or @name='treeOakLrg01']/drop[@event='Destroy' and starts-with(@name, 'treePlanted')]"/>
     <append xpath="//block[starts-with(@name, 'treeOakMed0') or @name='treeOakLrg01']">
-        <property name="DowngradeBlock" value="rbtTreeStumpRandomRespawner"/>
+        <property name="DowngradeBlock" value="rbtAllTreeStumpsRandomHelper"/>
         <property name="PassThroughDamage" value="false"/>
         <property name="FallOver" value="false"/>
     </append>
@@ -42,7 +42,7 @@
     <!-- Saplings (treePlantedOak1m) shouldn't give seeds back' -->
     <remove xpath="//block[starts-with(@name, 'treePlantedOak')]/drop[@event='Destroy' and starts-with(@name, 'treePlanted')]"/>
     <append xpath="//block[starts-with(@name, 'treePlantedOak') and not (@name='treePlantedOak1m')]">
-        <property name="DowngradeBlock" value="rbtTreeStumpRandomRespawner"/>
+        <property name="DowngradeBlock" value="rbtAllTreeStumpsRandomHelper"/>
         <property name="PassThroughDamage" value="false"/>
         <property name="FallOver" value="false"/>
     </append>
@@ -50,14 +50,14 @@
     <!-- MOUNTAIN_PINE -->
     <remove xpath="//block[starts-with(@name, 'treeMountainPine') or @name='treeFirLrg01']/drop[@event='Destroy' and starts-with(@name, 'treePlanted')]"/>
     <append xpath="//block[starts-with(@name, 'treeMountainPine') or @name='treeFirLrg01']">
-        <property name="DowngradeBlock" value="rbtTreeStumpRandomRespawner"/>
+        <property name="DowngradeBlock" value="rbtAllTreeStumpsRandomHelper"/>
         <property name="PassThroughDamage" value="false"/>
         <property name="FallOver" value="false"/>
     </append>
 
     <remove xpath="//block[starts-with(@name, 'treePineBurnt')]/drop[@event='Destroy' and starts-with(@name, 'treePlanted')]"/>
     <append xpath="//block[starts-with(@name, 'treePineBurnt')]">
-        <property name="DowngradeBlock" value="rbtTreeStumpBurntRandomRespawner"/>
+        <property name="DowngradeBlock" value="rbtAllTreeStumpsRandomHelper"/>
         <property name="PassThroughDamage" value="false"/>
         <property name="FallOver" value="false"/>
     </append>
@@ -65,7 +65,7 @@
     <!-- Saplings (treePlantedMountainPine1m) shouldn't give seeds back' -->
     <remove xpath="//block[starts-with(@name, 'treePlantedMountainPine')]/drop[@event='Destroy' and starts-with(@name, 'treePlanted')]"/>
     <append xpath="//block[starts-with(@name, 'treePlantedMountainPine') and not (@name='treePlantedMountainPine1m')]">
-        <property name="DowngradeBlock" value="rbtTreeStumpRandomRespawner"/>
+        <property name="DowngradeBlock" value="rbtAllTreeStumpsRandomHelper"/>
         <property name="PassThroughDamage" value="false"/>
         <property name="FallOver" value="false"/>
     </append>
@@ -73,15 +73,15 @@
     <!-- WINTER -->
     <remove xpath="//block[starts-with(@name, 'treeWinterPine') or starts-with(@name, 'treeWinterEverGreen')]/drop[@event='Destroy' and starts-with(@name, 'treePlanted')]"/>
     <append xpath="//block[starts-with(@name, 'treeWinterPine') or starts-with(@name, 'treeWinterEverGreen')]">
-        <property name="DowngradeBlock" value="rbtTreeStumpWinterRandomRespawner"/>
+        <property name="DowngradeBlock" value="rbtAllTreeStumpsRandomHelper"/>
         <property name="PassThroughDamage" value="false"/>
         <property name="FallOver" value="false"/>
     </append>
 
     <!-- Saplings (treePlantedWinterPine1m) shouldn't give seeds back' -->
-    <remove xpath="//block[starts-with(@name, 'treePlantedWinterPine') and not (@name='treePlantedWinterPine6m')]/drop[@event='Destroy' and starts-with(@name, 'treePlanted')]"/>
-    <append xpath="//block[starts-with(@name, 'treePlantedWinterPine') and not (@name='treePlantedWinterPine1m') and not (@name='treePlantedWinterPine6m')]">
-        <property name="DowngradeBlock" value="rbtTreeStumpWinterRandomRespawner"/>
+    <remove xpath="//block[starts-with(@name, 'treePlantedWinterPine')]/drop[@event='Destroy' and starts-with(@name, 'treePlanted')]"/>
+    <append xpath="//block[starts-with(@name, 'treePlantedWinterPine') and not (@name='treePlantedWinterPine1m')]">
+        <property name="DowngradeBlock" value="rbtAllTreeStumpsRandomHelper"/>
         <property name="PassThroughDamage" value="false"/>
         <property name="FallOver" value="false"/>
     </append>
@@ -176,6 +176,14 @@
  -->
     <append xpath="//block[@name='plantedYucca1' or @name='plantedYucca3Harvest' or @name='plantedYuccaDead']">
         <property name="DowngradeBlock" value="rbtPlantYuccaRespawner"/>
+        <property name="PassThroughDamage" value="false"/>
+    </append>
+
+<!-- Tweak Driftwood as we'd like
+        - Insert the DowngradeBlock
+ -->
+    <append xpath="//block[@name='driftwood']">
+        <property name="DowngradeBlock" value="rbtDriftwoodRandomRespawner"/>
         <property name="PassThroughDamage" value="false"/>
     </append>
 

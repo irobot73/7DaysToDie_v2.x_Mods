@@ -2,21 +2,21 @@
 
 <blocks>
 
-    <!-- (Bird) Nests -->
-    <insertAfter xpath="/blocks/block[@name='cntBirdnestCorner']">
+    <!-- ATMs -->
+    <insertAfter xpath="/blocks/block[@name='cntATMInsecure']">
 
-        <block name="rbtBirdNestRespawner">
+        <block name="rbtATMRandomRespawner">
             <property name="Extends" value="rbtGrassRespawnMaster"/>
             <property name="CreativeMode" value="Dev"/>
-            <property name="DescriptionKey" value="rbtBirdNestRespawnerDesc"/>
-            <property name="CustomIcon" value="cntBirdnest"/>
-            <property name="PlantGrowing.Next" value="cntBirdnest"/>
+            <property name="DescriptionKey" value="rbtATMRandomRespawnerDesc"/>
+            <property name="CustomIcon" value="cntATMSecure"/>
+            <property name="PlantGrowing.Next" value="rbtAllATMsRandomHelper"/>
             <!-- 3.5 days @ 90-min/day -->
-            <!-- <property name="PlantGrowing.GrowthRate" value="270"/> -->
-            <property name="PlantGrowing.GrowthRate" value="0.2"/>
+            <!-- <property name="PlantGrowing.GrowthRate" value="315"/> -->
+	        <property name="PlantGrowing.GrowthRate" value="0.2"/>
             <property name="Texture" value="201,306,371,201,306,371"/>
-            <property name="SortOrder1" value="R400"/>
-            <property name="SortOrder2" value="9400"/>
+            <property name="SortOrder1" value="R015"/>
+            <property name="SortOrder2" value="9015"/>
         </block>
 
     </insertAfter>
@@ -28,11 +28,11 @@
             <property name="Extends" value="rbtGrassRespawnMaster"/>
             <property name="CreativeMode" value="Dev"/>
             <property name="DescriptionKey" value="rbtPostMailboxRandomRespawnerDesc"/>
-            <property name="CustomIcon" value="cntATMSecure"/>
+            <property name="CustomIcon" value="cntPostMailbox"/>
             <property name="PlantGrowing.Next" value="rbtAllPostMailboxesRandomHelper"/>
             <property name="Texture" value="201,306,371,201,306,371"/>
-            <property name="SortOrder1" value="R515"/>
-            <property name="SortOrder2" value="9515"/>
+            <property name="SortOrder1" value="R034"/>
+            <property name="SortOrder2" value="9034"/>
         </block>
 
     </insertAfter>
@@ -47,55 +47,8 @@
             <property name="CustomIcon" value="cntNewsDispenseFreeGreen"/>
             <property name="PlantGrowing.Next" value="rbtAllNewsDispensersRandomHelper"/>
             <property name="Texture" value="201,306,371,201,306,371"/>
-            <property name="SortOrder1" value="R520"/>
-            <property name="SortOrder2" value="9520"/>
-        </block>
-
-    </insertAfter>
-
-    <!-- ATMs -->
-    <insertAfter xpath="/blocks/block[@name='cntATMInsecure']">
-
-        <block name="rbtATMRandomRespawner">
-            <property name="Extends" value="rbtGrassRespawnMaster"/>
-            <property name="CreativeMode" value="Dev"/>
-            <property name="DescriptionKey" value="rbtATMRandomRespawnerDesc"/>
-            <property name="CustomIcon" value="cntATMSecure"/>
-            <property name="PlantGrowing.Next" value="rbtAllATMsRandomHelper"/>
-            <!-- 3.5 days @ 90-min/day -->
-            <!-- <property name="PlantGrowing.GrowthRate" value="315"/> -->
-	        <property name="PlantGrowing.GrowthRate" value="0.2"/>
-            <property name="Texture" value="201,306,371,201,306,371"/>
-            <property name="SortOrder1" value="R505"/>
-            <property name="SortOrder2" value="9505"/>
-        </block>
-
-    </insertAfter>
-
-
-    <!-- Vending machines -->
-    <insertAfter xpath="/blocks/block[@name='cntVendingMachineSnacksRandomLootHelper']">
-
-        <block name="rbtAllDrinksVendingMachineRandomRespawner">
-            <property name="Extends" value="rbtGrassRespawnMaster"/>
-            <property name="CreativeMode" value="Dev"/>
-            <property name="DescriptionKey" value="rbtAllDrinksVendingMachineRandomRespawnerDesc"/>
-            <property name="CustomIcon" value="cntVendingMachine2"/>
-            <property name="PlantGrowing.Next" value="cntVendingMachine2RandomLootHelper"/>
-            <property name="Texture" value="201,306,371,201,306,371"/>
-            <property name="SortOrder1" value="R506"/>
-            <property name="SortOrder2" value="9506"/>
-        </block>
-
-        <block name="rbtAllSnacksVendingMachineRandomRespawner">
-            <property name="Extends" value="rbtGrassRespawnMaster"/>
-            <property name="CreativeMode" value="Dev"/>
-            <property name="DescriptionKey" value="rbtAllSnacksVendingMachineRandomRespawnerDesc"/>
-            <property name="CustomIcon" value="cntVendingMachineSnacksFull"/>
-            <property name="PlantGrowing.Next" value="cntVendingMachineSnacksRandomLootHelper"/>
-            <property name="Texture" value="201,306,371,201,306,371"/>
-            <property name="SortOrder1" value="R507"/>
-            <property name="SortOrder2" value="9507"/>
+            <property name="SortOrder1" value="R047"/>
+            <property name="SortOrder2" value="9047"/>
         </block>
 
     </insertAfter>
@@ -109,8 +62,68 @@
             <property name="DescriptionKey" value="rbtAllStreeLightRandomRespawnerDesc"/>
             <property name="CustomIcon" value="streetLight01"/>
             <property name="PlantGrowing.Next" value="rbtAllStreeLightsRandomHelper"/>
-            <property name="SortOrder1" value="R509"/>
-            <property name="SortOrder2" value="9509"/>
+            <property name="SortOrder1" value="R062"/>
+            <property name="SortOrder2" value="9062"/>
+        </block>
+
+    </insertAfter>
+
+    <!-- Boulders -->
+    <insertAfter xpath="/blocks/block[@name='oreShaleBoulder']">
+
+        <block name="rbtAllBoulderRandomRespawner">
+            <property name="Extends" value="rbtBoulderRespawnMaster"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="DescriptionKey" value="rbtAllBoulderRandomRespawnerDesc"/>
+            <property name="CustomIcon" value="rock01"/>
+            <property name="SortOrder1" value="R072"/>
+            <property name="SortOrder2" value="9072"/>
+        </block>
+
+    </insertAfter>
+
+    <!-- (Bird) Nests -->
+    <insertAfter xpath="/blocks/block[@name='cntBirdnestCorner']">
+
+        <block name="rbtBirdNestRespawner">
+            <property name="Extends" value="rbtGrassRespawnMaster"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="DescriptionKey" value="rbtBirdNestRespawnerDesc"/>
+            <property name="CustomIcon" value="cntBirdnest"/>
+            <property name="PlantGrowing.Next" value="cntBirdnest"/>
+            <!-- 3.5 days @ 90-min/day -->
+            <!-- <property name="PlantGrowing.GrowthRate" value="270"/> -->
+            <property name="PlantGrowing.GrowthRate" value="0.2"/>
+            <property name="Texture" value="201,306,371,201,306,371"/>
+            <property name="SortOrder1" value="R080"/>
+            <property name="SortOrder2" value="9080"/>
+        </block>
+
+    </insertAfter>
+
+    <!-- Vending machines -->
+    <insertAfter xpath="/blocks/block[@name='cntVendingMachineSnacksRandomLootHelper']">
+
+        <block name="rbtAllDrinksVendingMachineRandomRespawner">
+            <property name="Extends" value="rbtGrassRespawnMaster"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="DescriptionKey" value="rbtAllDrinksVendingMachineRandomRespawnerDesc"/>
+            <property name="CustomIcon" value="cntVendingMachine2"/>
+            <property name="PlantGrowing.Next" value="cntVendingMachine2RandomLootHelper"/>
+            <property name="Texture" value="201,306,371,201,306,371"/>
+            <property name="SortOrder1" value="R090"/>
+            <property name="SortOrder2" value="9090"/>
+        </block>
+
+        <block name="rbtAllSnacksVendingMachineRandomRespawner">
+            <property name="Extends" value="rbtGrassRespawnMaster"/>
+            <property name="CreativeMode" value="Dev"/>
+            <property name="DescriptionKey" value="rbtAllSnacksVendingMachineRandomRespawnerDesc"/>
+            <property name="CustomIcon" value="cntVendingMachineSnacksFull"/>
+            <property name="PlantGrowing.Next" value="cntVendingMachineSnacksRandomLootHelper"/>
+            <property name="Texture" value="201,306,371,201,306,371"/>
+            <property name="SortOrder1" value="R092"/>
+            <property name="SortOrder2" value="9092"/>
         </block>
 
     </insertAfter>
@@ -124,8 +137,8 @@
             <property name="DescriptionKey" value="rbtUtilityTransformerRespawnerDesc"/>
             <property name="CustomIcon" value="utilityTransformer"/>
             <property name="PlantGrowing.Next" value="utilityTransformer"/>
-            <property name="SortOrder1" value="R514"/>
-            <property name="SortOrder2" value="9514"/>
+            <property name="SortOrder1" value="R095"/>
+            <property name="SortOrder2" value="9095"/>
         </block>
 
         <block name="rbtUtilityTransformerHangingRespawner">
@@ -134,22 +147,8 @@
             <property name="DescriptionKey" value="rbtUtilityTransformerHangingRespawnerDesc"/>
             <property name="CustomIcon" value="utilityTransformerHanging"/>
             <property name="PlantGrowing.Next" value="utilityTransformerHanging"/>
-            <property name="SortOrder1" value="R514"/>
-            <property name="SortOrder2" value="9514"/>
-        </block>
-
-    </insertAfter>
-
-    <!-- Boulders -->
-    <insertAfter xpath="/blocks/block[@name='oreShaleBoulder']">
-
-        <block name="rbtAllBoulderRandomRespawner">
-            <property name="Extends" value="rbtBoulderRespawnMaster"/>
-            <property name="CreativeMode" value="Dev"/>
-            <property name="DescriptionKey" value="rbtAllBoulderRandomRespawnerDesc"/>
-            <property name="CustomIcon" value="rock01"/>
-            <property name="SortOrder1" value="R401"/>
-            <property name="SortOrder2" value="9401"/>
+            <property name="SortOrder1" value="R097"/>
+            <property name="SortOrder2" value="9097"/>
         </block>
 
     </insertAfter>
