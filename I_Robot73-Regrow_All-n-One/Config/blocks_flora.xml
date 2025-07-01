@@ -40,7 +40,7 @@
     </append>
 
     <!-- Saplings (treePlantedOak1m) shouldn't give seeds back' -->
-    <remove xpath="//block[starts-with(@name, 'treePlantedOak')]/drop[@event='Destroy' and starts-with(@name, 'treePlanted')]"/>
+    <remove xpath="//block[starts-with(@name, 'treePlantedOak') and not (@name='treePlantedOak1m')]/drop[@event='Destroy' and starts-with(@name, 'treePlanted')]"/>
     <append xpath="//block[starts-with(@name, 'treePlantedOak') and not (@name='treePlantedOak1m')]">
         <property name="DowngradeBlock" value="rbtAllTreeStumpsRandomHelper"/>
         <property name="PassThroughDamage" value="false"/>
@@ -63,7 +63,7 @@
     </append>
 
     <!-- Saplings (treePlantedMountainPine1m) shouldn't give seeds back' -->
-    <remove xpath="//block[starts-with(@name, 'treePlantedMountainPine')]/drop[@event='Destroy' and starts-with(@name, 'treePlanted')]"/>
+    <remove xpath="//block[starts-with(@name, 'treePlantedMountainPine') and not (@name='treePlantedMountainPine1m')]/drop[@event='Destroy' and starts-with(@name, 'treePlanted')]"/>
     <append xpath="//block[starts-with(@name, 'treePlantedMountainPine') and not (@name='treePlantedMountainPine1m')]">
         <property name="DowngradeBlock" value="rbtAllTreeStumpsRandomHelper"/>
         <property name="PassThroughDamage" value="false"/>
@@ -79,7 +79,7 @@
     </append>
 
     <!-- Saplings (treePlantedWinterPine1m) shouldn't give seeds back' -->
-    <remove xpath="//block[starts-with(@name, 'treePlantedWinterPine')]/drop[@event='Destroy' and starts-with(@name, 'treePlanted')]"/>
+    <remove xpath="//block[starts-with(@name, 'treePlantedWinterPine') and not (@name='treePlantedWinterPine1m')]/drop[@event='Destroy' and starts-with(@name, 'treePlanted')]"/>
     <append xpath="//block[starts-with(@name, 'treePlantedWinterPine') and not (@name='treePlantedWinterPine1m')]">
         <property name="DowngradeBlock" value="rbtAllTreeStumpsRandomHelper"/>
         <property name="PassThroughDamage" value="false"/>
@@ -87,7 +87,7 @@
     </append>
 
     <!-- Trees not touched CAN FallOver (if they don't already)-->
-    <append xpath="//block[@name='treeJuniper4m']">
+    <append xpath="//block[@name='treeJuniper4m' or @name='treeOakSml01']">
         <property name="FallOver" value="true"/>
     </append>
 
