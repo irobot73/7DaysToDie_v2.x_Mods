@@ -2,7 +2,31 @@
 
 <entityclasses>
 
-    <!-- Time, in seconds, before loot bags will despawn ('2700' == 45-min [1/2 of a 90-min/day]')-->
-    <set xpath="/entity_classes/entity_class[starts-with(@name,'EntityLootContainer')]/property[@name='TimeStayAfterDeath']/@value">2700</set>   
+<!-- Set {@VALUE} = Time, in seconds, before {X} will despawn.  NOTE:  0 means 0, not infinite! -->
+
+    <!-- Dropped player backpack.  Default: 3600 -->
+    <!-- <set xpath="/entity_classes/entity_class[@name='Backpack']/property[@name='TimeStayAfterDeath']/@value">3600</set> -->
+
+    <!-- Used after a container block is destroyed.  Default: 60 -->
+    <!-- <set xpath="/entity_classes/entity_class[@name='DroppedLootContainer']/property[@name='TimeStayAfterDeath']/@value">60</set> -->
+
+    <!-- Used after a vehicle is destroyed.  Default: 3600 -->
+    <!-- <set xpath="/entity_classes/entity_class[@name='DroppedVehicleContainer']/property[@name='TimeStayAfterDeath']/@value">3600</set> -->
+
+<!-- NOTE:  Individual option(s) or the All-In-One, if using more than one, may supercede others, if not careful -->
+
+    <!-- ALL Dropped loot bags (Yellow, Blue & Red).  Default: 1200 -->
+    <set xpath="/entity_classes/entity_class[starts-with(@name,'EntityLootContainer')]/property[@name='TimeStayAfterDeath']/@value">2700</set>
+
+    <!-- Dropped loot bags (Yellow).  Default: 1200 -->
+    <!-- <set xpath="/entity_classes/entity_class[@name='EntityLootContainerRegular' or @name='EntityLootContainerNurse' or @name='EntityLootContainerLab' or @name='EntityLootContainerUtility' or @name='EntityLootContainerSoldier' or @name='EntityLootContainerThug']/property[@name='TimeStayAfterDeath']/@value">2700</set> -->
+
+    <!-- Dropped loot bags (Yellow).  Default: 1200 -->
+    <!-- <set xpath="/entity_classes/entity_class[@name='EntityLootContainerStrong']/property[@name='TimeStayAfterDeath']/@value">1200</set> -->
+
+    <!-- Dropped loot bags (Red).  Default: 1200 -->
+    <!-- <set xpath="/entity_classes/entity_class[@name='EntityLootContainerBoss']/property[@name='TimeStayAfterDeath']/@value">1200</set> -->
+
+
 
 </entityclasses>
