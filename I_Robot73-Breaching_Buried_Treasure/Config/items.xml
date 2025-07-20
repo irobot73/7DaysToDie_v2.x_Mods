@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<items>
+
+    <append xpath="//item[@name='ammoShotgunBreachingSlug']/effect_group[@name='ammoShotgunBreachingSlug']/passive_effect[@name='BlockDamage' and @operation='base_add']/@tags">,buriedTreasure</append>
+
+</items>

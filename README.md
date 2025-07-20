@@ -1,6 +1,9 @@
 # 7 Days To Die v2.x Mods
 Custom, SERVER-side mods for any 7 Days To Die v2.x EAC-enabled servers
 
+[I_Robot73-Breaching_Buried_Treasure](https://github.com/irobot73/7DaysToDie_v2.x_Mods/tree/main/I_Robot73-Breaching_Buried_Treasure)
+* Makes breaching slug ammo viable vs. buried treasure chests.
+
 [I_Robot73-Corpse_Removal](https://github.com/irobot73/7DaysToDie_v2.x_Mods/tree/main/I_Robot73-Corpse_Removal)
 * Decreases the amount of time before corpses de-spawn.
 
