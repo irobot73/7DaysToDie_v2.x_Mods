@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- No loot cap but keep hazards -->
+
+<biomes>
+
+	<!--no loot cap-->
+	<set xpath="/worldgeneration/biomes/biome[@name='burnt_forest']/@lootstage_max">99999</set>
+	<set xpath="/worldgeneration/biomes/biome[@name='desert']/@lootstage_max">99999</set>
+	<set xpath="/worldgeneration/biomes/biome[@name='snow']/@lootstage_max">99999</set>
+
+<!-- No hazards but keep loot cap. -->
+
+	<!-- no hazards -->
+	<set xpath="/worldgeneration/biomes/biome[@name='burnt_forest']/@buff">buffForest_Hazard</set>
+	<set xpath="/worldgeneration/biomes/biome[@name='desert']/@buff">buffForest_Hazard</set>
+	<set xpath="/worldgeneration/biomes/biome[@name='snow']/@buff">buffForest_Hazard</set>
+	<set xpath="/worldgeneration/biomes/biome[@name='wasteland']/@buff">buffForest_Hazard</set>
+
+</biomes>
