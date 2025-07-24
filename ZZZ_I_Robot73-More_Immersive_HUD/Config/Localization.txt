@@ -1,0 +1,7 @@
+Key,File,Type,UsedInMainMenu,NoTranslate,english,Context / Alternate Text,german,spanish,french,italian,japanese,koreana,polish,brazilian,russian,turkish,schinese,tchinese
+weatherStorm,XUi,Weather Alert,,,,,,,,,,,,,,,,
+weatherStormBuild,XUi,Weather Alert,,,,,,,,,,,,,,,,,,,
+weatherStormBuildLeave,XUi,Weather Alert,,,,,,,,,,,,,,,,,,,
+weatherStormBuildSafe,XUi,Weather Alert,,,,,,,,,,,,,,,,,,,
+weatherStormLeave,XUi,Weather Alert,,,,,,,,,,,,,,,,,,,
+weatherStormSafe,XUi,Weather Alert,,,,,,,,,,,,,,,,,,,

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<windows>
+
+<!--Smaller Entering Area, Difficulty Display & Storm Warning [Center] -->
+    <removeattribute xpath="//window[@name='windowEntering']/rect/label[@name='TextContent']/@text"/>
+    <removeattribute xpath="//window[@name='windowEntering']/rect/label[@name='MessageContent']/@text"/>
+	<remove xpath="//window[@name='windowEntering']/rect/grid"/>
+
+<!-- Remove SKULLS vs. POIs [upper-right corner] -->
+    <remove xpath="//window[@name='windowLocation']/sprite[@name='Background']"/>
+    <remove xpath="//window[@name='windowLocation']/sprite[@name='backgroundMain']"/>
+    <removeattribute xpath="//window[@name='windowLocation']/label[@text='{locationname}']/@text"/>
+	<remove xpath="//window[@name='windowLocation']/grid"/>
+	
+</windows>
+
+
+
+
