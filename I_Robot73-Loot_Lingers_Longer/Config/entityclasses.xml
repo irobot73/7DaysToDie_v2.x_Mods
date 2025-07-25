@@ -21,7 +21,7 @@
     <!-- Dropped loot bags (Yellow).  Default: 1200 -->
     <!-- <set xpath="/entity_classes/entity_class[@name='EntityLootContainerRegular' or @name='EntityLootContainerNurse' or @name='EntityLootContainerLab' or @name='EntityLootContainerUtility' or @name='EntityLootContainerSoldier' or @name='EntityLootContainerThug']/property[@name='TimeStayAfterDeath']/@value">2700</set> -->
 
-    <!-- Dropped loot bags (Yellow).  Default: 1200 -->
+    <!-- Dropped loot bags (Blue).  Default: 1200 -->
     <!-- <set xpath="/entity_classes/entity_class[@name='EntityLootContainerStrong']/property[@name='TimeStayAfterDeath']/@value">1200</set> -->
 
     <!-- Dropped loot bags (Red).  Default: 1200 -->
