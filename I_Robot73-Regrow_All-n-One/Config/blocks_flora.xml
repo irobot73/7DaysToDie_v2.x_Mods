@@ -86,10 +86,11 @@
         <property name="FallOver" value="false"/>
     </append>
 
-    <!-- Trees not touched CAN FallOver (if they don't already)-->
+    <!-- If added in, these 2 will simply disappear, NOT fall-over -->
+    <!-- Trees not touched CAN FallOver (if they don't already) 
     <append xpath="//block[@name='treeJuniper4m' or @name='treeOakSml01']">
         <property name="FallOver" value="true"/>
-    </append>
+    </append>-->
 
 <!-- Tweak the Cacti as we'd like
         - Insert the DowngradeBlock
