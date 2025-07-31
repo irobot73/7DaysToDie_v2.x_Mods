@@ -2,9 +2,9 @@
 <xml>
 	<Name value="I_Robot73_Slow_Your_Roll"/>
 	<DisplayName value="Slow Your Roll (Robot Edition)" />
-	<Description value="Slows the progression, level gain, of characters."/>
+	<Description value="Changes XP gains so character's progression takes longer."/>
 	<Author value="I_Robot73"/>
-	<Version value="2.0.0"/>
+	<Version value="2.0.1"/>
 	<Website value="https://discord.gg/DEU5wmMvSn/"/>
 </xml>
 
