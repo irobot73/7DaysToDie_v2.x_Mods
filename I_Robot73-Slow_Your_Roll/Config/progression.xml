@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-
-<progression>
-
-    <!-- Original game file:  <level max_level="300" exp_to_level="10000" experience_multiplier="1.05" skill_points_per_level="1" clamp_exp_cost_at_level="60"> -->
-	<set xpath="/progression/level[@max_level='300']/@exp_to_level">15000</set>
-
-
-</progression>
