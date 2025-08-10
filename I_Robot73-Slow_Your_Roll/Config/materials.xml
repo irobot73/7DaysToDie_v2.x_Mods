@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<materials>
+
+<!-- Values for adjusting block upgrading -->
+    <!-- Default EXP rate is '2' -->
+	<!-- <set xpath="//material[@id='Mwood_shapes']/property[@name='Experience']/@value">.1</set> -->
+    <!-- Default EXP rate is '2' -->
+	<!-- <set xpath="//material[@id='Mcobblestone_shapes']/property[@name='Experience']/@value">.1</set> -->
+    <!-- Default EXP rate is '4' -->
+	<!-- <set xpath="//material[@id='Mconcrete_shapes']/property[@name='Experience']/@value">.2</set> -->
+    <!-- Default EXP rate is '6' -->
+	<!-- <set xpath="//material[@id='Msteel_shapes']/property[@name='Experience']/@value">.3</set> -->
+	
+<!-- Values for adjusting material harvesting -->
+    <!-- Default EXP rate is '1.5' -->
+	<!-- <set xpath="//material[@id='MresourceWood']/property[@name='Experience']/@value">.05</set> -->
+    <!-- Default EXP rate is '1.6' -->
+	<!-- <set xpath="//material[@id='MresourceClayLump']/property[@name='Experience']/@value">.06</set> -->
+    <!-- Default EXP rate is '2' -->
+	<!-- <set xpath="//material[@id='MresourceRockSmall']/property[@name='Experience']/@value">.1</set> -->
+    <!-- Default EXP rate is '1.4' -->
+	<!-- <set xpath="//material[@id='MresourceCrushedSand']/property[@name='Experience']/@value">.04</set> -->
+    <!-- Default EXP rate is '6' -->
+	<!-- <set xpath="//material[@id='MresourceCoal']/property[@name='Experience']/@value">.3</set> -->
+    <!-- Default EXP rate is '6' -->
+	<!-- <set xpath="//material[@id='MresourceOilShale']/property[@name='Experience']/@value">.3</set> -->
+    <!-- Default EXP rate is '1.6' -->
+	<!-- <set xpath="//material[@id='MresourceScrapIron']/property[@name='Experience']/@value">.06</set> -->
+    <!-- Default EXP rate is '6' -->
+	<!-- <set xpath="//material[@id='MresourceScrapLeadSmall']/property[@name='Experience']/@value">.3</set> -->
+
+</materials>

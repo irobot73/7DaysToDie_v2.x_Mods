@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<items>
+
+<!-- XPath used to grab all ITEMS: //item/effect_group/triggered_effect[@action='GiveExp']/../../@name
+        Everything defaults to 10% of vanilla values -->
+
+<!-- Set EXP gain from reading the Duke's note -->
+    <!-- Default EXP rate is 100 -->
+	<set xpath="//item[@name='noteDuke01']/effect_group/triggered_effect[@action='GiveExp']/@exp">10</set>
+
+<!-- Use the following to set ALL skill magazines -->
+    <!-- Default EXP rate is 50 -->
+	<set xpath="//item[contains(@name,'SkillMagazine')]/effect_group/triggered_effect[@action='GiveExp']/@exp">5</set>
+  
+<!-- Use the following to set ALL books -->
+    <!-- Default EXP rate is 50 -->
+	<set xpath="//item[starts-with(@name,'book')]/effect_group/triggered_effect[@action='GiveExp']/@exp">5</set>
+
+<!-- Use the following to set ALL skill schematic -->
+    <!-- Default EXP rate is 50 -->
+	<set xpath="//item[contains(@name,'Schematic')]/effect_group/triggered_effect[@action='GiveExp']/@exp">5</set>
+
+<!-- Set EXP gain from utilizing medicine and medical equipment -->
+    <!-- Progressive EXP given
+        medicalBandage (10/20/30/60/60/60)
+        medicalFirstAidBandage (100/200/300/600/600/600)
+        medicalFirstAidKit (300/600/900/1800/1800/1800)
+        medicalSplint (100/200/300/600/600/600)
+        medicalPlasterCast (300/600/900/1800/1800/1800) -->
+	<!-- <set xpath="//item[@name='medicalBandage']/effect_group/triggered_effect[@trigger='onSelfPrimaryActionEnd' and @action='GiveExp']/@exp">0</set>
+	<set xpath="//item[@name='medicalBandage']/effect_group/triggered_effect[@trigger='onSelfSecondaryActionEnd' and @action='GiveExp']/@exp">0</set>
+	<set xpath="//item[@name='medicalFirstAidBandage']/effect_group/triggered_effect[@trigger='onSelfPrimaryActionEnd' and @action='GiveExp']/@exp">0</set>
+	<set xpath="//item[@name='medicalFirstAidBandage']/effect_group/triggered_effect[@trigger='onSelfSecondaryActionEnd' and @action='GiveExp']/@exp">0</set>
+	<set xpath="//item[@name='medicalFirstAidKit']/effect_group/triggered_effect[@trigger='onSelfPrimaryActionEnd' and @action='GiveExp']/@exp">0</set>
+	<set xpath="//item[@name='medicalFirstAidKit']/effect_group/triggered_effect[@trigger='onSelfSecondaryActionEnd' and @action='GiveExp']/@exp">0</set>
+	<set xpath="//item[@name='medicalSplint']/effect_group/triggered_effect[@trigger='onSelfPrimaryActionEnd' and @action='GiveExp']/@exp">0</set>
+	<set xpath="//item[@name='medicalSplint']/effect_group/triggered_effect[@trigger='onSelfSecondaryActionEnd' and @action='GiveExp']/@exp">0</set>
+	<set xpath="//item[@name='medicalPlasterCast']/effect_group/triggered_effect[@trigger='onSelfPrimaryActionEnd' and @action='GiveExp']/@exp">0</set>
+	<set xpath="//item[@name='medicalPlasterCast']/effect_group/triggered_effect[@trigger='onSelfSecondaryActionEnd' and @action='GiveExp']/@exp">0</set> -->
+	
+<!-- ...or set each individual magaine -->
+
+	<!-- <set xpath="/items/item[starts-with(@name, 'masterSkillMagazine')]/effect_group/triggered_effect/@exp">0</set> -->
+	<!-- <set xpath="/items/item[starts-with(@name, 'harvestingToolsSkillMagazine')]/effect_group/triggered_effect/@exp">0</set> -->
+	<!-- <set xpath="/items/item[starts-with(@name, 'repairToolsSkillMagazine')]/effect_group/triggered_effect/@exp">0</set> -->
+	<!-- <set xpath="/items/item[starts-with(@name, 'salvageToolsSkillMagazine')]/effect_group/triggered_effect/@exp">0</set> -->
+	<!-- <set xpath="/items/item[starts-with(@name, 'knucklesSkillMagazine')]/effect_group/triggered_effect/@exp">0</set> -->
+	<!-- <set xpath="/items/item[starts-with(@name, 'bladesSkillMagazine')]/effect_group/triggered_effect/@exp">0</set> -->
+	<!-- <set xpath="/items/item[starts-with(@name, 'clubsSkillMagazine')]/effect_group/triggered_effect/@exp">0</set> -->
+	<!-- <set xpath="/items/item[starts-with(@name, 'sledgehammersSkillMagazine')]/effect_group/triggered_effect/@exp">0</set> -->
+	<!-- <set xpath="/items/item[starts-with(@name, 'spearsSkillMagazine')]/effect_group/triggered_effect/@exp">0</set> -->
+	<!-- <set xpath="/items/item[starts-with(@name, 'bowsSkillMagazine')]/effect_group/triggered_effect/@exp">0</set> -->
+	<!-- <set xpath="/items/item[starts-with(@name, 'handgunsSkillMagazine')]/effect_group/triggered_effect/@exp">0</set> -->
+	<!-- <set xpath="/items/item[starts-with(@name, 'shotgunsSkillMagazine')]/effect_group/triggered_effect/@exp">0</set> -->
+	<!-- <set xpath="/items/item[starts-with(@name, 'riflesSkillMagazine')]/effect_group/triggered_effect/@exp">0</set> -->
+	<!-- <set xpath="/items/item[starts-with(@name, 'machineGunsSkillMagazine')]/effect_group/triggered_effect/@exp">0</set> -->
+	<!-- <set xpath="/items/item[starts-with(@name, 'explosivesSkillMagazine')]/effect_group/triggered_effect/@exp">0</set> -->
+	<!-- <set xpath="/items/item[starts-with(@name, 'roboticsSkillMagazine')]/effect_group/triggered_effect/@exp">0</set> -->
+	<!-- <set xpath="/items/item[starts-with(@name, 'armorSkillMagazine')]/effect_group/triggered_effect/@exp">0</set> -->
+	<!-- <set xpath="/items/item[starts-with(@name, 'medicalSkillMagazine')]/effect_group/triggered_effect/@exp">0</set> -->
+	<!-- <set xpath="/items/item[starts-with(@name, 'foodSkillMagazine')]/effect_group/triggered_effect/@exp">0</set> -->
+	<!-- <set xpath="/items/item[starts-with(@name, 'seedSkillMagazine')]/effect_group/triggered_effect/@exp">0</set> -->
+	<!-- <set xpath="/items/item[starts-with(@name, 'electricianSkillMagazine')]/effect_group/triggered_effect/@exp">0</set> -->
+	<!-- <set xpath="/items/item[starts-with(@name, 'trapsSkillMagazine')]/effect_group/triggered_effect/@exp">0</set> -->
+	<!-- <set xpath="/items/item[starts-with(@name, 'workstationSkillMagazine')]/effect_group/triggered_effect/@exp">0</set> -->
+	<!-- <set xpath="/items/item[starts-with(@name, 'vehiclesSkillMagazine')]/effect_group/triggered_effect/@exp">0</set> -->
+
+<!-- ...or set each individual book -->
+
+	<!-- <set xpath="//item[@name='bookFiremansAlmanacHeat']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookFiremansAlmanacAxes']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookFiremansAlmanacSpeed']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookFiremansAlmanacMolotov']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookFiremansAlmanacPrevention']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookFiremansAlmanacHarvest']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookFiremansAlmanacEquipment']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookNightStalkerStealthDamage']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookNightStalkerSilentNight']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookNightStalkerBlades']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookNightStalkerThiefAdrenaline']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookNightStalkerArchery']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookNightStalkerTwilightThief']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookNightStalkerSlumberParty']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookLuckyLooterDukes']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookLuckyLooterAmmunition']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookLuckyLooterBrass']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookLuckyLooterLead']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookLuckyLooterBooks']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookLuckyLooterFood']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookLuckyLooterMedical']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookEnforcerDamage']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookEnforcerApparel']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookEnforcerPunks']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookEnforcerIntimidation']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookEnforcerAPAmmo']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookEnforcerHPAmmo']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookEnforcerCriminalPursuit']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookBatterUpBigHits']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookBatterUpStealingBases']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookBatterUpSlowPitch']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookBatterUpKnockdown']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookBatterUpMaintenance']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookBatterUpFoulBalls']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookBatterUpMetalChain']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookSledgeSagaKnockdown']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookSledgeSagaDegradation']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookSledgeSagaCrippledMorale']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookSledgeSagaPulverizingFinishers']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookSledgeSagaSavageReaper']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookSledgeSagaConcussiveStrike']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookSledgeSagaArmorCrusher']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookGreatHeistSafes']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookGreatHeistGems']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookGreatHeistGoldRush']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookGreatHeistClaimed']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookGreatHeistAdrenalineFall']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookGreatHeistSprintSneak']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookGreatHeistMotionDetection']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookWasteTreasuresHoney']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookWasteTreasuresCoffins']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookWasteTreasuresAcid']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookWasteTreasuresWater']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookWasteTreasuresDoors']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookWasteTreasuresCloth']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookWasteTreasuresSinks']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookHuntingJournalBears']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookHuntingJournalWolves']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookHuntingJournalCoyotes']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookHuntingJournalMountainLions']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookHuntingJournalDeer']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookHuntingJournalVultures']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookHuntingJournalSelfDefense']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookArtOfMiningLuckyStrike']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookArtOfMiningDiamondTools']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookArtOfMiningCoffee']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookArtOfMiningBlackStrap']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookArtOfMiningPallets']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookArtOfMiningAvalanche']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookArtOfMiningDamage']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookRangersArrowRecovery']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookRangersExplodingBolts']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookRangersCripplingShot']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookRangersAPAmmo']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookRangersFlamingArrows']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookRangersForestGuide']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookRangersKnockdown']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookPistolPeteTakeAim']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookPistolPeteSwissKnees']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookPistolPeteSteadyHand']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookPistolPeteMaintenance']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookPistolPeteHPAmmo']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookPistolPeteAPAmmo']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookPistolPeteDamage']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookShotgunMessiahDamage']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookShotgunMessiahBreachingSlugs']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookShotgunMessiahLimbShot']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookShotgunMessiahSlugs']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookShotgunMessiahMaintenance']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookShotgunMessiahMagazine']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookShotgunMessiahPartyStarter']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookSniperDamage']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookSniperCripplingShot']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookSniperHeadShot']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookSniperReload']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookSniperControlledBreathing']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookSniperAPAmmo']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookSniperHPAmmo']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookAutoWeaponsDamage']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookAutoWeaponsUncontrolledBurst']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookAutoWeaponsMaintenance']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookAutoWeaponsDrumMag']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookAutoWeaponsRecoil']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookAutoWeaponsRagdoll']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookAutoWeaponsMachineGuns']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookUrbanCombatLanding']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookUrbanCombatCigar']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookUrbanCombatSneaking']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookUrbanCombatJumping']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookUrbanCombatLandMines']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookUrbanCombatAdrenalineRush']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookUrbanCombatRoomClearing']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookTechJunkie1Damage']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookTechJunkie2Maintenance']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookTechJunkie3APAmmo']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookTechJunkie4Shells']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookTechJunkie5Repulsor']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookTechJunkie6BatonCharge']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookTechJunkie7Hydraulics']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookBarBrawling1BasicMoves']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookBarBrawling2DropABomb']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookBarBrawling3KillerInstinct']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookBarBrawling4FinishingMoves']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookBarBrawling5AdrenalineHealing']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookBarBrawling6RageMode']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookBarBrawling7BoozedUp']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookSpearHunter1Damage']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookSpearHunter2Maintenance']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookSpearHunter3Bleed']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookSpearHunter4KillMove']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookSpearHunter5RapidStrike']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookSpearHunter6PenetratingShaft']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="//item[@name='bookSpearHunter7QuickStrike']/effect_group/triggered_effect/@exp">0</set> -->
+
+<!-- ...or set each individual schematic -->
+
+    <!-- <set xpath="modGunBarrelExtenderSchematic']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="modGunMuzzleBrakeSchematic']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="modGunSoundSuppressorSilencerSchematic']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="modGunLaserSightSchematic']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="modGunFlashlightSchematic']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="modGunScopeSmallSchematic']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="modGunScopeMediumSchematic']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="modGunScopeLargeSchematic']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="modGunReflexSightSchematic']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="modGunTriggerGroupSemiSchematic']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="modGunTriggerGroupBurst3Schematic']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="modGunTriggerGroupAutomaticSchematic']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="modGunBipodSchematic']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="modGunForegripSchematic']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="modGunRetractingStockSchematic']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="modGunDuckbillSchematic']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="modGunChokeSchematic']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="modGunMagazineExtenderSchematic']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="modShotgunSawedOffBarrelSchematic']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="modGunCrippleEmSchematic']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="modGunBowPolymerStringSchematic']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="modGunBowArrowRestSchematic']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="modGunMeleeTheHunterSchematic']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="modGunMeleeRadRemoverSchematic']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="modMeleeTemperedBladeSchematic']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="modMeleeSerratedBladeSchematic']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="modMeleeWeightedHeadSchematic']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="modMeleeStructuralBraceSchematic']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="modMeleeErgonomicGripSchematic']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="modMeleeFortifyingGripSchematic']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="modMeleeClubBarbedWireSchematic']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="modMeleeClubMetalSpikesSchematic']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="modMeleeGraveDiggerSchematic']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="modMeleeBunkerBusterSchematic']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="modMeleeIronBreakerSchematic']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="modMeleeWoodSplitterSchematic']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="modMeleeClubBurningShaftSchematic']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="modArmorImprovedFittingsSchematic']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="modArmorCustomizedFittingsSchematic']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="modArmorPlatingBasicSchematic']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="modArmorPlatingReinforcedSchematic']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="modArmorStoragePocketSchematic']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="modArmorDoubleStoragePocketSchematic']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="modArmorTripleStoragePocketSchematic']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="modArmorQuadStoragePocketSchematic']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="modArmorMuffledConnectorsSchematic']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="modArmorAdvancedMuffledConnectorsSchematic']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="modArmorImpactBracingSchematic']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="modArmorBandolierSchematic']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="modArmorWaterPurifierSchematic']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="modArmorHelmetLightSchematic']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="modFuelTankSmallSchematic']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="modFuelTankLargeSchematic']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="modRoboticDroneCargoModSchematic']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="modRoboticDroneMedicModSchematic']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="modRoboticDroneHeadlampModSchematic']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="modRoboticDroneArmorPlatingModSchematic']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="modRoboticDroneMoraleBoosterModSchematic']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="modVehicleFuelSaverSchematic']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="modVehicleOffRoadHeadlightsSchematic']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="modVehicleSuperChargerSchematic']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="modVehicleExpandedSeatSchematic']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="modVehicleReserveFuelTankSchematic']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="modVehiclePlowSchematic']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="modVehicleArmorSchematic']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="foodCanShamSchematic']/effect_group/triggered_effect/@exp">0</set> -->
+    <!-- <set xpath="plantedGraceCorn1Schematic']/effect_group/triggered_effect/@exp">0</set> -->
+
+<!-- ...or set each individual medical -->
+
+    <set xpath="//item[@name='medicalBandage']/effect_group/triggered_effect[@trigger='onSelfPrimaryActionEnd' and @action='GiveExp'][1]/@exp">1</set>
+    <set xpath="//item[@name='medicalBandage']/effect_group/triggered_effect[@trigger='onSelfPrimaryActionEnd' and @action='GiveExp'][2]/@exp">2</set>
+    <set xpath="//item[@name='medicalBandage']/effect_group/triggered_effect[@trigger='onSelfPrimaryActionEnd' and @action='GiveExp'][3]/@exp">3</set>
+    <set xpath="//item[@name='medicalBandage']/effect_group/triggered_effect[@trigger='onSelfPrimaryActionEnd' and @action='GiveExp'][4]/@exp">6</set>
+    <set xpath="//item[@name='medicalBandage']/effect_group/triggered_effect[@trigger='onSelfPrimaryActionEnd' and @action='GiveExp'][5]/@exp">6</set>
+    <set xpath="//item[@name='medicalBandage']/effect_group/triggered_effect[@trigger='onSelfPrimaryActionEnd' and @action='GiveExp'][6]/@exp">6</set>
+    <set xpath="//item[@name='medicalBandage']/effect_group/triggered_effect[@trigger='onSelfSecondaryActionEnd' and @action='GiveExp'][1]/@exp">1</set>
+    <set xpath="//item[@name='medicalBandage']/effect_group/triggered_effect[@trigger='onSelfSecondaryActionEnd' and @action='GiveExp'][2]/@exp">2</set>
+    <set xpath="//item[@name='medicalBandage']/effect_group/triggered_effect[@trigger='onSelfSecondaryActionEnd' and @action='GiveExp'][3]/@exp">3</set>
+    <set xpath="//item[@name='medicalBandage']/effect_group/triggered_effect[@trigger='onSelfSecondaryActionEnd' and @action='GiveExp'][4]/@exp">6</set>
+    <set xpath="//item[@name='medicalBandage']/effect_group/triggered_effect[@trigger='onSelfSecondaryActionEnd' and @action='GiveExp'][5]/@exp">6</set>
+    <set xpath="//item[@name='medicalBandage']/effect_group/triggered_effect[@trigger='onSelfSecondaryActionEnd' and @action='GiveExp'][6]/@exp">6</set>
+    <set xpath="//item[@name='medicalFirstAidBandage']/effect_group/triggered_effect[@trigger='onSelfPrimaryActionEnd' and @action='GiveExp'][1]/@exp">10</set>
+    <set xpath="//item[@name='medicalFirstAidBandage']/effect_group/triggered_effect[@trigger='onSelfPrimaryActionEnd' and @action='GiveExp'][2]/@exp">20</set>
+    <set xpath="//item[@name='medicalFirstAidBandage']/effect_group/triggered_effect[@trigger='onSelfPrimaryActionEnd' and @action='GiveExp'][3]/@exp">30</set>
+    <set xpath="//item[@name='medicalFirstAidBandage']/effect_group/triggered_effect[@trigger='onSelfPrimaryActionEnd' and @action='GiveExp'][4]/@exp">60</set>
+    <set xpath="//item[@name='medicalFirstAidBandage']/effect_group/triggered_effect[@trigger='onSelfPrimaryActionEnd' and @action='GiveExp'][5]/@exp">60</set>
+    <set xpath="//item[@name='medicalFirstAidBandage']/effect_group/triggered_effect[@trigger='onSelfPrimaryActionEnd' and @action='GiveExp'][6]/@exp">60</set>
+    <set xpath="//item[@name='medicalFirstAidBandage']/effect_group/triggered_effect[@trigger='onSelfSecondaryActionEnd' and @action='GiveExp'][1]/@exp">10</set>
+    <set xpath="//item[@name='medicalFirstAidBandage']/effect_group/triggered_effect[@trigger='onSelfSecondaryActionEnd' and @action='GiveExp'][2]/@exp">20</set>
+    <set xpath="//item[@name='medicalFirstAidBandage']/effect_group/triggered_effect[@trigger='onSelfSecondaryActionEnd' and @action='GiveExp'][3]/@exp">30</set>
+    <set xpath="//item[@name='medicalFirstAidBandage']/effect_group/triggered_effect[@trigger='onSelfSecondaryActionEnd' and @action='GiveExp'][4]/@exp">60</set>
+    <set xpath="//item[@name='medicalFirstAidBandage']/effect_group/triggered_effect[@trigger='onSelfSecondaryActionEnd' and @action='GiveExp'][5]/@exp">60</set>
+    <set xpath="//item[@name='medicalFirstAidBandage']/effect_group/triggered_effect[@trigger='onSelfSecondaryActionEnd' and @action='GiveExp'][6]/@exp">60</set>
+    <set xpath="//item[@name='medicalFirstAidKit']/effect_group/triggered_effect[@trigger='onSelfPrimaryActionEnd' and @action='GiveExp'][1]/@exp">30</set>
+    <set xpath="//item[@name='medicalFirstAidKit']/effect_group/triggered_effect[@trigger='onSelfPrimaryActionEnd' and @action='GiveExp'][2]/@exp">60</set>
+    <set xpath="//item[@name='medicalFirstAidKit']/effect_group/triggered_effect[@trigger='onSelfPrimaryActionEnd' and @action='GiveExp'][3]/@exp">90</set>
+    <set xpath="//item[@name='medicalFirstAidKit']/effect_group/triggered_effect[@trigger='onSelfPrimaryActionEnd' and @action='GiveExp'][4]/@exp">180</set>
+    <set xpath="//item[@name='medicalFirstAidKit']/effect_group/triggered_effect[@trigger='onSelfPrimaryActionEnd' and @action='GiveExp'][5]/@exp">180</set>
+    <set xpath="//item[@name='medicalFirstAidKit']/effect_group/triggered_effect[@trigger='onSelfPrimaryActionEnd' and @action='GiveExp'][6]/@exp">180</set>
+    <set xpath="//item[@name='medicalFirstAidKit']/effect_group/triggered_effect[@trigger='onSelfSecondaryActionEnd' and @action='GiveExp'][1]/@exp">30</set>
+    <set xpath="//item[@name='medicalFirstAidKit']/effect_group/triggered_effect[@trigger='onSelfSecondaryActionEnd' and @action='GiveExp'][2]/@exp">60</set>
+    <set xpath="//item[@name='medicalFirstAidKit']/effect_group/triggered_effect[@trigger='onSelfSecondaryActionEnd' and @action='GiveExp'][3]/@exp">90</set>
+    <set xpath="//item[@name='medicalFirstAidKit']/effect_group/triggered_effect[@trigger='onSelfSecondaryActionEnd' and @action='GiveExp'][4]/@exp">180</set>
+    <set xpath="//item[@name='medicalFirstAidKit']/effect_group/triggered_effect[@trigger='onSelfSecondaryActionEnd' and @action='GiveExp'][5]/@exp">180</set>
+    <set xpath="//item[@name='medicalFirstAidKit']/effect_group/triggered_effect[@trigger='onSelfSecondaryActionEnd' and @action='GiveExp'][6]/@exp">180</set>
+    <set xpath="//item[@name='medicalSplint']/effect_group/triggered_effect[@trigger='onSelfPrimaryActionEnd' and @action='GiveExp'][1]/@exp">10</set>
+    <set xpath="//item[@name='medicalSplint']/effect_group/triggered_effect[@trigger='onSelfPrimaryActionEnd' and @action='GiveExp'][2]/@exp">20</set>
+    <set xpath="//item[@name='medicalSplint']/effect_group/triggered_effect[@trigger='onSelfPrimaryActionEnd' and @action='GiveExp'][3]/@exp">30</set>
+    <set xpath="//item[@name='medicalSplint']/effect_group/triggered_effect[@trigger='onSelfPrimaryActionEnd' and @action='GiveExp'][4]/@exp">60</set>
+    <set xpath="//item[@name='medicalSplint']/effect_group/triggered_effect[@trigger='onSelfPrimaryActionEnd' and @action='GiveExp'][5]/@exp">60</set>
+    <set xpath="//item[@name='medicalSplint']/effect_group/triggered_effect[@trigger='onSelfPrimaryActionEnd' and @action='GiveExp'][6]/@exp">60</set>
+    <set xpath="//item[@name='medicalSplint']/effect_group/triggered_effect[@trigger='onSelfSecondaryActionEnd' and @action='GiveExp'][1]/@exp">0</set>
+    <set xpath="//item[@name='medicalSplint']/effect_group/triggered_effect[@trigger='onSelfSecondaryActionEnd' and @action='GiveExp'][2]/@exp">0</set>
+    <set xpath="//item[@name='medicalSplint']/effect_group/triggered_effect[@trigger='onSelfSecondaryActionEnd' and @action='GiveExp'][3]/@exp">0</set>
+    <set xpath="//item[@name='medicalSplint']/effect_group/triggered_effect[@trigger='onSelfSecondaryActionEnd' and @action='GiveExp'][4]/@exp">0</set>
+    <set xpath="//item[@name='medicalSplint']/effect_group/triggered_effect[@trigger='onSelfSecondaryActionEnd' and @action='GiveExp'][5]/@exp">0</set>
+    <set xpath="//item[@name='medicalSplint']/effect_group/triggered_effect[@trigger='onSelfSecondaryActionEnd' and @action='GiveExp'][6]/@exp">0</set>
+    <set xpath="//item[@name='medicalPlasterCast']/effect_group/triggered_effect[@trigger='onSelfPrimaryActionEnd' and @action='GiveExp'][1]/@exp">30</set>
+    <set xpath="//item[@name='medicalPlasterCast']/effect_group/triggered_effect[@trigger='onSelfPrimaryActionEnd' and @action='GiveExp'][2]/@exp">60</set>
+    <set xpath="//item[@name='medicalPlasterCast']/effect_group/triggered_effect[@trigger='onSelfPrimaryActionEnd' and @action='GiveExp'][3]/@exp">90</set>
+    <set xpath="//item[@name='medicalPlasterCast']/effect_group/triggered_effect[@trigger='onSelfPrimaryActionEnd' and @action='GiveExp'][4]/@exp">180</set>
+    <set xpath="//item[@name='medicalPlasterCast']/effect_group/triggered_effect[@trigger='onSelfPrimaryActionEnd' and @action='GiveExp'][5]/@exp">180</set>
+    <set xpath="//item[@name='medicalPlasterCast']/effect_group/triggered_effect[@trigger='onSelfPrimaryActionEnd' and @action='GiveExp'][6]/@exp">180</set>
+    <set xpath="//item[@name='medicalPlasterCast']/effect_group/triggered_effect[@trigger='onSelfSecondaryActionEnd' and @action='GiveExp'][1]/@exp">30</set>
+    <set xpath="//item[@name='medicalPlasterCast']/effect_group/triggered_effect[@trigger='onSelfSecondaryActionEnd' and @action='GiveExp'][2]/@exp">60</set>
+    <set xpath="//item[@name='medicalPlasterCast']/effect_group/triggered_effect[@trigger='onSelfSecondaryActionEnd' and @action='GiveExp'][3]/@exp">90</set>
+    <set xpath="//item[@name='medicalPlasterCast']/effect_group/triggered_effect[@trigger='onSelfSecondaryActionEnd' and @action='GiveExp'][4]/@exp">180</set>
+    <set xpath="//item[@name='medicalPlasterCast']/effect_group/triggered_effect[@trigger='onSelfSecondaryActionEnd' and @action='GiveExp'][5]/@exp">180</set>
+    <set xpath="//item[@name='medicalPlasterCast']/effect_group/triggered_effect[@trigger='onSelfSecondaryActionEnd' and @action='GiveExp'][6]/@exp">180</set>
+	
+</items>
