@@ -11,6 +11,14 @@
 	        <property name="CustomIcon" value="challengeQuestMaster"/>
         </item>
 
+        <item name="q_basicSurvivalCasual">
+	        <property name="Extends" value="questMaster"/>
+	        <property name="CreativeMode" value="Player"/>
+	        <property class="Action0">
+		        <property name="QuestGiven" value="intro_buried_supplies"/>
+	        </property>
+        </item>
+
         <!-- Starter Items -->
         <item name="RobotsStarterItems">
             <property name="CreativeMode" value="Player"/>

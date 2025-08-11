@@ -18,6 +18,9 @@
 
     <!-- Take your damn shovel - Rekt -->
 	<setattribute xpath="//quest/reward[@id='meleeToolShovelT0StoneShovel']" name="ischosen">false</setattribute>
+    <insertafter xpath="//quest/reward[@id='meleeToolShovelT0StoneShovel']">
+        <reward type="Item" id="q_basicSurvivalCasual" ischosen="false" value="1"/>
+    </insertafter>
 
     <!-- Since the 'Intro Buried Supplies' quest will never be offered, insert rewards into  -->
 	<insertAfter xpath="//quest[@id='quest_whiteRiverCitizen1']/reward[@type='Exp']">
@@ -30,5 +33,21 @@
 
     <!-- Make sure none of the other traders offer the 'Intro Buried Supplies' quest -->
 	<remove xpath="//quests/quest_list[starts-with(@id,'trader_')]/quest[@id='intro_buried_supplies']" />
+
+    <!-- Tweak existing 'intro_buried_supplies' quest that player can complete if/when they choose -->
+    <remove xpath="//quest[@id='intro_buried_supplies']/property[@name='single_quest']" />
+    <remove xpath="//quest[@id='intro_buried_supplies']/action[@type='SetCVar']" />
+    <remove xpath="//quest[@id='intro_buried_supplies']/reward[@type='Item']" />
+    <!-- Not biome dependant any longer -->
+    <remove xpath="//quest[@id='intro_buried_supplies']/objective[@type='RandomGotoNPC']/property[@name='biome_filter_type']" />
+    <remove xpath="//quest[@id='intro_buried_supplies']/objective[@type='RandomGotoNPC']/property[@name='biome_filter']" />
+
+	<insertafter xpath="//quest[@id='intro_buried_supplies']/reward[@type='Exp']">
+        <reward type="LootItem" id="groupQuestFood,groupQuestAmmo,groupQuestSchematics" ischosen="true" value="1"/>
+        <reward type="LootItem" id="groupQuestFood,groupQuestAmmo,groupQuestSchematics" ischosen="true" value="1"/>
+        <reward type="LootItem" id="groupQuestFood,groupQuestAmmo,groupQuestSchematics" ischosen="true" value="1"/>
+        <reward type="LootItem" id="groupQuestResourcesT0" ischosen="true" value="2"/>
+        <reward type="LootItem" id="groupQuestMedical,groupQuestAmmo,groupQuestSchematics" ischosen="true" value="2"/>
+    </insertafter>
 
 </quests>

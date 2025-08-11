@@ -7,3 +7,6 @@ MysteriousDrifterNoteDesc,items,item,,,"Stranger,\n\nI've left you with the few 
 
 quest_WhiteRiverCitizen1_description_title,Quest,Quest Info,,,"A hastily scrawled note"
 quest_WhiteRiverCitizen1_description,Quest,Quest Info,,,"Stranger,\n\nBassed off the note stuffed in the mouth of your near dead body, you must have crossed some powerful people.\n\nI've left you with the few supplies I could spare and noted on your map the nearest trader I could find.\n\nFare thee well and God speed\n- The Mysterious Drifter"
+
+q_basicSurvivalCasual,items,Quest - Note,,,Intro to Buried Supplies: Digging
+q_basicSurvivalCasualDesc,items,Quest - Note,,,How-To:\n\n1. Find marker.\n2. Dig down (shovel helps).\n3. Find supplies\n4. Watch your surroundings\n5. Profit(?)\n\nLet's try one now.  Happy hunting.
