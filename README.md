@@ -32,7 +32,10 @@ Custom, SERVER-side mods for any 7 Days To Die v2.x EAC-enabled servers
     * Added 'looted' ATM and police car
 
 [I_Robot73-Slow_Your_Roll](https://github.com/irobot73/7DaysToDie_v2.x_Mods/tree/main/I_Robot73-Slow_Your_Roll)
-* Increases the XP required between levels. 
+* Increases the XP required between levels & lowers EXP gains.
+* Two versions:
+    * Machete Edition - BROAD strokes
+    * Scalpel Edition - fine tune
 
 [I_Robot73-Test_Your_Mettle](https://github.com/irobot73/7DaysToDie_v2.x_Mods/tree/main/I_Robot73-Test_Your_Mettle)
 * Allows player to (immediately) head to the trader.

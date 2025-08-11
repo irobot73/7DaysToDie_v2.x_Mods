@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<entity_classes>
+
+    <!-- PlayerExpGain, Tags: Crafting, Harvesting, Kill, Looting, Other, Party, Quest, Selling, Upgrading (at bottom) -->
+    <insertBefore xpath="//entity_class[@name='playerMale']/effect_group/passive_effect[@name='PlayerExpGain' and (@tags='Upgrading')]">
+
+        <passive_effect name="PlayerExpGain" operation="perc_add" value="-.90" tags="Crafting"/>
+        <passive_effect name="PlayerExpGain" operation="perc_add" value="-.90" tags="Harvesting"/>
+        <passive_effect name="PlayerExpGain" operation="perc_add" value="-.90" tags="Kill"/>
+        <passive_effect name="PlayerExpGain" operation="perc_add" value="-.50" tags="Looting"/>
+        <!-- Reading, Using medical bandages/casts -->
+        <passive_effect name="PlayerExpGain" operation="perc_add" value="-.90" tags="Other"/>
+        <passive_effect name="PlayerExpGain" operation="perc_add" value="1.00" tags="Party"/>
+        <passive_effect name="PlayerExpGain" operation="perc_add" value="-.75" tags="Quest"/>
+        <passive_effect name="PlayerExpGain" operation="perc_add" value="-.75" tags="Selling"/>
+
+    </insertBefore>
+
+    <setattribute xpath="//entity_class[@name='playerMale']/effect_group/passive_effect[@name='PlayerExpGain' and (@tags='Upgrading')]" name="value">-.90</setattribute>
+
+</entity_classes>
