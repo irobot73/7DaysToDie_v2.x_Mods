@@ -2,8 +2,33 @@
 
 <quests>
 
-    <!--  Remove biome filter from the Goto objective  -->
-    <setattribute xpath="//quest[@id='quest_whiteRiverCitizen1']/objective[@type='Goto' and @id='trader']/property[@name='biome_filter_type']" name="value">AnyBiome</setattribute>
-    <remove xpath="//quest[@id='quest_whiteRiverCitizen1']/objective[@type='Goto' and @id='trader']/property[@name='biome_filter']"/> 
+    <!-- Setup the rewards choices we'll be injecting' -->
+	<insertafter xpath="//quest[@id='quest_whiteRiverCitizen1']/property[@name='shareable']">
+		<property name="reward_choices_count" value="5" />
+	</insertafter>
+
+    <!-- Mark IntroComplete -->
+	<insertafter xpath="//quest[@id='quest_whiteRiverCitizen1']/objective[@type='InteractWithNPC']">
+		<action type="SetCVar">
+			<property name="cvar" value="IntroComplete" />
+			<property name="value" value="1" />
+			<property name="on_complete" value="true" />
+		</action>
+	</insertafter>
+
+    <!-- Take your damn shovel - Rekt -->
+	<setattribute xpath="//quest/reward[@id='meleeToolShovelT0StoneShovel']" name="ischosen">false</setattribute>
+
+    <!-- Since the 'Intro Buried Supplies' quest will never be offered, insert rewards into  -->
+	<insertAfter xpath="//quest[@id='quest_whiteRiverCitizen1']/reward[@type='Exp']">
+		<reward type="Item" id="questRewardPipePistolBundle" ischosen="true" value="1" />
+		<reward type="Item" id="questRewardPipeShotgunBundle" ischosen="true" value="1" />
+		<reward type="Item" id="questRewardPipeRifleBundle" ischosen="true" value="1" />
+		<reward type="Item" id="questRewardPipeMachineGunBundle" ischosen="true" value="1" />
+		<reward type="Item" id="questRewardPipeBatonBundle" ischosen="true" value="1" />
+	</insertAfter>
+
+    <!-- Make sure none of the other traders offer the 'Intro Buried Supplies' quest -->
+	<remove xpath="//quests/quest_list[starts-with(@id,'trader_')]/quest[@id='intro_buried_supplies']" />
 
 </quests>
