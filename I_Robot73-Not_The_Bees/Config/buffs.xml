@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<buffs>
+
+<!-- ADD - When getting the buffFatigued, remove buffWinded -->
+    <!-- <append xpath="//buff[@name='buffFatiguedTrigger']/effect_group" >        
+		<requirement name="HasBuff" buff="buffWindedTrigger"/>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffWindedTrigger"/>
+    </append> -->
+
+<!-- New BUFF(s) -->
+    <append xpath="/buffs">
+
+        <!-- *** triggerBuffInjuryStunned00 -->
+	    <buff name="triggerBuffInjuryStunned00" name_key="trigger" icon="ui_game_symbol_quest">
+		    <duration value=".1"/>
+
+		    <effect_group>
+			    <passive_effect name="BuffResistance" operation="base_subtract" value="5" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffAbrasionCatch,buffInjuryStunned00,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffWinded"/>
+			    <triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffInjuryStunned00"/>
+		    </effect_group>
+	    </buff>
+
+        <!-- *** triggerBuffWinded -->
+	    <buff name="triggerBuffWinded" name_key="trigger" icon="ui_game_symbol_quest">
+		    <duration value=".1"/>
+
+		    <effect_group>
+			    <passive_effect name="BuffResistance" operation="base_subtract" value="5" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffAbrasionCatch,buffInjuryStunned00,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffWinded"/>
+			    <triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffWindedTrigger"/>
+		    </effect_group>
+	    </buff>
+
+        <!-- Triggers winded if not using vitamins -->
+	    <buff name="buffWindedTrigger" name_key="buff Winded Trigger" icon="ui_game_symbol_quest" hidden="true">
+		    <duration value=".1"/>
+
+		    <effect_group>
+			    <!-- If not consuming vitamins, start winded -->
+			    <requirement name="!HasBuff" buff="buffDrugVitamins"/>
+                <requirement name="!HasBuff" buff="buffFatigued"/>
+				    <triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffWinded"/>
+		    </effect_group>
+	    </buff>
+
+	    <!-- *** buffWinded -->
+	    <!-- TRIGGERED_BY: Buffs = buffWindedTrigger -->
+	    <!-- Reduces max health and increases damage taken -->
+	    <buff name="buffWinded" name_key="buffWindedName" description_key="buffWindedDesc" tooltip_key="buffWindedTooltip" icon="ui_game_symbol_fatigued" icon_color="255,255,0">
+		    <damage_type value="Bashing"/>
+		    <stack_type value="duration"/>
+		    <duration value="0"/>
+		    <display_value value=".windedDurationDisplay"/>
+		    <display_value_format value="time"/>
+		    <tags value="deathpenalty_injured"/>
+
+		    <effect_group>
+			    <!-- Blinks the display -->
+			    <passive_effect name="BuffBlink" operation="base_set" value="2" duration="0,3" tags="buffWinded"/>
+		    </effect_group>
+
+		    <effect_group>
+			    <!-- Setup counters (5-min to start, +30-sec on stack) -->
+			    <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$windedCounter" operation="set" value="300"/>
+			    <triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="$windedCounter" operation="add" value="30"/>
+			    <!-- Reduce counter by natural healing rate -->
+			    <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$windedCounter" operation="subtract" value="@$critHitNaturalHealingRate"/>
+			    <!-- If counter LTE 0, remove buff -->
+			    <triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffWinded">
+				    <requirement name="CVarCompare" cvar="$windedCounter" operation="LTE" value="0"/>
+			    </triggered_effect>
+			    <!-- If consuming vitamins or fatigued, remove buff -->
+			    <triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffWinded">
+				    <requirement name="HasBuff" buff="buffFatigued"/>
+			    </triggered_effect>
+			    <triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffWinded">
+				    <requirement name="HasBuff" buff="buffDrugVitamins"/>
+			    </triggered_effect>
+			    <!-- Reset counters -->
+			    <triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar" cvar="$windedCounter,.WeakenedHealthBlockage"/>
+		    </effect_group>
+
+		    <effect_group name="DisplayDuration">
+			    <!-- Handlers for the display -->
+			    <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".windedDurationDisplay" operation="set" value="@$windedCounter"/>
+			    <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".windedDurationDisplay" operation="divide" value="@$critHitNaturalHealingRate"/>
+			    <triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar" cvar=".windedDurationDisplay"/>
+		    </effect_group>
+
+		    <effect_group name="getting hit makes it worse">
+			    <!-- When attacked again, make it last longer (+30-sec) -->
+			    <triggered_effect trigger="onOtherAttackedSelf" action="ModifyCVar" cvar="$windedCounter" operation="add" value="30"/>
+			    <!-- If counter GT, clamp it (30-min maximum)-->
+			    <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$windedCounter" operation="set" value="1802">
+				    <requirement name="CVarCompare" cvar="$windedCounter" operation="GT" value="1802"/>
+			    </triggered_effect>
+		    </effect_group>
+
+		    <effect_group>
+			    <!-- Setup the max health blockage based on the remaining counter -->
+			    <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".WeakenedHealthBlockage" operation="set" value="@$windedCounter"/>
+			    <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".WeakenedHealthBlockage" operation="divide" value="10"/>
+			    <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".WeakenedHealthBlockage" operation="set" value="@$windedCounter"/>
+			    <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".WeakenedHealthBlockage" operation="divide" value="10"/>
+			    <passive_effect name="HealthMaxBlockage" operation="base_add" value="@.WeakenedHealthBlockage"/>
+			    <!-- Take 15% more damage when attacked -->
+			    <passive_effect name="HealthLoss" operation="perc_add" value=".15"/>
+		    </effect_group>
+	    </buff>
+
+    </append>
+
+</buffs>

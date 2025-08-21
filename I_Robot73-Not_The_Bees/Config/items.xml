@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<items>
+
+    <!-- Replace the AnimalInsectSwarm (de)buffs) with the new one(s) -->
+    <set xpath="//item[@name='meleeHandAnimalInsectSwarm']/effect_group[@name='meleeHandAnimalInsectSwarm']/triggered_effect[(@trigger='onSelfAttackedOther') and (@action='AddBuff') and (@target='other') and (@fireOneBuff='true')]/@buff">buffInjuryStunned00,buffWindedTrigger,buffInjuryStunned00</set>
+    <set xpath="//item[@name='meleeHandAnimalInsectSwarm']/effect_group[@name='meleeHandAnimalInsectSwarm']/triggered_effect[(@trigger='onSelfAttackedOther') and (@action='AddBuff') and (@target='other') and (@fireOneBuff='true')]/@weights">0.2,0.08,0.2</set>
+
+    <!-- ADD - When using Vitamins, remove the new buff(s) -->
+    <append xpath="//item[@name='drugVitamins']/effect_group[@tiered='false']" >
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="buffWindedTrigger"/>
+    </append>
+
+    <!-- Can use these to test out the buffs directly -->
+    <insertAfter xpath="//item[@name='adminGiveBuffBrokenArm']">
+
+	    <!-- *** ADMIN_GIVE_BUFF_STUNNED00 -->
+        <item name="adminGiveBuffInjuryStunned00">
+	        <property name="Extends" value="adminGiveBuffFatigued"/>
+	        <property name="CreativeMode" value="Dev"/>
+	        <property name="CustomIcon" value="drinkJarGrandpasForgettingElixir"/>
+	        <property name="CustomIconTint" value="9caf88"/>
+	        <property name="TintColor" value="9caf88"/>
+	        <effect_group tiered="false">
+		        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="triggerBuffInjuryStunned00"/>
+	        </effect_group>
+        </item>
+
+	    <!-- *** ADMIN_GIVE_BUFF_WINDED -->
+        <item name="adminGiveBuffWinded">
+	        <property name="Extends" value="adminGiveBuffFatigued"/>
+	        <property name="CreativeMode" value="Dev"/>
+	        <property name="CustomIcon" value="drinkJarGrandpasForgettingElixir"/>
+	        <property name="CustomIconTint" value="9caf88"/>
+	        <property name="TintColor" value="9caf88"/>
+	        <effect_group tiered="false">
+		        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="triggerBuffWinded"/>
+	        </effect_group>
+        </item>
+
+    </insertAfter>
+
+</items>

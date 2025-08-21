@@ -17,6 +17,15 @@ Custom, SERVER-side mods for any 7 Days To Die v2.x EAC-enabled servers
 * Supplements (all?) HUDs to remove ENTERING, POI LOCATION and STORM_WARNING areas of the UI.
     * Should be (one of) the last MOD(s) to load
 
+[I_Robot73-Not_The_Bees](https://github.com/irobot73/7DaysToDie_v2.x_Mods/tree/main/I_Robot73-Not_The_Bees)
+* New BUFF ('Winded') to nerf the insect swarm via Plague Spitter.
+    * Slow, Stun & Winded (the last two are random)
+    * 15% added to all damage while Winded
+    * 5-min starting timer with additional hits adding to that tally
+    * 30-min maximum timer
+    * Mitigate with Vitamins
+    * Getting the 'Fatigued' buff will remove 'Winded' (as it's the lesser of the two)
+
 [I_Robot73-Regrow_All-n-One](https://github.com/irobot73/7DaysToDie_v2.x_Mods/tree/main/I_Robot73-Regrow_All-n-One)
 * Regrows, after a time:
     * Trees

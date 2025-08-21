@@ -1,0 +1,8 @@
+Key,File,Type,UsedInMainMenu,NoTranslate,english,Context / Alternate Text,german,spanish,french,italian,japanese,koreana,polish,brazilian,russian,turkish,schinese,tchinese
+
+adminGiveBuffInjuryStunned00,items,Admin,,,Dev: Buff Stunned,,,,,,,,,,,,,
+adminGiveBuffWinded,items,Admin,,,Dev: Buff Winded,,,,,,,,,,,,,
+
+buffWindedDesc,buffs,Buff,,,You are winded and take 15% more damage from all attacks.\nEat vitamins to cure this.\n\nYour max health is lowered by {cvar(.WeakenedHealthBlockage:0.0)}.,,,,,,,,,,,,,
+buffWindedName,buffs,Buff,,,Winded,,,,,,,,,,,,,
+buffWindedTooltip,buffs,Buff,,,You feel winded.,,,,,,,,,,,,,
